@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import TopNav from './components/TopNav';
+import Bande1 from './components/Bande1';
+import LogosPartners from './components/LogosPartners';
+import Economies from './components/Economies';
+import Bande2 from './components/Bande2';
+import MiniCardGroup from './components/MiniCardGroup';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TopNav/>
+      <Bande1/>
+      <LogosPartners/>
+      <Economies/>
+      <Bande2/>
+      <MiniCardGroup/>
     </div>
   );
 }
