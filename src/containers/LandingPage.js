@@ -15,7 +15,6 @@ import Try from '../components/Try';
 const LandingPage = () => {
     return (
         <>
-            <TopNav />
             <Bande1 />
             <LogosPartners />
             <Economies />
