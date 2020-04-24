@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Grid, Button, Image, Input } from 'semantic-ui-react';
+import { Button, Image, Input } from 'semantic-ui-react';
 import img1 from '../img/img1.png'
 import BandeLayout from './BandeLayout';
 

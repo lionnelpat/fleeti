@@ -13,6 +13,7 @@ const MiniCardGroup = () => {
                <Grid.Row>
 
                 {miniCards.map((item,i) =>  <MiniCard
+                    key={i}
                     title={item.title}
                     text={item.text}
                     img={item.img}

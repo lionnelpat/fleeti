@@ -2,17 +2,17 @@ export const items = [
     {
         title: "Gestion de flotte",
         categories : [
-            { key: 'ct', value: 'costTracking', text: 'Cost tracking' },
+            { key: 'ct', value: 'cost-tracking', text: 'Cost tracking' },
             { key: 'a', value: 'alertes', text: 'Alertes' },
             { key: 'g', value: 'geolocalisation', text: 'Géolocalisation' },
-            { key: 'fm', value: 'fuelManagement', text: 'Fuel management' },
-            { key: 'pm', value: 'planningEtMissions', text: 'Planning et missions' }
+            { key: 'fm', value: 'fuel-management', text: 'Fuel management'},
+            { key: 'pm', value: 'planning-et-missions', text: 'Planning et missions'}
         ]
     },
     {
         title: "Maintenance de parc",
         categories : [
-            { key: 'cp', value: 'comparaisonDePrestaires', text: 'Comparaison de prestataires' },
+            { key: 'cp', value: 'comparaison-de-prestaires', text: 'Comparaison de prestataires' },
             { key: 'ga', value: 'gestionAtelier', text: 'Gestion d’atelier' }
         ]
     },

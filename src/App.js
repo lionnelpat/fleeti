@@ -5,16 +5,22 @@ import CostTracking from './containers/CostTracking';
 import TopNav from './components/TopNav';
 import Geolocalisation from './containers/Geolocalisation';
 import FuelManagement from './containers/FuelManagement';
-
+import {BrowserRouter,Switch,Route} from "react-router-dom"
 
 function App() {
   return (
     <>
+    <BrowserRouter>
       <TopNav />
-      {/* <CostTracking/> */}
-      {/* <LandingPage/> */}
-      {/* <Geolocalisation/> */}
-      <FuelManagement/>
+      <Switch>
+        <Route path="/cost-tracking" component={CostTracking} />
+        <Route path="/geolocalisation" component={Geolocalisation} />
+        <Route path="/fuel-management" component={FuelManagement} />
+        <Route exact path="/" component={LandingPage} />
+      </Switch>
+    
+    </BrowserRouter>
+
     </>
   );
 }

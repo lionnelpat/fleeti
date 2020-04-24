@@ -9,9 +9,7 @@ const FirstNav = () => {
         { key: 'mr', value: 'mr', text: 'Maurice' },
     ]
     return (
-        <Menu.Menu position="right" >
-               
-               
+        <Menu.Menu position="right" >         
                {items.map((item,i) => <CustomMenuItem
                 key={i}
                 title={item.title}
@@ -26,17 +24,7 @@ const FirstNav = () => {
                 <Dropdown defaultValue="sn" placeholder='Select choice' simple options={countryOptions} />
             </Menu.Item>
 
-            {/* 
-            <Menu.Item
-                name='messages'
-                active={activeItem === 'messages'}
-                onClick={this.handleItemClick}
-            />
-            <Menu.Item
-                name='friends'
-                active={activeItem === 'friends'}
-                onClick={this.handleItemClick}
-            /> */}
+            
              <Menu.Item>
                 <Button style={{backgroundColor: "#0BA1C1", color:"white",fontWeight:"bold"}} >Démo gratuite</Button>
             </Menu.Item>

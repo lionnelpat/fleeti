@@ -1,5 +1,4 @@
 import React from 'react';
-import TopNav from '../components/TopNav';
 import Bande1 from '../components/Bande1';
 import LogosPartners from '../components/LogosPartners';
 import Economies from '../components/Economies';

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Image, Button } from 'semantic-ui-react';
+import { Grid, Image } from 'semantic-ui-react';
 import footer_logo from "../img/footer_logo.png"
 import FooterItem from './FooterItem';
 import { footer } from '../variables/Footer';

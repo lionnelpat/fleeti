@@ -1,9 +1,12 @@
 import React from 'react';
 import { Dropdown } from 'semantic-ui-react';
+import { withRouter } from 'react-router-dom';
 
-const CustomMenuItem = ({title,categories=[]}) => {
+const CustomMenuItem = ({title,categories=[], location, history}) => {
     return (
-        <Dropdown 
+    
+        <Dropdown
+            onChange={(e,data) => history.push(data.value)} 
             style={{fontWeight: "bold", color: "#757575",zIndex:2}} 
             text={title} simple options={categories}  
             item 
@@ -12,4 +15,4 @@ const CustomMenuItem = ({title,categories=[]}) => {
     );
 };
 
-export default CustomMenuItem;
+export default withRouter(CustomMenuItem);
