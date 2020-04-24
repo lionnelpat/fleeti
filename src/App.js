@@ -6,6 +6,8 @@ import TopNav from './components/TopNav';
 import Geolocalisation from './containers/Geolocalisation';
 import FuelManagement from './containers/FuelManagement';
 import {BrowserRouter,Switch,Route} from "react-router-dom"
+import Alertes from './containers/Alertes';
+import ComparaisonDePrestaires from './containers/ComparaisonDePrestaires';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/cost-tracking" component={CostTracking} />
         <Route path="/geolocalisation" component={Geolocalisation} />
         <Route path="/fuel-management" component={FuelManagement} />
+        <Route path="/alertes" component={Alertes} />
+        <Route path="/comparaison-de-prestaires" component={ComparaisonDePrestaires} />
         <Route exact path="/" component={LandingPage} />
       </Switch>
     

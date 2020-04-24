@@ -15,6 +15,13 @@ import geoloc3 from "../img/geoloc3.png"
 import fm1 from "../img/fm1.png"
 import fm2 from "../img/fm2.png"
 import fm3 from "../img/fm3.png"
+import a1 from "../img/a1.png"
+import a2 from "../img/a2.png"
+import a3 from "../img/a3.png"
+import cdp1 from "../img/cdp1.png"
+import cdp2 from "../img/cdp2.png"
+import cdp3 from "../img/cdp3.png"
+
 
 const MiniCard = ({ title, text, img, mt,knowMore=true, height=200 }) => {
     return (
@@ -40,6 +47,12 @@ const MiniCard = ({ title, text, img, mt,knowMore=true, height=200 }) => {
                             {img === "fm1" && <Image src={fm1} />}
                             {img === "fm2" && <Image src={fm2} />}
                             {img === "fm3" && <Image src={fm3} />}
+                            {img === "cdp1" && <Image src={cdp1} />}
+                            {img === "cdp2" && <Image src={cdp2} />}
+                            {img === "cdp3" && <Image src={cdp3} />}
+                            {img === "a1" && <Image src={a1} />}
+                            {img === "a2" && <Image src={a2} />}
+                            {img === "a3" && <Image src={a3} />}
                         </div>
 
                     </Grid.Column>

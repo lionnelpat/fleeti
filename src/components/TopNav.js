@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Segment, Image, Menu } from 'semantic-ui-react';
 import logo from '../img/logo.png'
 import FirstNav from './FirstNav';
+import {withRouter} from "react-router-dom"
 
 class TopNav extends Component {
     state = { activeItem: 'home' }
-
     render() {
+       let { history} = this.props
 
         return (
 
@@ -14,7 +15,7 @@ class TopNav extends Component {
 
 
                 <Menu secondary >
-                    <Menu.Menu>
+                    <Menu.Menu onClick={() => history.push('/')} style={{cursor:"pointer"}}>
 
                         <Image src={logo} size='small' style={{ marginLeft: 20 }} />
                     </Menu.Menu>
@@ -28,4 +29,4 @@ class TopNav extends Component {
     }
 }
 
-export default TopNav;
+export default withRouter(TopNav);
