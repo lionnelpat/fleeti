@@ -12,6 +12,7 @@ import big_geoloc from "../img/big_geoloc.png"
 import big_fm from "../img/big_fm.png"
 import big_a from "../img/big_a.png"
 import big_cdp from "../img/big_cdp.png"
+import tiretOrange from "../img/tiret-orange.png"
 
 
 const ComonLayout = ({ title1, title2, text, data=[], data2=[], title3,img2,img1 }) => {
@@ -44,13 +45,18 @@ const ComonLayout = ({ title1, title2, text, data=[], data2=[], title3,img2,img1
         <h1 style={{textAlign: "center"}}>{title3}</h1>
         <BandeLayout
             illustration={
-              data2.map((item,i) => (
+                <>
+              {data2.map((item,i) => (
                 <Fragment  key={i}>
-                    <p style={{fontSize: 20, fontWeight: "bold"}}>{item.title} <br/>
+                    <p style={{fontSize: 20, fontWeight: "bold"}}> <Image src={tiretOrange} /> {item.title} <br/>
                         <span style={{fontSize: 15,color:"#757575"}}>{item.text}</span>
                     </p>
                 </Fragment>
-            ))  
+            ))  }   
+            <p style={{fontSize:25, fontWeight:"bold",color:"#FFAC26"}}>Prêt à vous lancer ?</p>
+            <Button style={{ backgroundColor: "#FFAC26", color: "white", fontWeight: "bold"}} size="big" >Profitez de notre version d'essai gratuite</Button>
+
+            </>
             }
         >
             {img2==="big_ct" && <Image src={big_ct}/>}
@@ -59,11 +65,17 @@ const ComonLayout = ({ title1, title2, text, data=[], data2=[], title3,img2,img1
             {img2==="big_a" && <Image src={big_a}/>}
             {img2==="big_cdp" && <Image src={big_cdp}/>}
         </BandeLayout>
-        <div style={{textAlign:"center"}}>
+
+        <div style={{textAlign: "center", fontSize: 25, display:"flex", justifyContent:"center"}}>
+            <p style={{width: "40%",color: "#04212E"}}>“La part des entreprises européennes qui géolocalisaent leur flotte a augmenté de 20% entre 2010 et 2019” <br/><br/>
+            <span style={{color:"#0BA1C1", fontWeight: "bold"}}>Arval Fleet Observatory 2019</span>
+            </p>
+        </div>
+        {/* <div style={{textAlign:"center"}}>
             <h1 style={{color: "#0BA1C1", fontSize:50,marginTop: 20}}>Prêt à débuter ?</h1>
             <Button style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold"}} size="big" >Voir Démo</Button>
 
-        </div>
+        </div> */}
         <div style={{paddingTop: 50}} />
         </>
     );

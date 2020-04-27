@@ -5,7 +5,9 @@ import MiniCard from './MiniCard';
 
 const BandeLayout2 = ({data=[]}) => {
     return (
-        <Card style={{width: "90%",padding:80,boxShadow: "none"}}  centered>
+        <Card style={{width: "100%",padding:80,boxShadow: "none"}}  centered>
+                
+            <div style={{backgroundColor:"#0BA1C1", height:300,left:0,width:"100%", position:"absolute",marginTop:80}} />
 
             <Grid columns={3} >
                 <Grid.Row>
@@ -15,10 +17,8 @@ const BandeLayout2 = ({data=[]}) => {
                         img={item.img}
                         title={item.title}
                         text={item.text}
-                        knowMore={false}
-                        height={100}
-
-                        
+                        knowMore={false}  
+                        mt={0}   
                     />)}
                     
                 </Grid.Row>

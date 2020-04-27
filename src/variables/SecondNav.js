@@ -2,10 +2,10 @@ export const items = [
     {
         title: "Gestion de flotte",
         categories : [
-            { key: 'ct', value: 'cost-tracking', text: 'Cost tracking' },
+            { key: 'ct', value: 'cost-tracking', text: 'Suivi des coûts' },
             { key: 'a', value: 'alertes', text: 'Alertes' },
             { key: 'g', value: 'geolocalisation', text: 'Géolocalisation' },
-            { key: 'fm', value: 'fuel-management', text: 'Fuel management'},
+            { key: 'fm', value: 'fuel-management', text: 'Gestion du carburant'},
             { key: 'pm', value: 'planning-et-missions', text: 'Planning et missions'}
         ]
     },

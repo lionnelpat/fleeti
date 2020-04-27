@@ -11,7 +11,7 @@ class TopNav extends Component {
 
         return (
 
-            <Segment clearing>
+            <Segment clearing >
 
 
                 <Menu secondary >

@@ -8,6 +8,9 @@ import FuelManagement from './containers/FuelManagement';
 import {BrowserRouter,Switch,Route} from "react-router-dom"
 import Alertes from './containers/Alertes';
 import ComparaisonDePrestaires from './containers/ComparaisonDePrestaires';
+import Footer from './components/Footer';
+import Try from './components/Try';
+
 
 function App() {
   return (
@@ -22,7 +25,8 @@ function App() {
         <Route path="/comparaison-de-prestaires" component={ComparaisonDePrestaires} />
         <Route exact path="/" component={LandingPage} />
       </Switch>
-    
+      <Try/>
+      <Footer/>
     </BrowserRouter>
 
     </>

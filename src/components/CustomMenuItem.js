@@ -6,10 +6,13 @@ const CustomMenuItem = ({title,categories=[], location, history}) => {
     return (
     
         <Dropdown
+            
             onChange={(e,data) => history.push(data.value)} 
             style={{fontWeight: "bold", color: "#757575",zIndex:2}} 
-            text={title} simple options={categories}  
-            item 
+            text={title} 
+            options={categories}  
+            simple 
+             
 
         /> 
     );

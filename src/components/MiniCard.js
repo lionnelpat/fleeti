@@ -30,7 +30,7 @@ const MiniCard = ({ title, text, img, mt,knowMore=true, height=200 }) => {
         <Grid.Column style={{ textAlign: "center", display: "flex", justifyContent: "center",marginTop:mt}}>
             <Grid columns={1}>
                 <Grid.Row>
-                    <Grid.Column style={{ display: "flex", justifyContent: "center", height }}>
+                    <Grid.Column style={{ display: "flex", justifyContent: "center", height:height/1.5 }}>
                         <div style={{ height }}>
                             {img === "mc1" && <Image src={mc1} />}
                             {img === "mc2" && <Image src={mc2} />}
@@ -56,15 +56,14 @@ const MiniCard = ({ title, text, img, mt,knowMore=true, height=200 }) => {
                         </div>
 
                     </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
                     <Grid.Column >
-                            <p style={{ textAlign: "center", fontWeight: "bold", fontSize: 20 }}>{title}</p>
+                            <p style={{ textAlign: "center",color:"white", fontWeight: "bold", fontSize: 20 }}>{title}</p>
                     </Grid.Column>
                 </Grid.Row>
+          
                 <Grid.Row>
                     <Grid.Column>
-                        <p style={{ textAlign: "center", fontSize: 20 }}>{text}</p>
+                        <p style={{ textAlign: "center",color:"white", fontSize: 20 }}>{text}</p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>

@@ -9,12 +9,16 @@ const FirstNav = () => {
         { key: 'mr', value: 'mr', text: 'Maurice' },
     ]
     return (
-        <Menu.Menu position="right" >         
-               {items.map((item,i) => <CustomMenuItem
-                key={i}
+         <Menu.Menu position="right"  >      
+            
+            {items.map((item,i) => 
+            <Menu.Item key={i}>
+            <CustomMenuItem
                 title={item.title}
                 categories={item.categories}
-            />)}
+                />
+                </Menu.Item>
+                )}
             <Menu.Item>
                 <p>
                     Nous contacter
@@ -23,7 +27,7 @@ const FirstNav = () => {
             <Menu.Item>
                 <Dropdown defaultValue="sn" placeholder='Select choice' simple options={countryOptions} />
             </Menu.Item>
-
+            
             
              <Menu.Item>
                 <Button style={{backgroundColor: "#0BA1C1", color:"white",fontWeight:"bold"}} >Démo gratuite</Button>

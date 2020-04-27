@@ -8,8 +8,6 @@ import Grille from '../components/Grille';
 import Pricing from '../components/Pricing';
 import Meet from '../components/Meet';
 import Blog from '../components/Blog';
-import Footer from '../components/Footer';
-import Try from '../components/Try';
 
 const LandingPage = () => {
     return (
@@ -23,8 +21,7 @@ const LandingPage = () => {
             <Pricing />
             <Meet />
             <Blog />
-            <Try/>
-            <Footer />
+           
         </>
     );
 };
