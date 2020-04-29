@@ -21,9 +21,13 @@ import a3 from "../img/a3.png"
 import cdp1 from "../img/cdp1.png"
 import cdp2 from "../img/cdp2.png"
 import cdp3 from "../img/cdp3.png"
+import pem1 from "../img/pem1.png"
+import pem2 from "../img/pem2.png"
+import pem3 from "../img/pem3.png"
+import { Link } from 'react-router-dom';
 
 
-const MiniCard = ({ title, text, img, mt,knowMore=true, height=200 }) => {
+const MiniCard = ({ title, text, img, mt,knowMore=true, height=200,link="/" }) => {
     return (
 
 
@@ -53,23 +57,28 @@ const MiniCard = ({ title, text, img, mt,knowMore=true, height=200 }) => {
                             {img === "a1" && <Image src={a1} />}
                             {img === "a2" && <Image src={a2} />}
                             {img === "a3" && <Image src={a3} />}
+                            {img === "pem1" && <Image src={pem1} />}
+                            {img === "pem2" && <Image src={pem2} />}
+                            {img === "pem3" && <Image src={pem3} />}
                         </div>
 
                     </Grid.Column>
-                    <Grid.Column >
-                            <p style={{ textAlign: "center",color:"white", fontWeight: "bold", fontSize: 20 }}>{title}</p>
+                    <Grid.Column style={{marginTop: knowMore ? 50 :  0}} >
+                            <p style={{ textAlign: "center",color: knowMore ? "black" : "white", fontWeight: "bold", fontSize: 20 }}>{title}</p>
                     </Grid.Column>
                 </Grid.Row>
           
                 <Grid.Row>
                     <Grid.Column>
-                        <p style={{ textAlign: "center",color:"white", fontSize: 20 }}>{text}</p>
+                        <p style={{ textAlign: "center",color: knowMore ? "black" : "white", fontSize: 20 }}>{text}</p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>
-                    <Grid.Column >
-                        <p style={{ textAlign: "center", fontSize: 20 }} >En savoir plus
+                    <Grid.Column  >
+                        <Link to={link} style={{color:"black"}}>
+                        <p style={{ textAlign: "center", fontSize: 20, cursor: "pointer" }} >En savoir plus
                                 <Icon name="long arrow alternate right" size="large" /></p>
+                        </Link>
                     </Grid.Column>
                 </Grid.Row>}
             </Grid>

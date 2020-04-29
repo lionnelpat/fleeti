@@ -20,8 +20,7 @@ que vous soyez une PME ou une multinationale</h1>
                         img={item.img}
                         title={item.title}
                         /> )}
-                    
-                    
+                                        
                 </Grid.Row>
                 <Grid.Row style={{display:"flex", justifyContent: "center"}}>
                         <div style={{width: "70%", display: "flex"}}>

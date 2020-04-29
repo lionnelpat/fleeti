@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ComonLayout from '../components/ComonLayout.js';
 import { geolocalisation } from '../variables/Geolocalisation.js';
 
 const Geolocalisation = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     return (
         <>
         <ComonLayout
@@ -14,6 +17,8 @@ const Geolocalisation = () => {
             title2="Localisez vos véhicules en un clin d’oeil et vérifiez l’état de vos livraisons"
             img1="geolocalisation"
             img2={geolocalisation.img2}
+            temoignage="“La part des entreprises européennes qui géolocalisaent leur flotte a augmenté de 20% entre 2010 et 2019”"
+            speaker="Arval Fleet Observatory 2019"
         />
     </>
     );

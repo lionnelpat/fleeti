@@ -3,6 +3,7 @@ import { Grid, Image } from 'semantic-ui-react';
 import footer_logo from "../img/footer_logo.png"
 import FooterItem from './FooterItem';
 import { footer } from '../variables/Footer';
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
     render() {
@@ -12,11 +13,16 @@ class Footer extends Component {
                 <div style={{height: 400, width: "100%", backgroundColor:"#19353B",textAlign:"center"}}>
                     <Grid columns={4}> 
                         <Grid.Row>
-                            {footer.map((item,i) => <FooterItem
-                                key={i}
-                                title={item.title}
-                                categories={item.categories}
-                            />)}
+                            {footer.map((item,i) => 
+                            
+                                <FooterItem
+                                    categoriesLinks={item.categoriesLinks}
+                                    key={i}
+                                    title={item.title}
+                                    categories={item.categories}
+                                />
+                         
+                            )}
                             
 
                         </Grid.Row>

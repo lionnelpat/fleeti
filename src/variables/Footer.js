@@ -5,8 +5,15 @@ export const footer = [
             "Suivi des coûts",
             "Alertes",
             "Géolocalisation",
-            "Fuel Management",
+            "Gestion du carburant",
             "Planning et missions"
+        ],
+        categoriesLinks: [
+            "/cost-tracking",
+            "/alertes",
+            "/geolocalisation",
+            "/fuel-management",
+            "/planning-et-missions"
         ]
     },
     {
@@ -14,6 +21,10 @@ export const footer = [
         categories: [
             "Comparaison de prestataires",
             "Gestion d’atelier",
+        ],
+        categoriesLinks: [
+            "/comparaison-de-prestaires",
+            
         ]
     },
     {

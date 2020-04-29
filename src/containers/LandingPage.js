@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Bande1 from '../components/Bande1';
 import LogosPartners from '../components/LogosPartners';
 import Economies from '../components/Economies';
@@ -10,6 +10,9 @@ import Meet from '../components/Meet';
 import Blog from '../components/Blog';
 
 const LandingPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
     return (
         <>
             <Bande1 />

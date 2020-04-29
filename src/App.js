@@ -10,6 +10,8 @@ import Alertes from './containers/Alertes';
 import ComparaisonDePrestaires from './containers/ComparaisonDePrestaires';
 import Footer from './components/Footer';
 import Try from './components/Try';
+import DemoGratuite from './containers/DemoGratuite';
+import PlanningEtMissions from './containers/PlanningEtMissions';
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
         <Route path="/fuel-management" component={FuelManagement} />
         <Route path="/alertes" component={Alertes} />
         <Route path="/comparaison-de-prestaires" component={ComparaisonDePrestaires} />
+        <Route path="/demo-gratuite" component={DemoGratuite} />
+        <Route path="/planning-et-missions" component={PlanningEtMissions} />
         <Route exact path="/" component={LandingPage} />
       </Switch>
       <Try/>
