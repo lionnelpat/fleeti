@@ -7,7 +7,7 @@ export const meet = [
     },
     {
         img: "meet2",
-        name: "Nina Tchallah",
+        name: "Nina Tchalla",
         role: "Lead Developper",
         description: "Nina est lead developper chez Fleeti, elle est la chef d’orchestre qui permet à toutes les nouvelles fonctionnalités de voir le jour. Travailleuse acharnée, elle trouve des solutions innovantes aux problématiques rencontrées par nos clients. "
     },

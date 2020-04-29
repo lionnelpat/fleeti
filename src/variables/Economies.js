@@ -14,7 +14,7 @@ export const economies = [
         text2: "Réduisez les dépenses inutiles grâce à notre module de gestion de la consommation de carburant."
     },
     {
-        img:"eco1",
+        img:"eco3",
         prix: "78.600",
         unit: "FCFA",
         text1: "économies sur l’optimisation des missions",
