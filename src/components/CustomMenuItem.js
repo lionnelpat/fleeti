@@ -12,7 +12,7 @@ const CustomMenuItem = ({title,categories=[], location, history}) => {
             text={title} 
             options={categories}  
             simple 
-             
+            value=""
 
         /> 
     );
