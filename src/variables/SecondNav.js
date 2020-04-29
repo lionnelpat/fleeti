@@ -1,6 +1,6 @@
 export const items = [
     {
-        title: "Gestion de flotte",
+        title: "Nos services",
         categories : [
             { key: 'ct', value: 'cost-tracking', text: 'Suivi des coûts' },
             { key: 'a', value: 'alertes', text: 'Alertes' },
