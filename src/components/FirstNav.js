@@ -21,9 +21,11 @@ const FirstNav = () => {
                 </Menu.Item>
                 )}
             <Menu.Item>
-                <p>
+                <Link to="/demo-gratuite">
+                <p style={{color: "black"}}>
                     Nous contacter
                 </p>
+                </Link>
             </Menu.Item>
             <Menu.Item>
                 <Dropdown defaultValue="sn" placeholder='Select choice' simple options={countryOptions} />
