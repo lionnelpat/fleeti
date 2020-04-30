@@ -41,10 +41,10 @@ const EconomieItem = ({ img = "", prix, unit, text1, text2 }) => {
                 </Grid.Column>
                 <Grid.Column>
                     <Grid columns={2}>
-                        <Grid.Column >
+                        {/* <Grid.Column >
                             <p style={{ textAlign: "left", fontSize: 16 }} >En savoir plus
                             <Icon name="long arrow alternate right" size="large" /></p>
-                        </Grid.Column>
+                        </Grid.Column> */}
                         <Grid.Column style={{ textAlign: "left" }}>
                         </Grid.Column>
 

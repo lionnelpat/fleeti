@@ -20,7 +20,7 @@ export const footer = [
         title: "Maintenance de parc",
         categories: [
             "Comparaison de prestataires",
-            "Gestion d’atelier",
+            // "Gestion d’atelier",
         ],
         categoriesLinks: [
             "/comparaison-de-prestaires",

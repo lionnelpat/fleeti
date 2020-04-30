@@ -13,7 +13,7 @@ export const items = [
         title: "Maintenance de parc",
         categories : [
             { key: 'cp', value: 'comparaison-de-prestaires', text: 'Comparaison de prestataires' },
-            { key: 'ga', value: 'gestionAtelier', text: 'Gestion d’atelier' }
+            // { key: 'ga', value: 'gestionAtelier', text: 'Gestion d’atelier' }
         ]
     },
     // {
