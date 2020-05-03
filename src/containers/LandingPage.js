@@ -23,7 +23,7 @@ const LandingPage = () => {
             <Grille />
             <Pricing />
             <Meet />
-            <Blog />
+            {/* <Blog /> */}
            
         </>
     );

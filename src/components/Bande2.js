@@ -14,9 +14,8 @@ const Bande2 = () => {
 
                     <div style={{ marginTop: 80 }}>
                         <Link to="/demo-gratuite">
-                        <Button style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} size="big" >démo gratuite</Button>
+                        <Button style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} size="big" >Démo gratuite</Button>
                         </Link>
-                        <Button style={{ backgroundColor: "#ffffff", color: "#9D9D9C", fontWeight: "bold", marginLeft: 10, border: "solid #9D9D9C 1px" }} size="big" >découvrir nos fonctionnalités</Button>
 
                     </div>
 

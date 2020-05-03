@@ -7,7 +7,7 @@ const Pricing = () => {
     return (
         <Card style={{width: "90%",padding:80,boxShadow: "none"}}  centered>
             <h1 style={{ fontSize: 50, color: "#0BA1C1" }}>Nos offres</h1>
-            <p style={{ fontSize: 20, color: "#757575" }}>Nos solutions s’adaptent à tous les secteurs d’activité.</p>
+            <p style={{ fontSize: 20, color: "#757575" }}>Le meilleur investissement pour votre activité</p>
 
             <Grid columns={3}>
             

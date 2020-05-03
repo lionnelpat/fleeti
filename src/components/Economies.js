@@ -13,11 +13,12 @@ const Economies = () => {
             <Grid columns={3} >
                 {economies.map((item,i) => <EconomieItem 
                 key={i}
-                img={item.img}
+                i={i}
                 prix={item.prix}
                 unit={item.unit}
                 text1={item.text1}
                 text2={item.text2}
+                color={item.color}
                 /> )}
             </Grid>
         </Card>

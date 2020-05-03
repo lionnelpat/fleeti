@@ -5,8 +5,9 @@ import { miniCards } from '../variables/MiniCardGroup';
 
 const MiniCardGroup = () => {
     return (
-        
-        <Card style={{width: "90%",padding:80,boxShadow: "none"}}  centered>
+        <div style={{width: "100%",backgroundColor:"#FAFBFB"}}>
+
+        <Card style={{width: "90%",padding:80,boxShadow: "none",backgroundColor:"#FAFBFB"}}  centered>
         <h1 style={{ fontSize: 50, color: "#0BA1C1" }}>Pourquoi nous choisir ?</h1>
         <p style={{ fontSize: 20, color: "#757575" }}>Un outil complet de pilotage de votre activité.</p>
             <Grid columns={3} >
@@ -19,12 +20,13 @@ const MiniCardGroup = () => {
                     img={item.img}
                     mt={i>2 ? 100: 0}
                     link={item.link}
-                
+                    
                 />)}
                </Grid.Row>
                
             </Grid>
         </Card>
+        </div>
     );
 };
 

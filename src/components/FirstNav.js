@@ -22,7 +22,7 @@ const FirstNav = () => {
                 )}
             <Menu.Item>
                 <Link to="/demo-gratuite">
-                <p style={{color: "black"}}>
+                <p style={{color: "#757575", fontWeight: "bold"}}>
                     Nous contacter
                 </p>
                 </Link>

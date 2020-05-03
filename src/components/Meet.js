@@ -7,7 +7,7 @@ const Meet = () => {
     return (
         <Card style={{width: "90%",padding:80,boxShadow: "none"}}  centered>
             <h1 style={{ fontSize: 50, color: "#0BA1C1" }}>Notre plus grande réussite ? Votre succès</h1>
-            <p style={{ fontSize: 20, color: "#757575" }}>Rencontrez nos Customer Success Manager et Développeurs</p>
+            <p style={{ fontSize: 20, color: "#757575" }}>Nous avons à coeur de vous satisfaire. Rencontrez ceux qui travaillent pour vous au quotidien !</p>
             <Grid columns={2}>
                 <Grid.Row>
 

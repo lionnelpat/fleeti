@@ -1,20 +1,20 @@
 export const economies = [
     {
-        img:"eco1",
+        color:"#0BA1C1",
         prix: "97.600",
         unit: "FCFA",
         text1: "économies sur la maintenance",
         text2: "Notre comparateur de prestataires vous permet d’obtenir les meilleures prestations au meilleur prix."
     },
     {
-        img:"eco2",
+        color:"#FF2407",
         prix:"75.400",
         unit:"FCFA",
         text1: "économies sur la consommation à l’arrêt",
         text2: "Réduisez les dépenses inutiles grâce à notre module de gestion de la consommation de carburant."
     },
     {
-        img:"eco3",
+        color:"#FFAC26",
         prix: "78.600",
         unit: "FCFA",
         text1: "économies sur l’optimisation des missions",

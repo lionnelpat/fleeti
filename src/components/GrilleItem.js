@@ -8,7 +8,7 @@ import grid5 from "../img/grid5.png"
 import grid6 from "../img/grid6.png"
 
 
-const GrilleItem = ({img,title, mt}) => {
+const GrilleItem = ({img, mt}) => {
     return (
        <Grid.Column style={{marginTop: mt}}>
            { img==="grid1" && <Image src={grid1} />}
@@ -18,7 +18,6 @@ const GrilleItem = ({img,title, mt}) => {
            { img==="grid5" && <Image src={grid5} />}
            { img==="grid6" && <Image src={grid6} />}
 
-            <p style={{fontWeight:"bold", fontSize: 20, textAlign:"center",marginTop: 20}}>{title}</p>
        </Grid.Column>
     );
 };

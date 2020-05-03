@@ -5,18 +5,18 @@ import { grille } from '../variables/Grille';
 
 const Grille = () => {
     return (
-        <div style={{backgroundColor:"#FAFBFB"}}>
+        <div>
 
-        <Card style={{width: "90%",padding:80,boxShadow: "none",backgroundColor:"#FAFBFB"}}  centered>
+        <Card style={{width: "90%",padding:80,boxShadow: "none"}}  centered>
              <h1 style={{ fontSize: 50, color: "#0BA1C1" }}>Prenez les meilleures décisions pour votre activité,
 que vous soyez une PME ou une multinationale</h1>
         <p style={{ fontSize: 20, color: "#757575" }}>Nos solutions s’adaptent à tous les secteurs d’activité.</p>
             <Grid columns={3}>
-                <Grid.Row>
+                <Grid.Row >
                     
                     {grille.map((item,i) => <GrilleItem
                         key={i}
-                        mt={i>2 ? 70 : 20}
+                        mt={i>2 ? 30 : 0}
                         img={item.img}
                         title={item.title}
                         /> )}
