@@ -9,14 +9,14 @@ const Pricing = () => {
             <h1 style={{ fontSize: 50, color: "#0BA1C1" }}>Nos offres</h1>
             <p style={{ fontSize: 20, color: "#757575" }}>Le meilleur investissement pour votre activité</p>
 
-            <Grid columns={3}>
+            <Grid columns={4}>
             
             
             {prix.map(((item,i) => <PricingBox
                 key={i}
                 color={item.color}
                 prix={item.prix}
-                height={item.height}
+                //height={item.height}
                 title={item.title}
                 unit={item.unit}
                 time={item.time}

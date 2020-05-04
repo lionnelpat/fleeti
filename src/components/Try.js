@@ -17,7 +17,10 @@ const Try = ({location}) => {
                     <Link to="/demo-gratuite">
                     <Button size="big" style={{ border: "solid white 2px", borderLeftWidth: 0, borderRightWidth: 0, borderTopWidth: 0, backgroundColor: "#0BA1C1", color: "white", borderRadius: 0 }}>Demandez une démo</Button>
                     </Link>
-                    <Button size="big" style={{ backgroundColor: "#0BA1C1", color: "white" }}>Contactez nous</Button>
+                    <Link to="/demo-gratuite">
+                        <Button size="big" style={{ backgroundColor: "#0BA1C1", color: "white" }}>Contactez nous</Button>
+                    
+                    </Link>
 
                 </div>}
             </Grid>

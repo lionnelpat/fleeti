@@ -38,7 +38,9 @@ const FirstNav = () => {
                  </Link>
             </Menu.Item>
             <Menu.Item>
-                <Button style={{backgroundColor: "#ffffff", color:"#DCA514",fontWeight:"bold", border: "solid #DCA514 1px"}} >Espace client</Button>
+                <Link to={process.env.ESPACE_CLIENT}>
+                    <Button style={{backgroundColor: "#ffffff", color:"#DCA514",fontWeight:"bold", border: "solid #DCA514 1px"}} >Espace client</Button>
+                </Link>
             </Menu.Item>
         </Menu.Menu>
     );
