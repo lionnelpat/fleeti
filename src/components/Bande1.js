@@ -13,8 +13,15 @@ const Bande1 = () => {
             <p style={{ fontSize: 20, color: "#757575" }}>La solution complète pour optimiser la gestion de vos véhicules et piloter votre entreprise.</p>
 
             <div>
-                <Input placeholder='Adresse e-mail' size={"big"} />
-                <Link to="/demo-gratuite">
+                <Input placeholder='Adresse e-mail' size={"big"} value={state.email} onChange={({target})=>setState({email: target.value})} />
+                <Link to={
+                    {
+                        pathname: "/demo-gratuite",
+                        state: {
+                            email: state.email
+                        }
+                    }
+                } >
                     <Button style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold", marginLeft: 10 }} size="big" >démo gratuite</Button>
                 </Link>
 
