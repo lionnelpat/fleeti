@@ -30,7 +30,7 @@ const DemoGratuite = ({location}) => {
     let handleSubmit = (e) => {
         e.preventDefault()
         setState({loading: true})
-        Axios.post("http://kulucar-api-test.cleverapps.io/api/v1/demo/create",{
+        Axios.post("https://kulucar-api-test.cleverapps.io/api/v1/demo/create",{
             firstname: state.nomEtPrenom,
             working_email: state.email,
             phone_number: state.numTel,
