@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Image, Input } from 'semantic-ui-react';
 import img1 from '../img/img1.png'
 import BandeLayout from './BandeLayout';
 import { Link } from 'react-router-dom';
 
 const Bande1 = () => {
+    const [state,setState] = useState({
+        email: ""
+    })
     return (
         <BandeLayout
             illustration={<Image src={img1} />}
