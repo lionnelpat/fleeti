@@ -2,12 +2,19 @@ import React from 'react';
 import { Card, Grid } from 'semantic-ui-react';
 import PricingBox from './PricingBox';
 import { prix } from '../variables/Pricing';
+import '../index.css'
 
 const Pricing = () => {
     return (
         <Card style={{width: "90%",padding:80,boxShadow: "none"}}  centered>
-            <h1 style={{ fontSize: 50, color: "#0BA1C1" }}>Nos offres</h1>
-            <p style={{ fontSize: 20, color: "#757575" }}>Le meilleur investissement pour votre activité</p>
+            <div style={{paddingLeft:20, marginBottom:10}}>
+                <div style={{marginBottom: 15}}>
+                <span style={{ fontSize: 30, fontWeight:"bold",  color: "#0BA1C1", fontFamily:'Muli' }}>Nos offres</span>
+            </div>
+            <div style={{height:48}}>
+                <span style={{ fontSize: 24, color: "#757575", fontWeight:'normal', fontFamily:'Robotto', fontFamily:'Roboto' }}>Le meilleur investissement pour votre activité</span>
+            </div>
+            </div>
 
             <Grid columns={4}>
             
