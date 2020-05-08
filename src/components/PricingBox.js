@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Grid, Button, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import "./PricingBox.css"
 
 
 const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, features }) => {
@@ -11,7 +12,7 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
     })
 
     let handleMouseIn = () => {
-        setBorder({ top: 10, others: 5 })
+        setBorder({ top: 13, others: 5 })
     }
     let handleMouseOut = () => {
         setBorder({ top: 8, others: 3 })
@@ -47,9 +48,7 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
                 <p><span style={{ fontSize: 30, fontWeight: "bold", fontFamily:'Muli', textAlign:'center' }}>{prix}</span> <span style={{ fontWeight: "normal", fontSize: 20 }}>{unit}</span></p>
                 <p><span style={{ fontSize: 18, color: "#929292", fontFamily:'Roboto' }}>{time}</span></p>
                 <p style={{marginTop: 35, marginBottom: 19, width:"75%", marginLeft:'auto', marginRight:'auto'}}><span style={{ fontSize: 22, color: "#6e6e6e", fontFamily:'Roboto', fontStyle:'Normal', lineHeight:1.2 }}>{text}</span></p>
-                <Link to="/demo-gratuite">
-                    <Button size="big" style={{ backgroundColor: color, color: "white" }}>Essai gratuit</Button>
-                </Link>
+            
                 <div style={{marginTop: 20,}}>
                      <p style={{ textAlign: "left", fontSize: 14, fontWeight: "bold", color: "#929292" }}> {text2}</p>
                 {features.map((ft, i) => <p style={{ textAlign: "left" }} key={i}>
