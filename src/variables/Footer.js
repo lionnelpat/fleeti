@@ -27,16 +27,7 @@ export const footer = [
             
         ]
     },
-    {
-        title: "Solutions par secteur",
-        categories: [
-            "Transport et logistique",
-            "Agroalimentaire",
-            "Construction",
-            "Gouvernement",
-            "Multinationale"
-        ]
-    },
+
     {
         title: "Reseaux sociaux",
         categories: [
