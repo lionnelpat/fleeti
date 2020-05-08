@@ -25,7 +25,7 @@ import pem1 from "../img/pem1.png"
 import pem2 from "../img/pem2.png"
 import pem3 from "../img/pem3.png"
 import { Link } from 'react-router-dom';
-
+import "./MiniCard.css"
 
 const MiniCard = ({ title, text, img, mt,knowMore=true, height=200,link="/" }) => {
     return (
@@ -64,20 +64,20 @@ const MiniCard = ({ title, text, img, mt,knowMore=true, height=200,link="/" }) =
 
                     </Grid.Column>
                     <Grid.Column style={{marginTop: knowMore ? 50 :  0}} >
-                            <p style={{ textAlign: "center",color: knowMore ? "black" : "white", fontWeight: "bold", fontSize: 20 }}>{title}</p>
+                            <p id="mcTitre" style={{ color: knowMore ? "black" : "white"}}>{title}</p>
                     </Grid.Column>
                 </Grid.Row>
           
                 <Grid.Row>
                     <Grid.Column>
-                        <p style={{ textAlign: "center",color: knowMore ? "black" : "white", fontSize: 20 }}>{text}</p>
+                        <p id="mcText" style={{ color: knowMore ? "black" : "white"}}>{text}</p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>
                     <Grid.Column  >
                         <Link to={link} style={{color:"black"}}>
-                        <p style={{ textAlign: "center", fontSize: 20, cursor: "pointer" }} >En savoir plus
-                                <Icon name="long arrow alternate right" size="large" /></p>
+                        <p id="mcText2" style={{ textAlign: "center", cursor: "pointer" }} >En savoir plus
+                                <Icon name="long arrow alternate right" color="black" size="large" /></p>
                         </Link>
                     </Grid.Column>
                 </Grid.Row>}

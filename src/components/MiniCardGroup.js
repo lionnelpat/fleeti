@@ -2,16 +2,18 @@ import React from 'react';
 import { Card, Grid } from 'semantic-ui-react';
 import MiniCard from './MiniCard';
 import { miniCards } from '../variables/MiniCardGroup';
+import "./MiniCardGroup.css"
+
 
 const MiniCardGroup = () => {
     return (
         <div style={{width: "100%",backgroundColor:"#FAFBFB"}}>
 
         <Card style={{width: "90%",padding:80,boxShadow: "none",backgroundColor:"#FAFBFB"}}  centered>
-        <h1 style={{ fontSize: 50, color: "#0BA1C1" }}>Pourquoi nous choisir ?</h1>
-        <p style={{ fontSize: 20, color: "#757575" }}>Un outil complet de pilotage de votre activité.</p>
+        <p id="mcgtitre">Pourquoi nous choisir ?</p>
+        <p id="mcgtext">Un outil complet de pilotage de votre activité.</p>
             <Grid columns={3} >
-               <Grid.Row>
+               <Grid.Row style={{marginTop: 30}}>
 
                 {miniCards.map((item,i) =>  <MiniCard
                     key={i}

@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Grid } from 'semantic-ui-react';
 import meet1 from "../img/meet1.png"
 import meet2 from "../img/meet2.png"
-
+import "./MeetItem.css"
 
 const MeetItem = ({ img, name,role,description }) => {
     return (
@@ -15,11 +15,11 @@ const MeetItem = ({ img, name,role,description }) => {
                         {img === "meet2" && <Image src={meet2} />}
                     </Grid.Column>
                     <Grid.Column width={11}>
-                        <p style={{fontSize: 20, fontWeight:"bold"}}>{name}  
+                        <p id="miName">{name}  
                         <br/>
-                        <span style={{fontWeight:"normal",fontSize: 16}}>{role}</span>
+                        <span id="miRole">{role}</span>
                         </p>
-                        <p style={{fontSize: 15}}>{description}</p>
+                        <p id="miDesc">{description}</p>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
