@@ -13,7 +13,7 @@ const Bande2 = () => {
                     <p id="b2titre" style={{textAlign: "left", alignSelf: "flex-start"}}>Fleeti s'intègre à vos outils</p>
                     <p id="b2text">Nous développons des passerelles entre vos logiciels et notre outils, pas besoin de changer vos habitudes !</p>
 
-                    <div style={{ marginTop: 50, alignSelf:"flex-start" }}>
+                    <div style={{ marginTop: 10 }}>
                         <Link to="/demo-gratuite">
                         <Button style={{backgroundColor: "#0BA1C1" ,color: "white", width: 138,padding: 10, height: 50.12}} size="big" >démo gratuite</Button>
                         </Link>
