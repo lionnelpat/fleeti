@@ -20,8 +20,10 @@ const MiniCardGroup = () => {
                     title={item.title}
                     text={item.text}
                     img={item.img}
-                    mt={i>2 ? 100: 0}
+                    mt={i>2 ? 30: 0}
                     link={item.link}
+                    height={i===4 ? 187: 200}
+                    mt2={i === 4 ? 43: undefined}
                     
                 />)}
                </Grid.Row>
