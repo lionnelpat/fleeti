@@ -7,7 +7,7 @@ import "./PricingBox.css"
 const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, features }) => {
 
     const [border, setBorder] = useState({
-        top: 8,
+        top: 10,
         others: 3
     })
 
@@ -26,8 +26,8 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
             justifyContent: "center" 
             }}>
             <div 
-            onMouseLeave={handleMouseOut} 
-            onMouseEnter={handleMouseIn} 
+            //onMouseLeave={handleMouseOut} 
+            //onMouseEnter={handleMouseIn} 
             style={{ 
                 //width: "90%", 
                 margin:-8,
@@ -36,7 +36,8 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
                 borderRightWidth: border.others, 
                 borderBottomWidth: border.others, 
                 borderTopWidth: border.top, 
-                borderRadius: 15, 
+                borderTopLeftRadius: 15, 
+                borderTopRightRadius: 15, 
                 textAlign: "center", 
                 paddingTop: 30, 
                 paddingBottom: 30, 
@@ -47,7 +48,7 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
                 <p style={{marginBottom:25}}><span style={{ textAlign: "center", fontSize: 24, marginTop: 10, fontFamily:'RobotoBold' }}>{title}</span></p>
                 <p><span style={{ fontSize: 30, fontWeight: "bold", fontFamily:'Muli', textAlign:'center' }}>{prix}</span> <span style={{ fontWeight: "normal", fontSize: 20 }}>{unit}</span></p>
                 <p><span style={{ fontSize: 18, color: "#929292", fontFamily:'Roboto' }}>{time}</span></p>
-                <p style={{marginTop: 35, marginBottom: 19, width:"75%", marginLeft:'auto', marginRight:'auto'}}><span style={{ fontSize: 22, color: "#6e6e6e", fontFamily:'Roboto', fontStyle:'Normal', lineHeight:1.2 }}>{text}</span></p>
+                <p style={{marginTop: 35, marginBottom: 19, width:"70%", marginLeft:'auto', marginRight:'auto'}}><span style={{ fontSize: 20, color: "#6e6e6e", fontFamily:'Roboto', fontStyle:'Normal', lineHeight:1.2 }}>{text}</span></p>
             
                 <div style={{marginTop: 20,}}>
                      <p style={{ textAlign: "left", fontSize: 14, fontWeight: "bold", color: "#929292" }}> {text2}</p>
