@@ -2,8 +2,6 @@ import React from 'react';
 import { Card, Grid } from 'semantic-ui-react';
 import MiniCard from './MiniCard';
 import { miniCards } from '../variables/MiniCardGroup';
-import "./MiniCardGroup.css"
-
 
 const MiniCardGroup = () => {
     return (

@@ -25,7 +25,7 @@ import pem1 from "../img/pem1.png"
 import pem2 from "../img/pem2.png"
 import pem3 from "../img/pem3.png"
 import { Link } from 'react-router-dom';
-import "./MiniCard.css"
+
 
 const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = "/", mt2 }) => {
     return (
@@ -63,22 +63,21 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = 
                         </div>
 
                     </Grid.Column>
-                    <Grid.Column style={{ position: "absolute", bottom: 0 }} >
-                        <p id="mcTitre" style={{ color: knowMore ? "black" : "white" }}>{title}</p>
+                    <Grid.Column style={{ marginTop: knowMore ? 50 : 0 }} >
+                        <p style={{ textAlign: "center", color: knowMore ? "black" : "white", fontWeight: "bold", fontSize: 20 }}>{title}</p>
                     </Grid.Column>
                 </Grid.Row>
 
-                <Grid.Row style={{ marginTop: 10 }}>
-                    <Grid.Column style={{ height: 115 }}>
-                        <p id="mcText" style={{ color: "#101014" }}>{text}</p>
+                <Grid.Row>
+                    <Grid.Column>
+                        <p style={{ textAlign: "center", color: knowMore ? "black" : "white", fontSize: 20 }}>{text}</p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>
                     <Grid.Column  >
                         <Link to={link} style={{ color: "black" }}>
-                            <p id="mcText2" style={{ textAlign: "center", cursor: "pointer", color: '#666666' }} >En savoir plus
-
-                        <span><Icon name="long arrow alternate right" style={{ marginLeft: 5, color: "#00907E" }} /></span> </p>
+                            <p style={{ textAlign: "center", fontSize: 20, cursor: "pointer" }} >En savoir plus
+                                <Icon name="long arrow alternate right" size="large" /></p>
                         </Link>
                     </Grid.Column>
                 </Grid.Row>}
