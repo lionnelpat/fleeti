@@ -13,17 +13,17 @@ import { Icon } from 'semantic-ui-react';
 const LandingPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    },[])
-    const logos= useRef(null)
+    }, [])
+    const logos = useRef(null)
     return (
         <>
             <Bande1 />
-            <p style={{textAlign: "center"}}>
-            <Icon name="angle down"  style={{fontSize: 50, color: "#757575", cursor: "pointer"}} onClick={() => logos.current.scrollIntoView({behavior: 'smooth'})} />
+            <p style={{ textAlign: "center" }}>
+                <Icon name="angle down" style={{ fontSize: 50, color: "#757575", cursor: "pointer" }} onClick={() => logos.current.scrollIntoView({ behavior: 'smooth' })} />
 
             </p>
             <div ref={logos}>
-            <LogosPartners />
+                <LogosPartners />
             </div>
             <Economies />
             <Bande2 />
@@ -32,7 +32,7 @@ const LandingPage = () => {
             <Pricing />
             <Meet />
             {/* <Blog /> */}
-           
+
         </>
     );
 };
