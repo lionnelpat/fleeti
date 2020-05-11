@@ -1,7 +1,10 @@
 import React from 'react';
-import { Grid, Card } from 'semantic-ui-react';
+import { Grid, Card, Image } from 'semantic-ui-react';
 import GrilleItem from './GrilleItem';
 import { grille } from '../variables/Grille';
+import "./Grille.css"
+import quote from "../img/quote.png"
+
 
 const Grille = () => {
     return (
