@@ -27,14 +27,14 @@ import pem3 from "../img/pem3.png"
 import { Link } from 'react-router-dom';
 
 
-const MiniCard = ({ title, text, img, mt,knowMore=true, height=200,link="/" }) => {
+const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = "/", mt2 }) => {
     return (
 
 
-        <Grid.Column style={{ textAlign: "center", display: "flex", justifyContent: "center",marginTop:mt}}>
+        <Grid.Column style={{ textAlign: "center", justifyContent: "center", marginTop: mt2 || mt, height: 500 }}>
             <Grid columns={1}>
                 <Grid.Row>
-                    <Grid.Column style={{ display: "flex", justifyContent: "center", height:height/1.5 }}>
+                    <Grid.Column style={{ display: "flex", justifyContent: "center" }}>
                         <div style={{ height }}>
                             {img === "mc1" && <Image src={mc1} />}
                             {img === "mc2" && <Image src={mc2} />}
@@ -63,21 +63,22 @@ const MiniCard = ({ title, text, img, mt,knowMore=true, height=200,link="/" }) =
                         </div>
 
                     </Grid.Column>
-                    <Grid.Column style={{marginTop: knowMore ? 50 :  0}} >
-                            <p style={{ textAlign: "center",color: knowMore ? "black" : "white", fontWeight: "bold", fontSize: 20 }}>{title}</p>
+                    <Grid.Column style={{ position: "absolute", bottom: 0 }} >
+                        <p id="mcTitre" style={{ color: knowMore ? "black" : "white" }}>{title}</p>
                     </Grid.Column>
                 </Grid.Row>
-          
-                <Grid.Row>
-                    <Grid.Column>
-                        <p style={{ textAlign: "center",color: knowMore ? "black" : "white", fontSize: 20 }}>{text}</p>
+
+                <Grid.Row style={{ marginTop: 10 }}>
+                    <Grid.Column style={{ height: 115 }}>
+                        <p id="mcText" style={{ color: "#101014" }}>{text}</p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>
                     <Grid.Column  >
-                        <Link to={link} style={{color:"black"}}>
-                        <p style={{ textAlign: "center", fontSize: 20, cursor: "pointer" }} >En savoir plus
-                                <Icon name="long arrow alternate right" size="large" /></p>
+                        <Link to={link} style={{ color: "black" }}>
+                            <p id="mcText2" style={{ textAlign: "center", cursor: "pointer", color: '#666666' }} >En savoir plus
+
+                        <span><Icon name="long arrow alternate right" style={{ marginLeft: 5, color: "#00907E" }} /></span> </p>
                         </Link>
                     </Grid.Column>
                 </Grid.Row>}
