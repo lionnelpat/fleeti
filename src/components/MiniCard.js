@@ -63,21 +63,22 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = 
                         </div>
 
                     </Grid.Column>
-                    <Grid.Column style={{ marginTop: knowMore ? 50 : 0 }} >
+                    <Grid.Column style={{ marginTop: 0 }} >
                         <p style={{ textAlign: "center", color: knowMore ? "black" : "white", fontWeight: "bold", fontSize: 20 }}>{title}</p>
                     </Grid.Column>
                 </Grid.Row>
 
                 <Grid.Row>
                     <Grid.Column>
-                        <p style={{ textAlign: "center", color: knowMore ? "black" : "white", fontSize: 20 }}>{text}</p>
+                        <p style={{ textAlign: "center", color: knowMore ? "#101014" : "white", fontSize: 20, fontFamily: 'Muli', marginLeft: 12, marginRight: 12 }}>{text}</p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>
                     <Grid.Column  >
                         <Link to={link} style={{ color: "black" }}>
-                            <p style={{ textAlign: "center", fontSize: 20, cursor: "pointer" }} >En savoir plus
-                                <Icon name="long arrow alternate right" size="large" /></p>
+                            <p id="mcText2" style={{ textAlign: "center", cursor: "pointer", color: '#666666', fontSize: 18 }} >En savoir plus
+
+                        <span><Icon name="long arrow alternate right" style={{ marginLeft: 5, color: "#00907E" }} /></span> </p>
                         </Link>
                     </Grid.Column>
                 </Grid.Row>}

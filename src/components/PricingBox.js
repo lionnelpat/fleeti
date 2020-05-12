@@ -57,8 +57,8 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
                     {prix == 'Sur mesure' ? <p style={{ marginBottom: 70 }}><span style={{ fontSize: 30, fontWeight: "bold", fontFamily: 'Muli', textAlign: 'center' }}>{prix}</span> <span style={{ fontWeight: "normal", fontSize: 20 }}>{unit}</span></p>
                         : <p><span style={{ fontSize: 30, fontWeight: "bold", fontFamily: 'Muli', textAlign: 'center' }}>{prix}</span> <span style={{ fontWeight: "normal", fontSize: 20 }}>{unit}</span></p>
                     }
-                    <p><span style={{ fontSize: 16, color: "rgba(0, 0, 0, 0.57)", fontFamily: 'Roboto' }}>{time}</span></p>
-                    <p style={{ marginTop: 35, marginBottom: 35, width: "70%", marginLeft: 'auto', marginRight: 'auto' }}><span style={{ fontSize: 20, color: "#6e6e6e", fontFamily: 'Roboto', fontStyle: 'Normal', lineHeight: 1.2 }}>{text}</span></p>
+                    <p><span style={{ fontSize: 16, color: "rgba(0, 0, 0, 0.57)", fontFamily: 'Muli' }}>{time}</span></p>
+                    <p style={{ marginTop: 35, marginBottom: 35, width: "70%", marginLeft: 'auto', marginRight: 'auto' }}><span style={{ fontSize: 20, color: "#6e6e6e", fontFamily: 'Muli', fontStyle: 'Normal', lineHeight: 1.2 }}>{text}</span></p>
 
                     <div style={{ marginTop: 20 }}>
                         <p style={{ textAlign: "left", fontSize: 14, fontWeight: "bold", color: "#929292" }}> {text2}</p>

@@ -10,13 +10,13 @@ const Grille = () => {
     return (
         <div>
 
-            <Card style={{ width: "90%", padding: 50, boxShadow: "none" }} centered>
+            <Card style={{ width: "90%", padding: 60, boxShadow: "none" }} centered>
                 <div style={{ marginBottom: 10 }}>
                     <div style={{ marginBottom: 15, width: '64%' }}>
-                        <span style={{ fontSize: 30, fontWeight: "bold", color: "#0BA1C1", fontFamily: 'Muli', lineHeight: 1.4 }}>Prenez les meilleures décisions pour votre activité,que vous soyez une PME ou une multinationale</span>
+                        <span style={{ fontSize: 30, fontWeight: "bold", color: "#0BA1C1", fontFamily: 'Muli', lineHeight: 1.4 }}>Prenez les meilleures décisions pour votre activité, <br />que vous soyez une PME ou une multinationale</span>
                     </div>
                     <div style={{ height: 55 }}>
-                        <span style={{ fontSize: 24, color: "#757575", fontWeight: 'normal', fontFamily: 'Robotto', fontFamily: 'Roboto' }}>Nos solutions s’adaptent à tous les secteurs d’activité.</span>
+                        <span style={{ fontSize: 24, color: "#757575", fontWeight: 'normal', fontFamily: 'Muli' }}>Nos solutions s’adaptent à tous les secteurs d’activité.</span>
                     </div>
                 </div>
 
