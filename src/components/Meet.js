@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, Grid } from 'semantic-ui-react';
-import MeetItem from './MeetItem';
-import { meet } from '../variables/Meet';
+import { Card } from 'semantic-ui-react';
+// import MeetItem from './MeetItem';
+// import { meet } from '../variables/Meet';
 import "./Meet.css"
 import './Style.css'
 import meet1 from "../img/meet1.png"
@@ -15,7 +15,7 @@ const Meet = () => {
                 <span style={{ fontSize: 30, fontWeight:"bold",  color: "#0BA1C1", fontFamily:'Muli' }}>Notre plus grande réussite ? Votre succès</span>
             </div>
             <div style={{height:48}}>
-                <span style={{ fontSize: 24, color: "#757575", fontWeight:'normal', fontFamily:'Robotto', fontFamily:'Roboto' }}>Nous avons à coeur de vous satisfaire. Rencontrez ceux qui travaillent pour vous au quotidien !</span>
+                <span style={{ fontSize: 24, color: "#757575", fontWeight:'normal', fontFamily:'Roboto' }}>Nous avons à coeur de vous satisfaire. Rencontrez ceux qui travaillent pour vous au quotidien !</span>
             </div>
             </div>
             <div style={{width:'100%', height:250}}>
@@ -30,7 +30,7 @@ const Meet = () => {
                         <p style={{fontSize:15, fontFamily:'Muli', fontWeight:'normal',fontStyle:'normal', color:'#04212E'}}>Amadou est responsable de l’accompagnement des utilisateurs Fleeti pour le déploiement au sein de leur entreprise. Expert de la relation client, il les aide à tirer le maxium de nos outils.</p>
                     </div>
                 </div>
-                
+
                  <div style={{width: '50%', height: '100%', float: 'right' }}>
                     <div style={{ width: '45%', height: '100%', float: 'left',display: "flex",justifyContent: "center",alignItems: "center"}}>
                         <img style={{justifyContent:'center', alignItems:'center', alignContent:'center'}} src={meet2} alt="" />
@@ -52,7 +52,7 @@ const Meet = () => {
                         name={item.name}
                         description={item.description}
                         role={item.role}
-                        
+
                         />)}
                 </Grid.Row>
             </Grid> */}
