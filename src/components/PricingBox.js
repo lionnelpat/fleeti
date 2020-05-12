@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Grid, Button, Icon } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { Grid, Icon } from 'semantic-ui-react';
+// import { Link } from 'react-router-dom';
 import "./PricingBox.css"
 
 

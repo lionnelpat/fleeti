@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, Grid } from 'semantic-ui-react';
-import MeetItem from './MeetItem';
-import { meet } from '../variables/Meet';
+import { Card } from 'semantic-ui-react';
+// import MeetItem from './MeetItem';
+// import { meet } from '../variables/Meet';
 import "./Meet.css"
 import './Style.css'
 import meet1 from "../img/meet1.png"
@@ -52,7 +52,7 @@ const Meet = () => {
                         name={item.name}
                         description={item.description}
                         role={item.role}
-                        
+
                         />)}
                 </Grid.Row>
             </Grid> */}
