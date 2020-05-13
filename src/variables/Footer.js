@@ -24,7 +24,7 @@ export const footer = [
         ],
         categoriesLinks: [
             "/comparaison-de-prestaires",
-            
+
         ]
     },
 
@@ -36,5 +36,5 @@ export const footer = [
             "LinkedIn",
         ]
     },
-    
+
 ]
