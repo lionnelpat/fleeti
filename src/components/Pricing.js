@@ -12,13 +12,13 @@ const Pricing = () => {
                 <span style={{ fontSize: 30, fontWeight:"bold",  color: "#0BA1C1", fontFamily:'Muli' }}>Nos offres</span>
             </div>
             <div style={{height:70}}>
-                <span style={{ fontSize: 24, color: "#757575", fontWeight:'normal', fontFamily:'Robotto', fontFamily:'Roboto' }}>Le meilleur investissement pour votre activité</span>
+                <span style={{ fontSize: 24, color: "#757575", fontWeight:'normal', fontFamily:'Roboto' }}>Le meilleur investissement pour votre activité</span>
             </div>
             </div>
 
             <Grid columns={4}>
-            
-            
+
+
             {prix.map(((item,i) => <PricingBox
                 key={i}
                 color={item.color}

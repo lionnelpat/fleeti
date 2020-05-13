@@ -6,17 +6,10 @@ import "./PricingBox.css"
 
 const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, features }) => {
 
-    const [border, setBorder] = useState({
+    const [border] = useState({
         top: 30,
         others: 3
     })
-
-    let handleMouseIn = () => {
-        setBorder({ top: 13, others: 5 })
-    }
-    let handleMouseOut = () => {
-        setBorder({ top: 8, others: 3 })
-    }
 
     return (
         <Grid.Column
@@ -26,10 +19,8 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
                 justifyContent: "center"
             }}>
             <div
-                //onMouseLeave={handleMouseOut} 
-                //onMouseEnter={handleMouseIn} 
                 style={{
-                    //width: "90%", 
+                    //width: "90%",
                     margin: -8,
                     border: `solid ${color} 3px`,
                     borderLeftWidth: border.others,
@@ -43,16 +34,16 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
                 }}>
                 <div style={{
                     backgroundColor: '#FFF',
-                    borderTopLeftRadius: 15,
-                    borderTopRightRadius: 15,
+                    borderTopLeftRadius: 10,
+                    borderTopRightRadius: 10,
                     paddingTop: 40,
-                    //paddingBottom: 70, 
+                    //paddingBottom: 70,
                     paddingLeft: 15,
                     paddingRight: 15,
                     marginTop: -10
                 }}>
                     <p style={{ marginBottom: 35 }}><span style={{ textAlign: "center", fontSize: 24, marginTop: 10, fontFamily: 'RobotoBold' }}>{title}</span></p>
-                    {prix == 'Sur mesure' ? <p style={{ marginBottom: 70 }}><span style={{ fontSize: 30, fontWeight: "bold", fontFamily: 'Muli', textAlign: 'center' }}>{prix}</span> <span style={{ fontWeight: "normal", fontSize: 20 }}>{unit}</span></p>
+                    {prix === 'Sur mesure' ? <p style={{ marginBottom: 70 }}><span style={{ fontSize: 30, fontWeight: "bold", fontFamily: 'Muli', textAlign: 'center' }}>{prix}</span> <span style={{ fontWeight: "normal", fontSize: 20 }}>{unit}</span></p>
                         : <p><span style={{ fontSize: 30, fontWeight: "bold", fontFamily: 'Muli', textAlign: 'center' }}>{prix}</span> <span style={{ fontWeight: "normal", fontSize: 20 }}>{unit}</span></p>
                     }
                     <p><span style={{ fontSize: 16, color: "rgba(0, 0, 0, 0.57)", fontFamily: 'Roboto' }}>{time}</span></p>
