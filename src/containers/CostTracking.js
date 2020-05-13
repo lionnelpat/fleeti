@@ -6,14 +6,14 @@ import { costTracking } from '../variables/CostTracking.js';
 const CostTracking = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    },[])
+    }, [])
     return (
         <>
             <ComonLayout
                 data={costTracking.data}
                 data2={costTracking.data2}
                 title3={costTracking.title3}
-                text="Intégrez Fleeti à vos outils existants (géolocalisation, cartes carburant, comptabilité.. etc) et ayez une vision claire de la productivité de votre parc de véhicules."
+                text="Fleeti s'intègre à vos outils existants (géolocalisation, cartes carburant, comptabilité... ) pour vous donner une vision claire de l'éfficacité de votre parc de véhicules."
                 title1="Tableau de suivi des coûts"
                 title2="Toutes les données vitales à votre entreprise en un seul endroit"
                 img1="cost_tracking"

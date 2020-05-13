@@ -27,7 +27,7 @@ import pem3 from "../img/pem3.png"
 import { Link } from 'react-router-dom';
 import "./MiniCard.css"
 
-const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = "/", mt2 }) => {
+const MiniCard = ({ title, text, img, mt, knowMore = true, height = 175, link = "/", mt2 }) => {
     return (
 
 
@@ -64,13 +64,13 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = 
 
                     </Grid.Column>
                     <Grid.Column style={{ position: "absolute", bottom: 0 }} >
-                        <p id="mcTitre" style={{ color: knowMore ? "black" : "white" }}>{title}</p>
+                        <p id="mcTitre" style={{ color: '#FFF', fontWeight: 'bold', fontSize: 24, fontFamily: 'Muli' }}>{title}</p>
                     </Grid.Column>
                 </Grid.Row>
 
-                <Grid.Row style={{ marginTop: 10 }}>
-                    <Grid.Column style={{ height: 115 }}>
-                        <p id="mcText" style={{ color: "#101014" }}>{text}</p>
+                <Grid.Row style={{ paddingTop: 0 }}>
+                    <Grid.Column>
+                        <p id="mcText" style={{ color: "#FFF", fontSize: 18, fontFamily: 'Muli', marginTop: 30 }}>{text}</p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>

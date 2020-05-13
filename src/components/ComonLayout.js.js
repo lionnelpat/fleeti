@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import BandeLayout from './BandeLayout';
 import { Image, Button, Input } from 'semantic-ui-react';
 import BandeLayout2 from './BandeLayout2';
+import BandeLayout4 from './BandeLayout4';
 import cost_tracking from "../img/cost_tracking.png"
 import geolocalisation from "../img/geolocalisation.png"
 import planning_et_missions from "../img/planning_et_missions.png"
@@ -20,22 +21,29 @@ import { Link } from 'react-router-dom';
 
 
 
-const ComonLayout = ({ title1, title2, text, data=[], data2=[], title3,img2,img1, temoignage, speaker }) => {
+const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2, img1, temoignage, speaker }) => {
     return (
         <>
-            <BandeLayout illustration={
+            <BandeLayout4 illustration={
                 <div style={{ textAlign: "center" }}>
-                    {img1 === "cost_tracking" && <Image src={cost_tracking} />}
-                    {img1 === "geolocalisation" && <Image src={geolocalisation} />}
-                    {img1 === "fuel_management" && <Image src={fuel_management} />}
-                    {img1 === "planning_et_missions" && <Image src={planning_et_missions} />}
-                    {img1 === "alertes" && <Image src={alertes} />}
-                    {img1 === "comparaisonDePrestaires" && <Image src={comparaisonDePrestaires} />}
+                    {img1 === "cost_tracking" && <Image src={cost_tracking} style={styles.imgStyle} />}
+                    {img1 === "geolocalisation" && <Image src={geolocalisation} style={styles.imgStyle} />}
+                    {img1 === "fuel_management" && <Image src={fuel_management} style={styles.imgStyle} />}
+                    {img1 === "planning_et_missions" && <Image src={planning_et_missions} style={styles.imgStyle} />}
+                    {img1 === "alertes" && <Image src={alertes} style={styles.imgStyle} />}
+                    {img1 === "comparaisonDePrestaires" && <Image src={comparaisonDePrestaires} style={styles.imgStyle} />}
                 </div>
             } >
-                <h1 style={{ fontSize: 50, color: "#0BA1C1" }}>{title1}</h1>
-                <h2>{title2}</h2>
-                <p style={{ fontSize: 20, color: "#757575" }}>{text}</p>
+                <p style={{ fontSize: 40, color: "#0BA1C1", fontFamily: 'Muli', fontWeight: 'bold', marginBottom: 0 }}>{title1}</p>
+                <p style={{
+                    fontSize: 25,
+                    fontFamily: 'Muli',
+                    lineHeight: 1.1,
+                    marginRight: 90,
+                    fontWeight: 'bold',
+                    marginBottom: 0
+                }}>{title2}</p>
+                <p style={{ fontSize: 24, fontFamily: 'Muli', color: "#757575", lineHeight: 1.2, marginTop: 20, marginBottom: 20 }}>{text}</p>
 
                 {/* <div>
                     <Button style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} size="big" >Voir démo</Button>
@@ -49,52 +57,57 @@ const ComonLayout = ({ title1, title2, text, data=[], data2=[], title3,img2,img1
                 <p style={{ fontSize: 15, color: "#757575", marginTop: 20 }}>
                     Essayez fleeti gratuitement pendant 30 jours, aucune carte de crédit n’est requise. En saisissant votre email, vous acceptez de recevoir des e-mails de la part de fleeti.
                 </p>
-            </BandeLayout>
+            </BandeLayout4>
             <BandeLayout2
                 data={data}
             />
 
-        <h1 style={{textAlign: "center"}}>{title3}</h1>
-        <BandeLayout
-            illustration={
-                <>
-              {data2.map((item,i) => (
-                <Fragment  key={i}>
-                    <p style={{fontSize: 20, fontWeight: "bold"}}> <Image src={tiretOrange} /> {item.title} <br/>
-                        <span style={{fontSize: 15,color:"#757575"}}>{item.text}</span>
-                    </p>
-                </Fragment>
-            ))  }   
-            <p style={{fontSize:25, fontWeight:"bold",color:"#FFAC26"}}>Prêt à vous lancer ?</p>
-            <Link to="/demo-gratuite">
-            <Button style={{ backgroundColor: "#FFAC26", color: "white", fontWeight: "bold"}} size="big" >Profitez de notre version d'essai gratuite</Button>
-            </Link>
+            <div style={{ width: '80%', margin: 'auto' }}><h1 style={{ textAlign: "left", color: '#0BA1C1', fontSize: 35, fontFamily: 'Muli', fontWeight: 'bold' }}>{title3}</h1></div>
 
-            </>
-            }
-        >
-            {img2==="big_ct" && <Image src={big_ct}/>}
-            {img2==="big_geoloc" && <Image src={big_geoloc}/>}
-            {img2==="big_fm" && <Image src={big_fm}/>}
-            {img2==="big_a" && <Image src={big_a}/>}
-            {img2==="big_cdp" && <Image src={big_cdp}/>}
-            {img2==="big_pem" && <Image src={big_pem}/>}
-        </BandeLayout>
+            <BandeLayout
+                illustration={
+                    <>
+                        {data2.map((item, i) => (
+                            <Fragment key={i}>
+                                <p style={{ fontSize: 20, fontWeight: "bold" }}> <Image src={tiretOrange} /> <span style={{ fontSize: 24, fontFamily: 'Muli', color: '#0BA1C1', fontWeight: 'bold' }}>{item.title}</span> <br />
+                                    <p style={{ fontSize: 18, fontWeight: 'normal', fontFamily: 'Muli', color: "#757575" }}>{item.text}</p>
+                                </p>
+                            </Fragment>
+                        ))}
+                        <div>
+                            <p style={{ fontSize: 25, fontWeight: "bold", color: "#FFAC26" }}>Prêt à vous lancer ?</p>
+                            <Link to="/demo-gratuite">
+                                <Button style={{ backgroundColor: "#FFAC26", color: "white", fontWeight: "bold" }} size="big" >Profitez de notre version d'essai gratuite</Button>
+                            </Link>
+                        </div>
 
-        <div style={{textAlign: "center", fontSize: 25, display:"flex", justifyContent:"center"}}>
-        <Image src={quote} style={{position: "absolute", right: "auto", left: "30vw"}} />
-            <p style={{width: "40%",color: "#04212E"}}> {temoignage} <br/><br/>
-        <span style={{color:"#0BA1C1", fontWeight: "bold"}}>{speaker}</span>
-            </p>
-        </div>
-        {/* <div style={{textAlign:"center"}}>
-            <h1 style={{color: "#0BA1C1", fontSize:50,marginTop: 20}}>Prêt à débuter ?</h1>
-            <Button style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold"}} size="big" >Voir Démo</Button>
+                    </>
+                }
+            >
+                {img2 === "big_ct" && <Image src={big_ct} style={styles.bandeLayoutImgStyle} />}
+                {img2 === "big_geoloc" && <Image src={big_geoloc} style={styles.bandeLayoutImgStyle} />}
+                {img2 === "big_fm" && <Image src={big_fm} style={styles.bandeLayoutImgStyle} />}
+                {img2 === "big_a" && <Image src={big_a} style={styles.bandeLayoutImgStyle} />}
+                {img2 === "big_cdp" && <Image src={big_cdp} style={styles.bandeLayoutImgStyle} />}
+                {img2 === "big_pem" && <Image src={big_pem} style={styles.bandeLayoutImgStyle} />}
+            </BandeLayout>
 
-        </div> */}
-        <div style={{paddingTop: 50}} />
+            <div style={{ width: "50%", display: "flex", position: "relative", marginTop: 120, marginLeft: 'auto', marginRight: 'auto' }} >
+                <Image src={quote} style={{ position: "absolute", top: -35, left: -70 }} />
+                <p id="grText2" >
+                    {temoignage}
+                    <p style={{ textAlign: "center", fontWeight: "bold", color: "#0BA1C1", margin: 60 }}>{speaker}</p>
+                </p>
+            </div>
+
+            <div style={{ paddingTop: 50 }} />
         </>
     );
 };
 
 export default ComonLayout;
+
+const styles = {
+    imgStyle: { width: '90%', float: 'right', paddingTop: 25 },
+    bandeLayoutImgStyle: { height: 485 }
+}
