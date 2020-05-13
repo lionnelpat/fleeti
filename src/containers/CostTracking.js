@@ -20,6 +20,7 @@ const CostTracking = () => {
                 img2={costTracking.img2}
                 temoignage="“Bien que nous soyons une PME avec un nombre limité de véhicules, Fleeti a pris le temps de comprendre notre fonctionnement et nous a permis d’économiser plus de 20% sur nos dépenses d’entretien par rapport à l’année dernière”"
                 speaker="F.Baudoin, Soram Ouest Africa "
+                mr={90}
             />
         </>
     );

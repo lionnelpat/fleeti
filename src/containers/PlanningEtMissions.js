@@ -5,7 +5,7 @@ import { planningEtMissions } from '../variables/PlanningEtMissions.js';
 const PlanningEtMissions = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    },[])
+    }, [])
     return (
         <>
             <ComonLayout
@@ -19,6 +19,7 @@ const PlanningEtMissions = () => {
                 img2={planningEtMissions.img2}
                 temoignage="“’Avoir la possibilité d’établir nos planning via Fleeti, de communiquer en temps réel avec nos chauffeurs et de suivre leur progression a complètement changé notre organisation et la façon dont nous établissons nos tournées de livraison”"
                 speaker="Pol Vuillier, France Sapion Bio "
+                mr={90}
             />
         </>
     );

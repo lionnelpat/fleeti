@@ -5,7 +5,7 @@ import { fuelManagement } from '../variables/FuelManagement.js';
 const FuelManagement = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
-    },[])
+    }, [])
     return (
         <>
             <ComonLayout
@@ -19,6 +19,7 @@ const FuelManagement = () => {
                 img2={fuelManagement.img2}
                 temoignage="“Les dépenses en carburant représentent 40% du coût total de détention d’un véhicule professionel”"
                 speaker="Deloitte “Fleet Management in Europe”, 2017"
+                mr={60}
             />
         </>
     );

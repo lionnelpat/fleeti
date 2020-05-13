@@ -25,7 +25,7 @@ function createMarkup(title) {
 }
 
 
-const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2, img1, temoignage, speaker }) => {
+const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2, img1, temoignage, speaker, mr }) => {
     return (
         <>
             <BandeLayout4 illustration={
@@ -38,12 +38,12 @@ const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2
                     {img1 === "comparaisonDePrestaires" && <Image src={comparaisonDePrestaires} style={styles.imgStyle} />}
                 </div>
             } >
-                <p style={{ fontSize: 40, color: "#0BA1C1", fontFamily: 'Muli', fontWeight: 'bold', marginBottom: 0 }}>{title1}</p>
+                <p style={{ fontSize: 39, color: "#0BA1C1", fontFamily: 'Muli', fontWeight: 'bold', marginBottom: 0, lineHeight: 1.2 }}>{title1}</p>
                 <p style={{
                     fontSize: 24,
                     fontFamily: 'Muli',
                     lineHeight: 1.1,
-                    marginRight: 90,
+                    marginRight: { mr },
                     fontWeight: 'bold',
                     marginBottom: 0
                 }}>{title2}</p>
@@ -59,7 +59,7 @@ const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2
                     <Button style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold", marginLeft: 10 }} size="big" >démo gratuite</Button>
                 </div>
                 <p style={{ fontSize: 15, color: "#757575", marginTop: 20 }}>
-                    Essayez fleeti gratuitement pendant 30 jours, aucune carte<br /> de crédit n’est requise. En saisissant votre email, vous acceptez de recevoir des e-mails de la part de fleeti.
+                    Essayez fleeti gratuitement pendant 30 jours, aucune carte de <br />crédit n’est requise. En saisissant votre email, vous acceptez de<br /> recevoir des e-mails de la part de fleeti.
                 </p>
             </BandeLayout4>
             <BandeLayout2
@@ -98,7 +98,7 @@ const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2
 
             <div style={{ width: "50%", display: "flex", position: "relative", marginTop: 120, marginLeft: 'auto', marginRight: 'auto' }} >
                 <Image src={quote} style={{ position: "absolute", top: -35, left: -70 }} />
-                <p id="grText2" >
+                <p id="grText2">
                     {temoignage}
                     <p style={{ textAlign: "center", fontWeight: "bold", color: "#0BA1C1", margin: 60 }}>{speaker}</p>
                 </p>
