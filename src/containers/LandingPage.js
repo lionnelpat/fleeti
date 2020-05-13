@@ -19,7 +19,7 @@ const LandingPage = () => {
         <>
             <Bande1 />
             <p style={{ textAlign: "center" }}>
-                <Icon name="angle down" style={{ fontSize: 50, color: "#757575", cursor: "pointer" }} onClick={() => logos.current.scrollIntoView({ behavior: 'smooth' })} />
+                <Icon name="chevron down" style={{ fontSize: 35, color: "rgba(0, 0, 0, 0.54)", cursor: "pointer", marginTop: 30 }} onClick={() => logos.current.scrollIntoView({ behavior: 'smooth' })} />
 
             </p>
             <div ref={logos}>

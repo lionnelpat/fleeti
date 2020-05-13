@@ -1,20 +1,20 @@
 import React from 'react';
 import { Card, Grid } from 'semantic-ui-react';
 
-const BandeLayout = ({ children, illustration }) => {
+const BandeLayout4 = ({ children, illustration }) => {
     return (
         <Card style={{ width: "90%", paddingLeft: 60, paddingRight: 60, paddingTop: 40, boxShadow: "none" }} centered>
-            <Grid columns={2} >
-                <Grid.Row >
-                    <Grid.Column width={7}>
+            <Grid >
+                <Grid.Row style={{ paddingLeft: 50, paddingRight: 50 }}>
+                    <Grid.Column width={8}>
 
-                        <Card.Content style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                        <Card.Content>
                             {children}
                         </Card.Content>
                     </Grid.Column>
-                    <Grid.Column width={9}>
+                    <Grid.Column width={8}>
 
-                        <Card.Content style={{ paddingLeft: 17 }}>
+                        <Card.Content>
                             {illustration}
                         </Card.Content>
                     </Grid.Column>
@@ -26,4 +26,4 @@ const BandeLayout = ({ children, illustration }) => {
     );
 };
 
-export default BandeLayout;
+export default BandeLayout4;

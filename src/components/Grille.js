@@ -10,13 +10,13 @@ const Grille = () => {
     return (
         <div>
 
-            <Card style={{ width: "90%", padding: 50, boxShadow: "none" }} centered>
+            <Card style={{ width: "90%", padding: 60, boxShadow: "none" }} centered>
                 <div style={{ marginBottom: 10 }}>
                     <div style={{ marginBottom: 15, width: '64%' }}>
-                        <span style={{ fontSize: 30, fontWeight: "bold", color: "#0BA1C1", fontFamily: 'Muli', lineHeight: 1.4 }}>Prenez les meilleures décisions pour votre activité,que vous soyez une PME ou une multinationale</span>
+                        <span style={{ fontSize: 30, fontWeight: "bold", color: "#0BA1C1", fontFamily: 'Muli', lineHeight: 1.2 }}>Prenez les meilleures décisions pour votre activité, <br />que vous soyez une PME ou une multinationale</span>
                     </div>
                     <div style={{ height: 55 }}>
-                        <span style={{ fontSize: 24, color: "#757575", fontWeight: 'normal', fontFamily: 'Roboto' }}>Nos solutions s’adaptent à tous les secteurs d’activité.</span>
+                        <span style={{ fontSize: 24, color: "#757575", fontWeight: 'normal', fontFamily: 'Muli' }}>Nos solutions s’adaptent à tous les secteurs d’activité.</span>
                     </div>
                 </div>
 
@@ -34,10 +34,10 @@ const Grille = () => {
                     <Grid.Row style={{ display: "flex", justifyContent: "center" }}>
                         <div style={{ width: "50%", display: "flex", position: "relative", marginTop: 50 }} >
                             <Image src={quote} style={{ position: "absolute", top: -35, left: -70 }} />
-                            <p id="grText2" >
+                            <div id="grText2" >
                                 “Bien que nous soyons une PME avec un nombre limité de véhicules, Fleeti a pris le temps de comprendre notre fonctionnement et nous a permis d’économiser plus de 20% sur nos dépenses d’entretien par rapport à l’année dernière” <br />
                                 <p style={{ textAlign: "center", fontWeight: "bold", color: "#0BA1C1", marginTop: 20 }}>F.Baudoin, Soram Ouest Africa</p>
-                            </p>
+                            </div>
                         </div>
 
                     </Grid.Row>
