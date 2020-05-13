@@ -9,13 +9,13 @@ import meet2 from "../img/meet2.png"
 
 const Meet = () => {
     return (
-        <Card style={{ width: "90%", paddingLeft: 80, paddingRight: 80, paddingTop: 50, paddingBottom: 80, boxShadow: "none" }} centered>
-            <div style={{ paddingLeft: 20, marginBottom: 10 }}>
+        <Card style={{ width: "90%", padding: 60, boxShadow: "none" }} centered>
+            <div style={{ marginBottom: 10 }}>
                 <div style={{ marginBottom: 15 }}>
                     <span style={{ fontSize: 30, fontWeight: "bold", color: "#0BA1C1", fontFamily: 'Muli' }}>Notre plus grande réussite ? Votre succès</span>
                 </div>
                 <div style={{ height: 48 }}>
-                    <span style={{ fontSize: 24, color: "#757575", fontWeight: 'normal', fontFamily: 'Roboto' }}>Nous avons à coeur de vous satisfaire. Rencontrez ceux qui travaillent pour vous au quotidien !</span>
+                    <span style={{ fontSize: 24, color: "#757575", fontWeight: 'normal', fontFamily: 'Muli' }}>Nous avons à coeur de vous satisfaire. Rencontrez ceux qui travaillent pour vous au quotidien !</span>
                 </div>
             </div>
             <div style={{ width: '100%', height: 250 }}>
