@@ -14,7 +14,7 @@ const BandeLayout = ({ children, illustration }) => {
                     </Grid.Column>
                     <Grid.Column width={9}>
 
-                        <Card.Content style={{ display: "flex", flexDirection: "column" }}>
+                        <Card.Content style={{ paddingLeft: 17 }}>
                             {illustration}
                         </Card.Content>
                     </Grid.Column>

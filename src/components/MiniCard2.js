@@ -64,7 +64,7 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 175, link = 
 
                     </Grid.Column>
                     <Grid.Column style={{ position: "absolute", bottom: 0 }} >
-                        <p id="mcTitre" style={{ color: '#FFF', fontWeight: 'bold', fontSize: 24, fontFamily: 'Muli' }}>{title}</p>
+                        <p id="mcTitre" style={{ color: '#FFF', fontWeight: 'bold', fontSize: 23, fontFamily: 'Muli' }}>{title}</p>
                     </Grid.Column>
                 </Grid.Row>
 
