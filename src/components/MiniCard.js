@@ -31,7 +31,7 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = 
     return (
 
 
-        <Grid.Column style={{ textAlign: "center", justifyContent: "center", marginTop: mt2 || mt, height: 500 }}>
+        <Grid.Column style={{ textAlign: "center", justifyContent: "center", marginTop: mt2 || mt, height: 450 }}>
             <Grid columns={1}>
                 <Grid.Row>
                     <Grid.Column style={{ display: "flex", justifyContent: "center" }}>
