@@ -3,7 +3,7 @@ import { Card, Grid } from 'semantic-ui-react';
 
 const BandeLayout3 = ({ children, illustration }) => {
     return (
-        <Card style={{ width: "90%", paddingLeft: 60, paddingRight: 60, boxShadow: "none" }} centered>
+        <Card style={{ width: "90%", padding: 60, boxShadow: "none" }} centered>
             <Grid >
                 <Grid.Row style={{ alignItems: 'center' }}>
                     <Grid.Column width={7}>

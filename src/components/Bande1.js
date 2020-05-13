@@ -5,18 +5,18 @@ import BandeLayout from './BandeLayout';
 import { Link } from 'react-router-dom';
 
 const Bande1 = () => {
-    const [state,setState] = useState({
+    const [state, setState] = useState({
         email: ""
     })
     return (
         <BandeLayout
-            illustration={<Image src={img1} />}
+            illustration={<Image src={img1} style={{ width: '94%', float: 'right' }} />}
         >
-            <h1 style={{ fontSize: 50, color: "#0BA1C1" }}>Une gestion de flotte réussie avec Fleeti</h1>
-            <p style={{ fontSize: 20, color: "#757575" }}>La solution complète pour optimiser la gestion de vos véhicules et piloter votre entreprise.</p>
+            <h1 style={{ fontSize: 40, color: "#0BA1C1", fontFamily: 'Muli', fontWeight: 'bold' }}>Une gestion de flotte<br /> réussie avec Fleeti</h1>
+            <p style={{ fontSize: 24, fontFamily: 'Muli', color: "#757575" }}>La solution complète pour optimiser <br /> la gestion de vos véhicules et piloter<br /> votre entreprise.</p>
 
             <div>
-                <Input placeholder='Adresse e-mail' size={"big"} value={state.email} onChange={({target})=>setState({email: target.value})} />
+                <Input placeholder='Adresse e-mail' size={"big"} value={state.email} onChange={({ target }) => setState({ email: target.value })} style={{ width: 205 }} />
                 <Link to={
                     {
                         pathname: "/demo-gratuite",
@@ -29,8 +29,8 @@ const Bande1 = () => {
                 </Link>
 
             </div>
-            <p style={{ fontSize: 15, color: "#757575", marginTop: 20 }}>
-                Essayez fleeti gratuitement pendant 30 jours, aucune carte de crédit n’est requise. En saisissant votre email, vous acceptez de recevoir des e-mails de la part de fleeti.
+            <p style={{ fontSize: 14, color: "#757575", marginTop: 20 }}>
+                Essayez fleeti gratuitement pendant 30 jours, aucune carte de <br /> crédit n’est requise. En saisissant votre email, vous acceptez de <br /> recevoir des e-mails de la part de fleeti.
             </p>
         </BandeLayout>
 
