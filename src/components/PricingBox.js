@@ -6,17 +6,10 @@ import "./PricingBox.css"
 
 const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, features }) => {
 
-    const [border, setBorder] = useState({
+    const [border] = useState({
         top: 30,
         others: 3
     })
-
-    let handleMouseIn = () => {
-        setBorder({ top: 13, others: 5 })
-    }
-    let handleMouseOut = () => {
-        setBorder({ top: 8, others: 3 })
-    }
 
     return (
         <Grid.Column
@@ -26,29 +19,25 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
                 justifyContent: "center"
             }}>
             <div
-                //onMouseLeave={handleMouseOut} 
-                //onMouseEnter={handleMouseIn} 
                 style={{
-                    //width: "90%", 
+                    //width: "90%",
                     margin: -8,
                     border: `solid ${color} 3px`,
                     borderLeftWidth: border.others,
                     borderRightWidth: border.others,
                     borderBottomWidth: border.others,
                     borderTopWidth: border.top,
-                    borderTopLeftRadius: 15,
-                    borderTopRightRadius: 15,
-                    borderBottomRightRadius: 10,
-                    borderBottomLeftRadius: 10,
+                    borderTopLeftRadius: 10,
+                    borderTopRightRadius: 10,
                     textAlign: "center",
                     height: "110%"
                 }}>
                 <div style={{
                     backgroundColor: '#FFF',
-                    borderTopLeftRadius: 15,
-                    borderTopRightRadius: 15,
+                    borderTopLeftRadius: 10,
+                    borderTopRightRadius: 10,
                     paddingTop: 40,
-                    //paddingBottom: 70, 
+                    //paddingBottom: 70,
                     paddingLeft: 15,
                     paddingRight: 15,
                     marginTop: -10
