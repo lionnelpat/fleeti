@@ -1,16 +1,15 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import "./FooterItem.css"
 
 const FooterItem = ({ title, categories = [], categoriesLinks = [] }) => {
 
     return (
         <Grid.Column>
-            <p id="fTitle">{title}</p>
+            <p style={{ fontSize: 20, color: "white", fontWeight: "bold", marginTop: 20 }}>{title}</p>
             {categories.map((item, i) =>
                 <Link to={categoriesLinks[i] || "/"} key={i}>
-                    <p id="fItem">{item}</p>
+                    <p style={{ fontSize: 20, color: "white", marginTop: 20 }}>{item}</p>
                 </Link>
             )}
         </Grid.Column>

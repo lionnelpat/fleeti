@@ -25,7 +25,7 @@ import pem1 from "../img/pem1.png"
 import pem2 from "../img/pem2.png"
 import pem3 from "../img/pem3.png"
 import { Link } from 'react-router-dom';
-import "./MiniCard.css"
+
 
 const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = "/", mt2 }) => {
     return (

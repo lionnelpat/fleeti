@@ -1,6 +1,6 @@
 export const footer = [
     {
-        title: "Gestion de flotte",
+        title: "Nos services",
         categories: [
             "Suivi des coûts",
             "Alertes",
