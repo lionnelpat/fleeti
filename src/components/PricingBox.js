@@ -43,7 +43,7 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
                     marginTop: -10
                 }}>
                     <p style={{ marginBottom: 35 }}><span style={{ textAlign: "center", fontSize: 24, marginTop: 10, fontFamily: 'RobotoBold' }}>{title}</span></p>
-                    {prix == 'Sur mesure' ? <p style={{ marginBottom: 70 }}><span style={{ fontSize: 30, fontWeight: "bold", fontFamily: 'Muli', textAlign: 'center' }}>{prix}</span> <span style={{ fontWeight: "normal", fontSize: 20 }}>{unit}</span></p>
+                    {prix === 'Sur mesure' ? <p style={{ marginBottom: 70 }}><span style={{ fontSize: 30, fontWeight: "bold", fontFamily: 'Muli', textAlign: 'center' }}>{prix}</span> <span style={{ fontWeight: "normal", fontSize: 20 }}>{unit}</span></p>
                         : <p><span style={{ fontSize: 30, fontWeight: "bold", fontFamily: 'Muli', textAlign: 'center' }}>{prix}</span> <span style={{ fontWeight: "normal", fontSize: 20 }}>{unit}</span></p>
                     }
                     <p><span style={{ fontSize: 16, color: "rgba(0, 0, 0, 0.57)", fontFamily: 'Muli' }}>{time}</span></p>
