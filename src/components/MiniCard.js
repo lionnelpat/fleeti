@@ -63,14 +63,14 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = 
                         </div>
 
                     </Grid.Column>
-                    <Grid.Column style={{ position: "absolute", bottom: 0 }} >
-                        <p id="mcTitre" style={{ color: knowMore ? "black" : "white" }}>{title}</p>
+                    <Grid.Column style={{ marginTop: 0 }} >
+                        <p style={{ textAlign: "center", color: knowMore ? "black" : "white", fontWeight: "bold", fontSize: 20 }}>{title}</p>
                     </Grid.Column>
                 </Grid.Row>
 
-                <Grid.Row style={{ marginTop: 10 }}>
-                    <Grid.Column style={{ height: 115 }}>
-                        <p id="mcText" style={{ color: "#101014" }}>{text}</p>
+                <Grid.Row>
+                    <Grid.Column>
+                        <p style={{ textAlign: "center", color: knowMore ? "#101014" : "white", fontSize: 20, fontFamily: 'Muli', marginLeft: 12, marginRight: 12 }}>{text}</p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>
