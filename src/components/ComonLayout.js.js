@@ -20,6 +20,10 @@ import quote from "../img/quote.png"
 import { Link } from 'react-router-dom';
 
 
+function createMarkup(title) {
+    return { __html: title };
+}
+
 
 const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2, img1, temoignage, speaker }) => {
     return (
@@ -62,7 +66,7 @@ const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2
                 data={data}
             />
 
-            <div style={{ width: '80%', margin: 'auto' }}><h1 style={{ textAlign: "left", color: '#0BA1C1', fontSize: 30, fontFamily: 'Muli', fontWeight: 'bold' }}>{title3}</h1></div>
+            <div style={{ width: '80%', margin: 'auto' }} ><h1 style={{ textAlign: "left", color: '#0BA1C1', fontSize: 30, fontFamily: 'Muli', fontWeight: 'bold' }} dangerouslySetInnerHTML={createMarkup(title3)}></h1></div>
 
             <BandeLayout
                 illustration={

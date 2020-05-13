@@ -17,7 +17,7 @@ export const costTracking =
             text: "Grâce à notre planning intuitif de gestion des missions, vérifiez où en sont vos collaborateurs, quels véhicules sont utilisés et lesquels sont indisponibles, modifiez en temps réel le planning de tournée"
         },
     ],
-    title3: "Faites des choix stratégiques à partir d'un tableau de bord précis et transparent de votre gestion de flotte ",
+    title3: "Faites des choix stratégiques à partir <br/>  d'un tableau de bord précis et transparent de votre gestion de flotte ",
     img2: "big_ct",
     data2: [
         {
