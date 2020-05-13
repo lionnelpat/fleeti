@@ -1,0 +1,75 @@
+#pboxTitre{
+    font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+
+color: #000000;
+}
+
+#pboxPrix{
+    font-family: Muli;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 38px;
+text-align: center;
+
+color: #000000;
+}
+
+#pboxUnit{
+    font-family: Muli;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 25px;
+text-align: center;
+}
+
+#pboxTime{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 23px;
+text-align: center;
+
+color: rgba(0, 0, 0, 0.57);
+
+}
+
+#pboxText{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+
+color: rgba(0, 0, 0, 0.57);
+
+}
+
+#pboxText2{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+
+color: rgba(0, 0, 0, 0.57);
+
+}
+
+#pboxText3{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+
+color: #000000;
+}
