@@ -5,7 +5,7 @@ import { logos } from '../variables/LogoPartners';
 
 const LogosPartners = () => {
     return (
-        <Card style={{ width: "77%", padding: 60, boxShadow: "none" }} centered>
+        <Card style={{ width: "77%", paddingLeft: 60, paddingRight: 60, paddingTop: 30, boxShadow: "none" }} centered>
             <h1 style={{ fontSize: 35, color: "#0BA1C1", textAlign: "center", fontFamily: 'Muli', fontWeight: 'bold' }}>Ils nous font confiance</h1>
             <Grid columns={5} style={{ marginTop: 50 }}>
                 <Grid.Row centered>
