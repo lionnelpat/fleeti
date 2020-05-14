@@ -17,7 +17,7 @@ const Alertes = () => {
                 title2="Réglez les problèmes avant qu’ils n’arrivent"
                 img1="alertes"
                 img2={alertes.img2}
-                temoignage="“Chaque jour d’immobilisation d’un véhicule représente une perte de '\n' productivtié comprise entre 450€ et 650€”"
+                temoignage="“Chaque jour d’immobilisation d’un véhicule représente une perte de productivtié comprise entre 450€ et 650€”"
                 speaker="Étude Décisiv"
                 mr={90}
             />
