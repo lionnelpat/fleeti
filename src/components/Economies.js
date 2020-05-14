@@ -13,7 +13,7 @@ const Economies = () => {
                         <span style={{ fontSize: 30, fontWeight: "bold", color: "#0BA1C1", fontFamily: 'Muli' }}>Faites des économies sur vos véhicules en prenant les bonnes décisions</span>
                     </div>
                     <div style={{ height: 70 }}>
-                        <span style={{ fontSize: 22, color: "#757575", fontWeight: 'normal', fontFamily: 'Muli' }}>Avec fleeti, vous comprenez rapidement et simplement l’origine de vos coûts, comment les optimiser, grâce à un contrôle <br /> et suivi précis de l’état de tous vos véhicules, qu’il s’agisse de leur maintenance, consommation et trajets.</span>
+                        <span style={{ fontSize: 19, lineHeight: 1.3, color: "#757575", fontWeight: 'normal', fontFamily: 'Muli' }}>Avec fleeti, vous comprenez rapidement et simplement l’origine de vos coûts, comment les optimiser, grâce à un contrôle <br /> et suivi précis de l’état de vos véhicules, qu’il s’agisse de leur maintenance, consommation et trajets.</span>
                     </div>
                 </div>
                 <Grid columns={3} >
