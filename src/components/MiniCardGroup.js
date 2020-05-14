@@ -13,7 +13,7 @@ const MiniCardGroup = () => {
                         <span style={{ fontSize: 30, fontWeight: "bold", color: "#0BA1C1", fontFamily: 'Muli' }}>Pourquoi nous choisir ?</span>
                     </div>
                     <div style={{ height: 70 }}>
-                        <span style={{ fontSize: 24, color: "#757575", fontWeight: 'normal', fontFamily: 'Muli' }}>Un outil complet de pilotage de votre activité.</span>
+                        <span style={{ fontSize: 22, color: "#757575", fontWeight: 'normal', fontFamily: 'Roboto' }}>Un outil complet de pilotage de votre activité.</span>
                     </div>
                 </div>
                 <Grid columns={3} >
@@ -28,7 +28,9 @@ const MiniCardGroup = () => {
                             link={item.link}
                             height={i === 4 ? 187 : 200}
                             mt2={i === 4 ? 43 : undefined}
-
+                            knowMoreMargin={item.knowMoreMargin}
+                            mgleft={item.mgleft}
+                            mgright={item.mgright}
                         />)}
                     </Grid.Row>
 

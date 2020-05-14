@@ -6,13 +6,13 @@ const BandeLayout4 = ({ children, illustration }) => {
         <Card style={{ width: "90%", paddingLeft: 60, paddingRight: 60, paddingTop: 40, boxShadow: "none" }} centered>
             <Grid >
                 <Grid.Row style={{ paddingLeft: 50, paddingRight: 50 }}>
-                    <Grid.Column width={8}>
+                    <Grid.Column width={9}>
 
                         <Card.Content>
                             {children}
                         </Card.Content>
                     </Grid.Column>
-                    <Grid.Column width={8}>
+                    <Grid.Column width={7}>
 
                         <Card.Content>
                             {illustration}

@@ -38,16 +38,16 @@ const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2
                     {img1 === "comparaisonDePrestaires" && <Image src={comparaisonDePrestaires} style={styles.imgStyle} />}
                 </div>
             } >
-                <p style={{ fontSize: 39, color: "#0BA1C1", fontFamily: 'Muli', fontWeight: 'bold', marginBottom: 0, lineHeight: 1.2 }}>{title1}</p>
+                <p style={{ fontSize: 39, color: "#0BA1C1", fontFamily: 'Muli', fontWeight: 'bold', marginBottom: 10, lineHeight: 1.2 }}>{title1}</p>
                 <p style={{
                     fontSize: 24,
                     fontFamily: 'Muli',
-                    lineHeight: 1.1,
+                    lineHeight: 1.4,
                     marginRight: { mr },
                     fontWeight: 'bold',
                     marginBottom: 0
-                }}>{title2}</p>
-                <p style={{ fontSize: 23, fontFamily: 'Muli', color: "#757575", lineHeight: 1.2, marginTop: 20, marginBottom: 20 }}>{text}</p>
+                }} dangerouslySetInnerHTML={createMarkup(title2)}></p>
+                <p style={{ fontSize: 23, fontFamily: 'Muli', color: "#757575", lineHeight: 1.4, marginTop: 20, marginBottom: 20 }} dangerouslySetInnerHTML={createMarkup(text)}></p>
 
                 {/* <div>
                     <Button style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} size="big" >Voir démo</Button>
@@ -55,7 +55,7 @@ const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2
 
                 </div> */}
                 <div>
-                    <Input placeholder='Adresse e-mail' size={"big"} type="email" style={{ width: 205 }} />
+                    <Input placeholder='Adresse e-mail' size={"big"} type="email" style={{ width: 230 }} />
                     <Button style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold", marginLeft: 10 }} size="big" >démo gratuite</Button>
                 </div>
                 <p style={{ fontSize: 15, color: "#757575", marginTop: 20 }}>
@@ -66,15 +66,15 @@ const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2
                 data={data}
             />
 
-            <div style={{ width: '80%', margin: 'auto' }} ><h1 style={{ textAlign: "left", color: '#0BA1C1', fontSize: 30, fontFamily: 'Muli', fontWeight: 'bold' }} dangerouslySetInnerHTML={createMarkup(title3)}></h1></div>
+            <div style={{ width: '80%', margin: 'auto' }} ><h1 style={{ textAlign: "left", color: '#0BA1C1', fontSize: 30, fontFamily: 'Muli', fontWeight: 'bold', lineHeight: 1.4 }} dangerouslySetInnerHTML={createMarkup(title3)}></h1></div>
 
             <BandeLayout
                 illustration={
                     <>
                         {data2.map((item, i) => (
                             <Fragment key={i}>
-                                <p style={{ fontSize: 20, fontWeight: "bold" }}> <Image src={tiretOrange} /> <span style={{ fontSize: 24, fontFamily: 'Muli', color: '#0BA1C1', fontWeight: 'bold' }}>{item.title}</span> <br />
-                                    <p style={{ fontSize: 18, fontWeight: 'normal', fontFamily: 'Muli', color: "#757575", lineHeight: 1.2, marginTop: 13 }}>{item.text}</p>
+                                <p style={{ fontSize: 20, fontWeight: "bold" }}> <Image src={tiretOrange} /> <span style={{ fontSize: 24, paddingLeft: 10, fontFamily: 'Muli', color: '#0BA1C1', fontWeight: 'bold' }}>{item.title}</span> <br />
+                                    <p style={{ fontSize: 16, fontWeight: 'normal', fontFamily: 'Muli', color: "#757575", lineHeight: 1.4, marginTop: 13 }}>{item.text}</p>
                                 </p>
                             </Fragment>
                         ))}
@@ -88,12 +88,12 @@ const ComonLayout = ({ title1, title2, text, data = [], data2 = [], title3, img2
                     </>
                 }
             >
-                {img2 === "big_ct" && <Image src={big_ct} style={styles.bandeLayoutImgStyle} />}
-                {img2 === "big_geoloc" && <Image src={big_geoloc} style={styles.bandeLayoutImgStyle} />}
-                {img2 === "big_fm" && <Image src={big_fm} style={styles.bandeLayoutImgStyle} />}
-                {img2 === "big_a" && <Image src={big_a} style={styles.bandeLayoutImgStyle} />}
-                {img2 === "big_cdp" && <Image src={big_cdp} style={styles.bandeLayoutImgStyle} />}
-                {img2 === "big_pem" && <Image src={big_pem} style={styles.bandeLayoutImgStyle} />}
+                {img2 === "big_ct" && <Image src={big_ct} style={{ height: 494 }} />}
+                {img2 === "big_geoloc" && <Image src={big_geoloc} style={{ height: 516 }} />}
+                {img2 === "big_fm" && <Image src={big_fm} style={{ height: 494 }} />}
+                {img2 === "big_a" && <Image src={big_a} style={{ height: 474 }} />}
+                {img2 === "big_cdp" && <Image src={big_cdp} style={{ height: 474 }} />}
+                {img2 === "big_pem" && <Image src={big_pem} style={{ height: 474 }} />}
             </BandeLayout>
 
             <div style={{ width: "50%", display: "flex", position: "relative", marginTop: 120, marginLeft: 'auto', marginRight: 'auto' }} >
@@ -113,5 +113,5 @@ export default ComonLayout;
 
 const styles = {
     imgStyle: { width: '90%', float: 'right', paddingTop: 25 },
-    bandeLayoutImgStyle: { height: 485 }
+    bandeLayoutImgStyle: { height: 500 }
 }

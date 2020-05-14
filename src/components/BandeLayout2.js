@@ -5,7 +5,7 @@ import MiniCard from './MiniCard2';
 
 const BandeLayout2 = ({ data = [] }) => {
     return (
-        <Card style={{ width: "100%", paddingLeft: 50, paddingRight: 50, paddingTop: 50, boxShadow: "none" }} centered>
+        <Card style={{ width: "100%", paddingLeft: 50, paddingRight: 50, paddingTop: 50, marginBottom: 100, boxShadow: "none" }} centered>
 
             <div style={{ backgroundColor: "#0BA1C1", height: 316, left: 0, width: "100%", position: "absolute", marginTop: 65 }} />
 
