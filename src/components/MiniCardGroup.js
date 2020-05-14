@@ -28,7 +28,7 @@ const MiniCardGroup = () => {
                             link={item.link}
                             height={i === 4 ? 187 : 200}
                             mt2={i === 4 ? 43 : undefined}
-
+                            knowMoreMargin={item.knowMoreMargin}
                         />)}
                     </Grid.Row>
 
