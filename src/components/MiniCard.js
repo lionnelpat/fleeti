@@ -74,7 +74,7 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = 
 
                 <Grid.Row>
                     <Grid.Column>
-                        <p style={{ textAlign: "center", color: knowMore ? "#101014" : "white", fontSize: 20, fontFamily: 'Muli', marginLeft: 16, marginRight: 16, marginLeft: mgleft, marginRight: mgright }} dangerouslySetInnerHTML={createMarkup(text)}></p>
+                        <p style={{ textAlign: "center", color: knowMore ? "#101014" : "white", fontSize: 20, fontFamily: 'Muli', marginLeft: mgleft, marginRight: mgright }} dangerouslySetInnerHTML={createMarkup(text)}></p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>
