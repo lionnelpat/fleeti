@@ -16,7 +16,7 @@ const Grille = () => {
                         <span style={{ fontSize: 30, fontWeight: "bold", color: "#0BA1C1", fontFamily: 'Muli', lineHeight: 1.3 }}>Prenez les meilleures décisions pour votre activité, <br />que vous soyez une PME ou une multinationale</span>
                     </div>
                     <div style={{ height: 55 }}>
-                        <span style={{ fontSize: 24, color: "#757575", fontWeight: 'normal', fontFamily: 'Muli' }}>Nos solutions s’adaptent à tous les secteurs d’activité.</span>
+                        <span style={{ fontSize: 24, color: "#757575", fontWeight: 'normal', fontFamily: 'Roboto' }}>Nos solutions s’adaptent à tous les secteurs d’activité.</span>
                     </div>
                 </div>
 
