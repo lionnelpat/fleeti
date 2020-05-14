@@ -10,9 +10,9 @@ const FirstNav = () => {
         { key: 'mr', value: 'mr', text: 'Maurice' },
     ]
     return (
-         <Menu.Menu position="right"  >      
-            
-            {items.map((item,i) => 
+         <Menu.Menu position="right"  >
+
+            {items.map((item,i) =>
             <Menu.Item key={i}>
             <CustomMenuItem
                 title={item.title}
@@ -30,17 +30,17 @@ const FirstNav = () => {
             <Menu.Item>
                 <Dropdown defaultValue="sn" placeholder='Select choice' simple options={countryOptions} />
             </Menu.Item>
-            
-            
+
+
              <Menu.Item>
                  <Link to="/demo-gratuite">
                     <Button style={{backgroundColor: "#0BA1C1", color:"white",fontWeight:"bold"}} >Démo gratuite</Button>
                  </Link>
             </Menu.Item>
             <Menu.Item>
-                <Link to={process.env.ESPACE_CLIENT}>
+          <a href={process.env.REACT_APP_ESPACE_CLIENT} target="blank">
                     <Button style={{backgroundColor: "#ffffff", color:"#DCA514",fontWeight:"bold", border: "solid #DCA514 1px"}} >Espace client</Button>
-                </Link>
+                </a>
             </Menu.Item>
         </Menu.Menu>
     );
