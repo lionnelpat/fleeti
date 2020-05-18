@@ -31,15 +31,16 @@ function createMarkup(title) {
 }
 
 
-const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = "/", mt2, knowMoreMargin, mgleft, mgright }) => {
+const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = "/", mt2, knowMoreMargin, mgleft, mgright, bg = "#F5F5F5", fs, knowMoreSize }) => {
     return (
 
 
-        <Grid.Column style={{ textAlign: "center", justifyContent: "center", marginTop: mt2 || mt, height: 450 }}>
+        <Grid.Column style={{ textAlign: "center", justifyContent: "center", marginTop: mt2 || mt, height: 450, backgroundColor: bg }}>
             <Grid columns={1}>
                 <Grid.Row>
                     <Grid.Column style={{ display: "flex", justifyContent: "center" }}>
                         <div style={{ height }}>
+                            <Image src={img} />
                             {img === "mc1" && <Image src={mc1} />}
                             {img === "mc2" && <Image src={mc2} />}
                             {img === "mc3" && <Image src={mc3} />}
@@ -68,19 +69,19 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = 
 
                     </Grid.Column>
                     <Grid.Column style={{ marginTop: 0 }} >
-                        <p style={{ textAlign: "center", color: knowMore ? "black" : "white", fontWeight: "bold", fontSize: 20 }}>{title}</p>
+                        <p style={{ textAlign: "center", color: '#000000', fontWeight: "600", fontSize: 19.8117, fontFamily: 'Muli' }}>{title}</p>
                     </Grid.Column>
                 </Grid.Row>
 
                 <Grid.Row>
                     <Grid.Column>
-                        <p style={{ textAlign: "center", color: knowMore ? "#101014" : "white", fontSize: 20, fontFamily: 'Muli', marginLeft: mgleft, marginRight: mgright }} dangerouslySetInnerHTML={createMarkup(text)}></p>
+                        <p style={{ textAlign: "center", color: knowMore ? "#101014" : "white", fontSize: fs, fontFamily: 'Muli', marginLeft: mgleft, marginRight: mgright }} dangerouslySetInnerHTML={createMarkup(text)}></p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>
                     <Grid.Column  >
                         <Link to={link} style={{ color: "black" }}>
-                            <p id="mcText2" style={{ textAlign: "center", cursor: "pointer", color: '#666666', fontSize: 18, marginTop: knowMoreMargin }} >En savoir plus
+                            <p id="mcText2" style={{ textAlign: "center", cursor: "pointer", color: '#666666', fontSize: knowMoreSize, marginTop: knowMoreMargin }} >En savoir plus
 
                         <span><Icon name="long arrow alternate right" style={{ marginLeft: 5, color: "#00907E" }} /></span> </p>
                         </Link>
