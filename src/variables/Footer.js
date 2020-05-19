@@ -6,17 +6,19 @@ export const footer = [
             "Alertes",
             "Géolocalisation",
             "Gestion du carburant",
-            "Planning et missions"
+            "Planning et missions",
+            "Comparaison de prestataires",
         ],
         categoriesLinks: [
             "/cost-tracking",
             "/alertes",
             "/geolocalisation",
             "/fuel-management",
-            "/planning-et-missions"
+            "/planning-et-missions",
+            "/comparaison-de-prestaires",
         ]
     },
-    {
+    /* {
         title: "Maintenance de parc",
         categories: [
             "Comparaison de prestataires",
@@ -26,7 +28,7 @@ export const footer = [
             "/comparaison-de-prestaires",
 
         ]
-    },
+    }, */
 
     {
         title: "Reseaux sociaux",
