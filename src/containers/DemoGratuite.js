@@ -54,8 +54,8 @@ const DemoGratuite = ({ location }) => {
                 <Grid.Row columns={2} centered>
                     <Grid.Column>
                         <h1 style={{ fontSize: 48, color: "#0BA1C1", fontFamily: 'Muli' }}>Commencez votre essai gratuit </h1>
-                        <p style={{ fontSize: 24, color: '#757575', fontFamily: 'Muli' }}>Notre challenge ? 30 jours pour commencer à vous <br /> faire réaliser des économies. Profitez d’un <br /> accompagnement sur mesure et découvrez toute la <br /> puissance de Fleeti.
-                    <br /><br />Pas de carte crédit requise, annulation possible à <br /> tout moment.</p>
+                        <p style={{ fontSize: 24, color: '#757575', fontFamily: 'Muli' }}>Notre challenge ? 30 jours pour commencer à vous faire réaliser des économies. Profitez d’un accompagnement sur mesure et découvrez toute la puissance de Fleeti.
+                    <br /><br />Pas de carte crédit requise, annulation possible à tout moment.</p>
                         <Image src={img1} />
                     </Grid.Column>
                     <Grid.Column style={{ marginTop: 165 }}>
