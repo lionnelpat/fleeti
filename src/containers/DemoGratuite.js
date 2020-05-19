@@ -49,7 +49,7 @@ const DemoGratuite = ({ location }) => {
     }
     return (
         <>
-            <Responsive>
+            <Responsive maxWidth={1024}>
                 <p style={{ textAlign: "center", marginTop: 20, fontSize: 20, color: "#0BA1C1" }}>Démo gratuit</p>
                 <p style={{ textAlign: "center", marginTop: 20, fontSize: 30, fontWeight: "bold" }}>Commencez à faire<br /> des économies</p>
                 <p style={{ fontSize: 17, color: "#757575", marginTop: 10, fontFamily: 'Muli', textAlign: "center" }}>
