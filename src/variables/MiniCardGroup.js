@@ -21,7 +21,7 @@ export const miniCards = [
         text: "Anticipez les actions à mener sur chacun de vos véhicules (assurance, entretien, contrôle technique...) <br/> et réduisez vos temps d’immobilisation.",
         img: "mc2",
         link: "alertes",
-        knowMoreMargin: 0,
+        knowMoreMargin: 25,
         mgleft: 7,
         mgright: 6
     },

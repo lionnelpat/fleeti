@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Image, Responsive } from 'semantic-ui-react';
+import { Grid, Responsive } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import "./FooterItem.css"
 

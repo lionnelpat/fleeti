@@ -23,9 +23,8 @@ const BandeLayout = ({ children, illustration, title, mobileTitle, text, reverse
                 </div>
                 {minitext && <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
                     <div style={{ width: "80%" }}>
-                        <p style={{ fontSize: 10, color: "#757575", marginTop: 20, textAlign: "center" }}>
-                            {minitext}
-                        </p>
+                        {minitext}
+
 
                     </div>
                 </div>}

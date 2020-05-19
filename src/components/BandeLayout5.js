@@ -1,11 +1,6 @@
-import React, { Fragment, Image } from 'react';
-import { Card, Grid, Responsive, Button } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-import tiretOrange from "../img/tiret-orange.png"
+import React from 'react';
+import { Responsive } from 'semantic-ui-react';
 
-function createMarkup(title) {
-    return { __html: title };
-}
 
 const BandeLayout5 = ({ children, data, illustration, mobileTitle, title2Mobile, text, reversed = false, minitext = "", image, showDemoBtn = false }) => {
     return (

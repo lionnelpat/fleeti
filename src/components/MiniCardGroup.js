@@ -65,6 +65,7 @@ const MiniCardGroup = () => {
                                     mgright={item.mgright}
                                     fs={18}
                                     knowMoreSize={18}
+                                    pt={40}
                                 />)}
                             </Grid.Row>
 

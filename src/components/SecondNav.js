@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Menu, Sidebar, Icon, Segment, Accordion, Dropdown } from 'semantic-ui-react';
 import { items } from '../variables/SecondNav';
+import { Link } from 'react-router-dom'
 
 
 const SecondNav = ({ children, visib = false }) => {
     let handleClick = (e, titleProps) => {
+        console.log(titleProps)
         const { index } = titleProps
         const { activeIndex } = state
         const newIndex = activeIndex === index ? -1 : index
@@ -34,7 +36,7 @@ const SecondNav = ({ children, visib = false }) => {
                 direction="right"
                 style={{ backgroundColor: "white" }}
             >
-                <Menu.Item as='a'>
+                <Menu.Item as='div'>
 
                     {items.map((item, i) => (
                         <Accordion fluid styled key={i} style={{ boxShadow: "none" }}>
@@ -51,8 +53,11 @@ const SecondNav = ({ children, visib = false }) => {
                             <Accordion.Content active={activeIndex === i}>
                                 {item.categories.map((categorie, ind) => (
                                     <p key={ind} style={{ color: "black" }}>
-                                        {categorie.text}
+                                        <Link style={{ color: '#000' }} to={"/" + categorie.value} key={i}>
+                                            {categorie.text}
+                                        </Link>
                                     </p>
+
                                 ))}
 
                             </Accordion.Content>
@@ -63,7 +68,7 @@ const SecondNav = ({ children, visib = false }) => {
                 <Menu.Item as="a">
                     <p style={{ color: "black" }}>Nous contacter</p>
                 </Menu.Item>
-                <Menu.Item as="p">
+                <Menu.Item as="a">
                     <Dropdown defaultValue="sn" placeholder='Select choice' style={{ color: "black" }} simple options={countryOptions} />
                 </Menu.Item>
             </Sidebar>
