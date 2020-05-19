@@ -11,9 +11,9 @@ class Footer extends Component {
                 <Responsive minWidth={1024}>
                     <Grid centered style={{ backgroundColor: "#19353B" }}>
 
-                        <div style={{ height: 280, width: "80%", textAlign: "center" }}>
+                        <div style={{ height: 320, width: "80%", textAlign: "center" }}>
                             <Grid columns={3} centered>
-                                <Grid.Row>
+                                <Grid.Row style={{ justifyContent: 'space-around' }}>
                                     {footer.map((item, i) =>
 
                                         <FooterItem

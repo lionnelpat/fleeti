@@ -31,9 +31,9 @@ function createMarkup(title) {
     return { __html: title };
 }
 
-const MiniCard = ({ title, text, img, mt, knowMore = true, height = 175, link = "/", mt2 }) => {
+const MiniCard = ({ title, text, img, mt, knowMore = true, height = 175, link = "/", mt2, textColor, titleColor, titleFontSize, titleFontWeight, mb, textFontSize, mr, ml }) => {
     return (
-        <Grid.Column style={{ textAlign: "center", justifyContent: "center", marginTop: mt2 || mt, height: 380 }}>
+        <Grid.Column style={{ textAlign: "center", justifyContent: "center", marginTop: mt2 || mt, height: 380, marginBottom: mb }}>
             <Grid columns={1}>
                 <Grid.Row>
                     <Grid.Column style={{ display: "flex", justifyContent: "center" }}>
@@ -66,13 +66,13 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 175, link = 
 
                     </Grid.Column>
                     <Grid.Column style={{ position: "absolute", bottom: 0 }} >
-                        <p id="mcTitre" style={{ color: '#FFF', fontWeight: 'bold', fontSize: 22, fontFamily: 'Muli' }} dangerouslySetInnerHTML={createMarkup(title)}></p>
+                        <p id="mcTitre" style={{ color: titleColor, fontWeight: titleFontWeight, fontSize: titleFontSize, fontFamily: 'Muli' }} dangerouslySetInnerHTML={createMarkup(title)}></p>
                     </Grid.Column>
                 </Grid.Row>
 
                 <Grid.Row style={{ paddingTop: 0 }}>
                     <Grid.Column>
-                        <p id="mcText" style={{ color: "#FFF", fontSize: 18, fontFamily: 'Muli', marginTop: 20 }} dangerouslySetInnerHTML={createMarkup(text)}></p>
+                        <p id="mcText" style={{ color: textColor, fontSize: textFontSize, fontFamily: 'Muli', marginTop: 20 }} dangerouslySetInnerHTML={createMarkup(text)}></p>
                     </Grid.Column>
                 </Grid.Row>
                 {knowMore && <Grid.Row>

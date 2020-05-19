@@ -31,8 +31,6 @@ const BandeLayout = ({ children, illustration, title, mobileTitle, text, reverse
                 </div>}
 
                 <div style={{ marginTop: 30 }} />
-
-
             </Responsive>
             <Responsive minWidth={1024}>
                 <Card style={{ width: "90%", paddingLeft: 60, paddingRight: 60, paddingTop: 40, boxShadow: "none" }} centered>

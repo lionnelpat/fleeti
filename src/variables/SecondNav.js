@@ -1,17 +1,17 @@
 export const items = [
     {
         title: "Nos services",
-        categories : [
+        categories: [
             { key: 'ct', value: 'cost-tracking', text: 'Suivi des coûts' },
             { key: 'a', value: 'alertes', text: 'Alertes' },
             { key: 'g', value: 'geolocalisation', text: 'Géolocalisation' },
-            { key: 'fm', value: 'fuel-management', text: 'Gestion du carburant'},
-            { key: 'pm', value: 'planning-et-missions', text: 'Planning et missions'}
+            { key: 'fm', value: 'fuel-management', text: 'Gestion du carburant' },
+            { key: 'pm', value: 'planning-et-missions', text: 'Planning et missions' }
         ]
     },
     {
         title: "Maintenance de parc",
-        categories : [
+        categories: [
             { key: 'cp', value: 'comparaison-de-prestaires', text: 'Comparaison de prestataires' },
             // { key: 'ga', value: 'gestionAtelier', text: 'Gestion d’atelier' }
         ]

@@ -15,11 +15,12 @@ const LandingPage = () => {
         window.scrollTo(0, 0);
     }, [])
     const arrow = useRef(null)
+    const economy = useRef(null)
     return (
         <>
             <Bande1 />
             <Responsive minWidth={1024}>
-                <p style={{ textAlign: "center" }}>
+                <p style={{ textAlign: "center", marginTop: 50 }}>
                     <Icon name="angle down" style={{ fontSize: 50, color: "#757575", cursor: "pointer" }} onClick={() => arrow.current.scrollIntoView({ behavior: 'smooth' })} />
 
                 </p>
@@ -27,9 +28,16 @@ const LandingPage = () => {
                     <LogosPartners />
                 </div>
             </Responsive>
-            <Economies />
-            <Responsive maxWidth={1024.9999}>
+            <Responsive maxWidth={1024}>
+                <p style={{ textAlign: "center", marginTop: 50 }}>
+                    <Icon name="angle down" style={{ fontSize: 50, color: "#757575", cursor: "pointer" }} onClick={() => economy.current.scrollIntoView({ behavior: 'smooth' })} />
 
+                </p>
+            </Responsive>
+            <div ref={economy}>
+                <Economies />
+            </div>
+            <Responsive maxWidth={1024}>
                 <LogosPartners />
             </Responsive>
             <Bande2 />
