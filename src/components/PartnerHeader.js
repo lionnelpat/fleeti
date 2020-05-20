@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Image, Input } from 'semantic-ui-react';
+import { Button, Image, Input, Responsive } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import './PartnerHeader.css'
 
@@ -8,6 +8,10 @@ const PartnerHeader = () => {
         email: ""
     })
     return (
+        <>
+       <Responsive minWidth={1024}>
+       </Responsive>
+       <Responsive maxWidth={1024.999}>
         <div className="containerHeader" style={{
             height: 618,
             width: '100%',
@@ -43,6 +47,8 @@ const PartnerHeader = () => {
                 </div>
             </div>
         </div>
+       </Responsive>
+       </>
     );
 };
 

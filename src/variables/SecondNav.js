@@ -9,13 +9,13 @@ export const items = [
             { key: 'pm', value: 'planning-et-missions', text: 'Planning et missions'}
         ]
     },
-    {
+    /* {
         title: "Maintenance de parc",
         categories : [
             { key: 'cp', value: 'comparaison-de-prestaires', text: 'Comparaison de prestataires' },
             // { key: 'ga', value: 'gestionAtelier', text: 'Gestion d’atelier' }
         ]
-    },
+    }, */
     // {
     //     title: "Solutions par secteur",
     //     categories : [

@@ -17,13 +17,13 @@ export const footer = [
         ]
     },
     {
-        title: "Maintenance de parc",
+        title: "Partenariat",
         categories: [
-            "Comparaison de prestataires",
+            "Devenir partenaire",
             // "Gestion d’atelier",
         ],
         categoriesLinks: [
-            "/comparaison-de-prestaires",
+            "/partnership",
 
         ]
     },
