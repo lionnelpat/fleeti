@@ -11,7 +11,7 @@ const FirstNav = ({ visible = false, setVisible }) => {
         { key: 'mr', value: 'mr', text: 'Maurice' },
     ]
     return (
-        <Menu.Menu position="right"  >
+        <Menu.Menu position="right" >
             <Responsive maxWidth={1024} style={{ display: "flex", alignItems: "center" }}>
                 <Image src={collapse_btn} style={{ cursor: "pointer" }} onClick={() => setVisible(!visible)} />
             </Responsive>
