@@ -10,20 +10,27 @@ const FirstNav = () => {
         { key: 'mr', value: 'mr', text: 'Maurice' },
     ]
     return (
-         <Menu.Menu position="right"  >
+        <Menu.Menu position="right"  >
 
-            {items.map((item,i) =>
-            <Menu.Item key={i}>
-            <CustomMenuItem
-                title={item.title}
-                categories={item.categories}
-                />
+            {items.map((item, i) =>
+                <Menu.Item key={i}>
+                    <CustomMenuItem
+                        title={item.title}
+                        categories={item.categories}
+                    />
                 </Menu.Item>
-                )}
+            )}
+            <Menu.Item>
+                <Link to="/partnership">
+                    <p style={{ color: "#757575", fontWeight: "bold" }}>
+                        Devenir partenaire
+                </p>
+                </Link>
+            </Menu.Item>
             <Menu.Item>
                 <Link to="/demo-gratuite">
-                <p style={{color: "#757575", fontWeight: "bold"}}>
-                    Nous contacter
+                    <p style={{ color: "#757575", fontWeight: "bold" }}>
+                        Nous contacter
                 </p>
                 </Link>
             </Menu.Item>
@@ -32,14 +39,14 @@ const FirstNav = () => {
             </Menu.Item>
 
 
-             <Menu.Item>
-                 <Link to="/demo-gratuite">
-                    <Button style={{backgroundColor: "#0BA1C1", color:"white",fontWeight:"bold"}} >Démo gratuite</Button>
-                 </Link>
+            <Menu.Item>
+                <Link to="/demo-gratuite">
+                    <Button style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} >Démo gratuite</Button>
+                </Link>
             </Menu.Item>
             <Menu.Item>
-          <a href={process.env.REACT_APP_ESPACE_CLIENT} target="blank">
-                    <Button style={{backgroundColor: "#ffffff", color:"#DCA514",fontWeight:"bold", border: "solid #DCA514 1px"}} >Espace client</Button>
+                <a href={process.env.REACT_APP_ESPACE_CLIENT} target="blank">
+                    <Button style={{ backgroundColor: "#ffffff", color: "#DCA514", fontWeight: "bold", border: "solid #DCA514 1px" }} >Espace client</Button>
                 </a>
             </Menu.Item>
         </Menu.Menu>

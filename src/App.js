@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import Try from './components/Try';
 import DemoGratuite from './containers/DemoGratuite';
 import PlanningEtMissions from './containers/PlanningEtMissions';
+import Partnership from './containers/Partnership';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/comparaison-de-prestaires" component={ComparaisonDePrestaires} />
           <Route path="/demo-gratuite" component={DemoGratuite} />
           <Route path="/planning-et-missions" component={PlanningEtMissions} />
+          <Route exact path="/partnership" component={Partnership} />
           <Route exact path="/" component={LandingPage} />
         </Switch>
         <Try />
