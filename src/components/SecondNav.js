@@ -37,7 +37,7 @@ const SecondNav = ({ children, visib = false }) => {
                 <Menu.Item as='a'>
 
                     {items.map((item, i) => (
-                        <Accordion fluid styled key={i} style={{ boxShadow: "none" }}>
+                        <Accordion fluid styled key={i} style={{ boxShadow: "none", textAlign: 'left' }}>
                             <Accordion.Title
                                 active={activeIndex === i}
                                 index={i}
@@ -48,7 +48,7 @@ const SecondNav = ({ children, visib = false }) => {
                                 {item.title}
                             </Accordion.Title>
 
-                            <Accordion.Content active={activeIndex === i}>
+                            <Accordion.Content active={activeIndex === i} style={{ paddingLeft: 50 }}>
                                 {item.categories.map((categorie, ind) => (
                                     <p key={ind} style={{ color: "black" }}>
                                         {categorie.text}
@@ -60,10 +60,10 @@ const SecondNav = ({ children, visib = false }) => {
                     ))}
 
                 </Menu.Item>
-                <Menu.Item as="a">
+                <Menu.Item as="p" style={{ textAlign: 'left', paddingLeft: 35, marginBottom: 0, paddingTop: 0 }}>
                     <p style={{ color: "black" }}>Nous contacter</p>
                 </Menu.Item>
-                <Menu.Item as="p">
+                <Menu.Item as="p" style={{ textAlign: 'left', paddingLeft: 35 }}>
                     <Dropdown defaultValue="sn" placeholder='Select choice' style={{ color: "black" }} simple options={countryOptions} />
                 </Menu.Item>
             </Sidebar>
