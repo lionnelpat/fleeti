@@ -8,38 +8,24 @@ import Grille from '../components/Grille';
 import Pricing from '../components/Pricing';
 import Meet from '../components/Meet';
 // import Blog from '../components/Blog';
-import { Icon, Responsive } from 'semantic-ui-react';
+import { Icon } from 'semantic-ui-react';
 
 const LandingPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
-    const arrow = useRef(null)
-    const economy = useRef(null)
+    const logos = useRef(null)
     return (
         <>
             <Bande1 />
-            <Responsive minWidth={1024}>
-                <p style={{ textAlign: "center", marginTop: 50 }}>
-                    <Icon name="angle down" style={{ fontSize: 50, color: "#757575", cursor: "pointer" }} onClick={() => arrow.current.scrollIntoView({ behavior: 'smooth' })} />
+            <p style={{ textAlign: "center" }}>
+                <Icon name="chevron down" style={{ fontSize: 35, color: "rgba(0, 0, 0, 0.54)", cursor: "pointer", marginTop: 30 }} onClick={() => logos.current.scrollIntoView({ behavior: 'smooth' })} />
 
-                </p>
-                <div ref={arrow}>
-                    <LogosPartners />
-                </div>
-            </Responsive>
-            <Responsive maxWidth={1024}>
-                <p style={{ textAlign: "center", marginTop: 50 }}>
-                    <Icon name="angle down" style={{ fontSize: 50, color: "#757575", cursor: "pointer" }} onClick={() => economy.current.scrollIntoView({ behavior: 'smooth' })} />
-
-                </p>
-            </Responsive>
-            <div ref={economy}>
-                <Economies />
-            </div>
-            <Responsive maxWidth={1024}>
+            </p>
+            <div ref={logos}>
                 <LogosPartners />
-            </Responsive>
+            </div>
+            <Economies />
             <Bande2 />
             <MiniCardGroup />
             <Grille />

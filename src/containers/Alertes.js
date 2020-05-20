@@ -12,7 +12,6 @@ const Alertes = () => {
                 data={alertes.data}
                 data2={alertes.data2}
                 title3={alertes.title3}
-                title3Mobile={alertes.title3Mobile}
                 text="Suivez en temps réel l’état de votre flotte, personnalisez les alertes d’entretien et de renouvellement de contrat, prenez rapidement les bonnes décisions en cas d’urgence."
                 title1="Alertes"
                 title2="Réglez les problèmes avant qu’ils n’arrivent"
