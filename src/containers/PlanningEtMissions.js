@@ -12,7 +12,6 @@ const PlanningEtMissions = () => {
                 data={planningEtMissions.data}
                 data2={planningEtMissions.data2}
                 title3={planningEtMissions.title3}
-                title3Mobile={planningEtMissions.title3Mobile}
                 text="Organisez facilement le planning de vos équipes selon la disponbilité de vos chauffeurs et de vos véhicules / équipements"
                 title1="Missions et planning"
                 title2="Plannifiez le travail de vos équipes "

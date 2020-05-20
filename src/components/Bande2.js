@@ -25,12 +25,6 @@ const Bande2 = () => {
                 </div>
 
             }
-            mobileTitle="fleeti s'intègre à vos outils"
-            title={"Une gestion de flotte réussie avec fleeti"}
-            showDemoBtn
-            text="Nous développons des passerelles<br/> entre vos logiciels et notre outil,<br/> pas besoin de changer vos<br/> habitudes !"
-            //minitext=" Essayez fleeti gratuitement pendant 30 jours, aucune carte de crédit n’est requise. En saisissant votre email, vous acceptez de recevoir des e-mails de la part de fleeti."
-            image={<Image src={groupe_outils} />}
         >
             <Image src={groupe_outils} />
         </BandeLayout>

@@ -11,12 +11,6 @@ const Bande1 = () => {
     return (
         <BandeLayout
             illustration={<Image src={img1} style={{ width: '94%', float: 'right' }} />}
-            image={<Image src={img1} />}
-            mobileTitle={<p style={{ fontSize: 22, fontFamily: 'Muli' }}>Connectez votre flotte</p>}
-            title={<p style={{ fontSize: 33.4, fontWeight: 'bold', fontFamily: 'Muli' }}>Une gestion de flotte <br /> réussie avec fleeti</p>}
-            text={<p style={{ fontSize: 17.22, fontFamily: 'Muli', textAlign: 'center', color: '#757575' }}>La solution complète pour optimiser<br /> la gestion de vos véhicules et piloter<br /> votre entreprise.</p>}
-            minitext={<p style={{ fontSize: 10, color: "#757575", marginTop: 20, textAlign: "center", fontFamily: 'Muli' }}>Essayez fleeti gratuitement pendant 30 jours, aucune <br />carte de crédit n’est requise.</p>}
-            showDemoBtn
         >
             <h1 style={{ fontSize: 40, color: "#0BA1C1", fontFamily: 'Muli', fontWeight: 'bold' }}>Une gestion de flotte<br /> réussie avec Fleeti</h1>
             <p style={{ fontSize: 24, fontFamily: 'Muli', color: "#757575" }}>La solution complète pour optimiser <br /> la gestion de vos véhicules et piloter<br /> votre entreprise.</p>

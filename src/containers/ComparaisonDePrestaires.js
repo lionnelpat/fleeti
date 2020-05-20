@@ -12,7 +12,6 @@ const ComparaisonDePrestaires = () => {
                 data={comparaisonDePrestaires.data}
                 data2={comparaisonDePrestaires.data2}
                 title3={comparaisonDePrestaires.title3}
-                title3Mobile={comparaisonDePrestaires.title3Mobile}
                 text="Avec Fleeti, vous pourrez comparer directement les prix et la réputation des garages autour de<br/> vous. "
                 title1="Comparaison de prestataires"
                 title2="Réalisez vos entretiens et réparations au<br/> meilleur prix, avec les meilleurs<br/> fournisseurs"
