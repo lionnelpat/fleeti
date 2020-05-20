@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Segment, Image, Menu } from 'semantic-ui-react';
 import logo from '../img/logo.png'
 import FirstNav from './FirstNav';
-import {withRouter} from "react-router-dom"
+import { withRouter } from "react-router-dom"
 
 class TopNav extends Component {
     state = { activeItem: 'home' }
     render() {
-       let { history} = this.props
+        let { history, setVisible, visible } = this.props
 
         return (
 
@@ -15,13 +15,13 @@ class TopNav extends Component {
 
 
                 <Menu secondary >
-                    <Menu.Menu onClick={() => history.push('/')} style={{cursor:"pointer"}}>
+                    <Menu.Menu onClick={() => history.push('/')} style={{ cursor: "pointer" }}>
 
                         <Image src={logo} size='small' style={{ marginLeft: 20 }} />
                     </Menu.Menu>
 
 
-                    <FirstNav />
+                    <FirstNav setVisible={setVisible} visible={visible} />
                 </Menu>
 
             </Segment>

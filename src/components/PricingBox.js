@@ -8,7 +8,7 @@ function createMarkup(title) {
 }
 
 
-const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, features }) => {
+const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, features, boxWidth, pb, mb }) => {
 
     const [border] = useState({
         top: 30,
@@ -34,7 +34,11 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
                     borderTopLeftRadius: 10,
                     borderTopRightRadius: 10,
                     textAlign: "center",
-                    height: "110%"
+                    height: "110%",
+                    width: boxWidth,
+                    paddingBottom: pb,
+                    marginBottom: mb
+
                 }}>
                 <div style={{
                     backgroundColor: '#FFF',
