@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Image, Icon } from 'semantic-ui-react';
+import { Grid, Image, Icon, Responsive } from 'semantic-ui-react';
 import mc1 from "../img/mc1.png"
 import mc2 from "../img/mc2.png"
 import mc3 from "../img/mc3.png"
@@ -31,16 +31,18 @@ function createMarkup(title) {
 }
 
 
-const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = "/", mt2, knowMoreMargin, mgleft, mgright, bg = "#F5F5F5", fs, knowMoreSize }) => {
+const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = "/", mt2, knowMoreMargin, mgleft, mgright, bg, fs, knowMoreSize, pt }) => {
     return (
 
 
         <Grid.Column style={{ textAlign: "center", justifyContent: "center", marginTop: mt2 || mt, height: 450, backgroundColor: bg }}>
             <Grid columns={1}>
-                <Grid.Row>
+                <Grid.Row style={{ paddingTop: pt }}>
                     <Grid.Column style={{ display: "flex", justifyContent: "center" }}>
                         <div style={{ height }}>
-                            <Image src={img} />
+                            <Responsive maxWidth={1024}>
+                                <Image src={img} />
+                            </Responsive>
                             {img === "mc1" && <Image src={mc1} />}
                             {img === "mc2" && <Image src={mc2} />}
                             {img === "mc3" && <Image src={mc3} />}
