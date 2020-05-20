@@ -4,20 +4,24 @@ export const fuelManagement =
         {
             img: "fm1",
             title: "Suivez en temps réel<br/> votre consommation",
-            text: "Vérifiez où, quand et combien de carburant<br/> a été inséré dans le réservoir. Assurez-vous<br/> que tous vos achats ont bien été insérés<br/> dans le réservoir. "
+            text: "Vérifiez où, quand et combien de carburant<br/> a été inséré dans le réservoir. Assurez-vous<br/> que tous vos achats ont bien été insérés<br/> dans le réservoir. ",
+            textMobile: "Vérifiez où, quand et combien de carburant a été inséré dans le réservoir. Assurez-vous que tous vos achats ont bien été insérés dans le réservoir. "
         },
         {
             img: "fm2",
             title: "Planifiez vos budgets",
-            text: "Recevez des analyses détaillées des<br/> volumes de carburant consommé pour<br/> mieux préparer vos budgets."
+            text: "Recevez des analyses détaillées des<br/> volumes de carburant consommé pour<br/> mieux préparer vos budgets.",
+            textMobile: "Recevez des analyses détaillées des volumes de carburant consommé pour mieux préparer vos budgets."
         },
         {
             img: "fm3",
             title: "Fixez des objectifs d’économies",
-            text: "Un système de contrôle efficace du<br/> carburant permet en moyenne d’économiser<br/> 15% sur les coûts totaux de carburant. La<br/> mise en place des sondes et du suivi associé<br/> sont généralement remboursés en 3-4 mois. "
+            text: "Un système de contrôle efficace du<br/> carburant permet en moyenne d’économiser<br/> 15% sur les coûts totaux de carburant. La<br/> mise en place des sondes et du suivi associé<br/> sont généralement remboursés en 3-4 mois. ",
+            textMobile: "Un système de contrôle efficace du carburant permet en moyenne d’économiser 15% sur les coûts totaux de carburant. La mise en place des sondes et du suivi associé sont généralement remboursés en 3-4 mois. "
         },
     ],
     title3: "Détectez facilement les anomalies de consommation",
+    title3Mobile: "Détectez facilement les anomalies de consommation",
     img2: "big_fm",
     data2: [
         {
