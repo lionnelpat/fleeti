@@ -7,7 +7,7 @@ const LogosPartners = () => {
     return (
         <>
             <Responsive maxWidth={1024}>
-                <p style={{ textAlign: "center", marginTop: 20, fontSize: 20, color: "#0BA1C1" }}>Ils nous font confiance</p>
+                <p style={{ textAlign: "center", marginTop: 20, marginBottom: 0, fontSize: 22, color: "#0BA1C1", fontWeight: '600' }}>Ils nous font confiance</p>
 
                 <Grid columns={5} style={{ padding: 10 }}>
                     <Grid.Row centered>

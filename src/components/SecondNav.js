@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 const SecondNav = ({ children, visib = false }) => {
     let handleClick = (e, titleProps) => {
+        console.log(titleProps)
         const { index } = titleProps
         const { activeIndex } = state
         const newIndex = activeIndex === index ? -1 : index
@@ -22,7 +23,7 @@ const SecondNav = ({ children, visib = false }) => {
         { key: 'mr', value: 'mr', text: 'Maurice' },
     ]
     return (
-        <Sidebar.Pushable as={Segment} style={{ marginTop: -15 }}>
+        <Sidebar.Pushable as={Segment} style={{ marginTop: -15, borderWidth:0}}>
 
             <Sidebar
                 as={Menu}
@@ -35,7 +36,7 @@ const SecondNav = ({ children, visib = false }) => {
                 direction="right"
                 style={{ backgroundColor: "white" }}
             >
-                <Menu.Item as='a'>
+                <Menu.Item as='div'>
 
                     {items.map((item, i) => (
                         <Accordion fluid styled key={i} style={{ boxShadow: "none", textAlign: 'left' }}>
@@ -56,6 +57,7 @@ const SecondNav = ({ children, visib = false }) => {
                                             {categorie.text}
                                         </Link>
                                     </p>
+
                                 ))}
 
                             </Accordion.Content>

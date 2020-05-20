@@ -6,16 +6,17 @@ export const items = [
             { key: 'a', value: 'alertes', text: 'Alertes' },
             { key: 'g', value: 'geolocalisation', text: 'Géolocalisation' },
             { key: 'fm', value: 'fuel-management', text: 'Gestion du carburant' },
-            { key: 'pm', value: 'planning-et-missions', text: 'Planning et missions' }
+            { key: 'pm', value: 'planning-et-missions', text: 'Planning et missions' },
+            { key: 'cp', value: 'comparaison-de-prestaires', text: 'Comparaison de prestataires' }
         ]
     },
-    {
-        title: "Maintenance de parc",
-        categories: [
-            { key: 'cp', value: 'comparaison-de-prestaires', text: 'Comparaison de prestataires' },
-            // { key: 'ga', value: 'gestionAtelier', text: 'Gestion d’atelier' }
-        ]
-    },
+    /*  {
+         title: "Maintenance de parc",
+         categories: [
+             { key: 'cp', value: 'comparaison-de-prestaires', text: 'Comparaison de prestataires' },
+             // { key: 'ga', value: 'gestionAtelier', text: 'Gestion d’atelier' }
+         ]
+     }, */
     // {
     //     title: "Solutions par secteur",
     //     categories : [
