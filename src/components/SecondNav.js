@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, Sidebar, Icon, Segment, Accordion, Dropdown } from 'semantic-ui-react';
 import { items } from '../variables/SecondNav';
+import { Link } from 'react-router-dom'
 
 
 const SecondNav = ({ children, visib = false }) => {
@@ -51,7 +52,9 @@ const SecondNav = ({ children, visib = false }) => {
                             <Accordion.Content active={activeIndex === i} style={{ paddingLeft: 50 }}>
                                 {item.categories.map((categorie, ind) => (
                                     <p key={ind} style={{ color: "black" }}>
-                                        {categorie.text}
+                                        <Link style={{ color: '#000' }} to={"/" + categorie.value} key={i}>
+                                            {categorie.text}
+                                        </Link>
                                     </p>
                                 ))}
 
