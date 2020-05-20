@@ -13,6 +13,7 @@ const CostTracking = () => {
                 data={costTracking.data}
                 data2={costTracking.data2}
                 title3={costTracking.title3}
+                title3Mobile={costTracking.title3Mobile}
                 text="fleeti s'intègre à vos outils existants (géolocalisation, cartes carburant, comptabilité... ) pour vous donner une vision claire de l'éfficacité de votre parc de véhicules."
                 title1="Tableau de suivi des coûts"
                 title2="Toutes les données vitales à votre entreprise en un seul endroit"
