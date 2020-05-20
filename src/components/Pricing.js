@@ -11,7 +11,7 @@ const Pricing = () => {
                 <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
                     <div style={{ width: "90%" }}>
                         <p style={{ fontSize: 22, color: "#0BA1C1", textAlign: "center", marginTop: 100, fontWeight: "600", fontFamily: 'Muli' }}>Nos offres</p>
-                        <p style={{ textAlign: "center", marginTop: 30, marginBottom: 20, color: '#757575', fontSize: 17, fontFamily: 'Muli' }}>Le meilleur investissement pour<br /> votre activité</p>
+                        <p style={{ textAlign: "center", marginTop: 25, marginBottom: 20, color: '#757575', fontSize: 17, fontFamily: 'Muli' }}>Le meilleur investissement pour<br /> votre activité</p>
                     </div>
                     <div>
                         <Grid.Row columns={1}>
