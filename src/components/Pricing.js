@@ -4,7 +4,14 @@ import PricingBox from './PricingBox';
 import { prix } from '../variables/Pricing';
 import '../index.css'
 
-const Pricing = () => {
+const Pricing = ({ selectedCountry }) => {
+
+    let countryPricing;
+    if (selectedCountry == 'Senegal') {
+        countryPricing = prix.senegal
+    } else {
+        countryPricing = prix.maurice
+    }
     return (
         <>
             <Responsive maxWidth={1024.9999} >
@@ -15,7 +22,7 @@ const Pricing = () => {
                     </div>
                     <div>
                         <Grid.Row columns={1}>
-                            {prix.map(((item, i) => <PricingBox
+                            {countryPricing.map(((item, i) => <PricingBox
                                 key={i}
                                 color={item.color}
                                 prix={item.prix}
@@ -51,7 +58,7 @@ const Pricing = () => {
                     <Grid columns={4}>
 
 
-                        {prix.map(((item, i) => <PricingBox
+                        {countryPricing.map(((item, i) => <PricingBox
                             key={i}
                             color={item.color}
                             prix={item.prix}

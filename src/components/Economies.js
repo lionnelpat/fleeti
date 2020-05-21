@@ -7,12 +7,19 @@ function createMarkup(title) {
     return { __html: title };
 }
 
-const Economies = () => {
+const Economies = ({ selectedCountry }) => {
+    let countryEconomy;
+    if (selectedCountry == 'Senegal') {
+        countryEconomy = economies.senegal
+    } else {
+        countryEconomy = economies.maurice
+    }
+
     return (
         <>
             <Responsive maxWidth={1024}>
                 <p style={{ fontSize: 22, fontWeight: '600', color: "#0BA1C1", textAlign: "center" }}>Faites des économies sur vos <br /> véhicules en prenant les bonnes<br /> décisions</p>
-                {economies.map((item, i) => (
+                {countryEconomy.map((item, i) => (
                     <div key={i} style={{ display: "flex", alignItems: "center", marginTop: 30, flexDirection: "column" }}>
                         <div style={{ width: 110, textAlign: "center", height: 110, border: `solid ${item.color} 10px`, borderRadius: 500, display: "flex", justifyContent: "center", alignItems: "center" }} >
                             <p style={{ fontSize: 20, fontWeight: "bold", color: item.color }}>{item.prix}<br />
@@ -37,7 +44,7 @@ const Economies = () => {
                         </div>
                     </div>
                     <Grid columns={3} >
-                        {economies.map((item, i) => <EconomieItem
+                        {countryEconomy.map((item, i) => <EconomieItem
                             key={i}
                             i={i}
                             prix={item.prix}

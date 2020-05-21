@@ -26,7 +26,7 @@ const EconomieItem = ({ prix, unit, text1, text2, color = "black", i = 0 }) => {
 
                 <div style={{ display: "flex", flex: 1, justifyContent: "center" }}>
                     <div style={{ border: "solid white 10px", width: 100, height: 100, borderRadius: 500, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <p style={{ fontSize: 20, color: 'white', fontWeight: 'bold' }}>{prix} <br />
+                        <p style={{ fontSize: 20, color: 'white', fontWeight: 'bold' }}>{prix} <br />
                             <span style={{ lineHeight: 0.8, fontSize: 20, fontWeight: 600, textAlign: "center", fontFamily: 'Muli', color: "white" }}>{unit}</span>
                         </p>
                     </div>

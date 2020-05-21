@@ -9,8 +9,13 @@ import Pricing from '../components/Pricing';
 import Meet from '../components/Meet';
 // import Blog from '../components/Blog';
 import { Icon, Responsive } from 'semantic-ui-react';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const LandingPage = () => {
+
+    const selected = useSelector(state => state);
+    const dispatch = useDispatch();
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
@@ -35,7 +40,7 @@ const LandingPage = () => {
                 </p>
             </Responsive>
             <div ref={economy}>
-                <Economies />
+                <Economies selectedCountry={selected.country} />
             </div>
             <Responsive maxWidth={1024}>
                 <LogosPartners />
@@ -43,7 +48,7 @@ const LandingPage = () => {
             <Bande2 />
             <MiniCardGroup />
             <Grille />
-            <Pricing />
+            <Pricing selectedCountry={selected.country} />
             <Meet />
             {/* <Blog /> */}
 
