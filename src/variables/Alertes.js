@@ -4,25 +4,29 @@ export const alertes =
         {
             img: "a1",
             title: "Soyez plus réactif",
-            text: "Soyez informé immédiatement d’un incident sur votre flotte et obtenez les détails (descriptif, photo..etc) qui vous permetront<br/> de prendre les mesures adéquates."
+            text: "Soyez informé immédiatement d’un incident sur votre flotte et obtenez les détails (descriptif, photo..etc) qui vous permetront<br/> de prendre les mesures adéquates.",
+            textMobile: "Soyez informé immédiatement d’un incident sur votre flotte et obtenez les détails (descriptif, photo..etc) qui vous permetront de prendre les mesures adéquates."
         },
         {
             img: "a2",
             title: "Ne ratez plus un entretien",
-            text: "Plannifier l’entretien périodique de votre<br/> flotte en fonction du kilométrage ou d’un<br/> temps donné, soyez alerté au bon moment<br/> de l’immobilisation d’un véhicule et adaptez<br/> vos plannings en conséquence"
+            text: "Plannifier l’entretien périodique de votre<br/> flotte en fonction du kilométrage ou d’un<br/> temps donné, soyez alerté au bon moment<br/> de l’immobilisation d’un véhicule et adaptez<br/> vos plannings en conséquence",
+            textMobile: "Plannifier l’entretien périodique de votre flotte en fonction du kilométrage ou d’un temps donné, soyez alerté au bon moment de l’immobilisation d’un véhicule et adaptez vos plannings en conséquence"
         },
         {
             img: "a3",
             title: "Suivez la résolution  des pannes",
-            text: "Communiquez avec vos chauffeurs et chefs<br/> d’atelier pour savoir quelles mesures doivent<br/> être prises pour résoudre les incidents, ayez<br/> un suivi précis des délais et coûts associés"
+            text: "Communiquez avec vos chauffeurs et chefs<br/> d’atelier pour savoir quelles mesures doivent<br/> être prises pour résoudre les incidents, ayez<br/> un suivi précis des délais et coûts associés",
+            textMobile: "Communiquez avec vos chauffeurs et chefs d’atelier pour savoir quelles mesures doivent être prises pour résoudre les incidents, ayez un suivi précis des délais et coûts associés"
         },
     ],
     title3: "Augmentez la durée de vie de votre parc de véhicules",
+    title3Mobile: "Augmentez la durée de vie de votre parc de véhicules",
     img2: "big_a",
     data2: [
         {
             title: "Diminuez les coûts associés à la maintenance",
-            text: "La maintenance préventive de votre parc évite sa détérioration prématurée et vous fait réaliser d’importantes économies"
+            text: "La maintenance préventive de votre parc évite sa détérioration prématurée et vous fait réaliser d’importantes économies",
         },
         {
             title: "Maximisez votre valeur de revente",

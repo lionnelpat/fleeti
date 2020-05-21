@@ -4,17 +4,20 @@ export const planningEtMissions =
         {
             img: "pem1",
             title: "Organisez vos<br/> équipes",
-            text: "Via ce module, vous aurez une vue en temps<br/> réel de la disponibilité de vos chauffeurs et<br/> véhicules pour organiser le travail de vos<br/> équipes de manière plus efficiente. "
+            text: "Via ce module, vous aurez une vue en temps<br/> réel de la disponibilité de vos chauffeurs et<br/> véhicules pour organiser le travail de vos<br/> équipes de manière plus efficiente. ",
+            textMobile: "Via ce module, vous aurez une vue en temps réel de la disponibilité de vos chauffeurs et véhicules pour organiser le travail de vos équipes de manière plus efficiente. "
         },
         {
             img: "pem2",
             title: "Impliquez vos<br/> collaborateurs",
-            text: "Grâce à notre application mobile, vous<br/> pouvez communiquer directements avec vos<br/> employés qui pourront quant à eux vous<br/> remonter des données terrain en temps réel"
+            text: "Grâce à notre application mobile, vous<br/> pouvez communiquer directements avec vos<br/> employés qui pourront quant à eux vous<br/> remonter des données terrain en temps réel",
+            textMobile: "Grâce à notre application mobile, vous pouvez communiquer directements avec vos employés qui pourront quant à eux vous remonter des données terrain en temps réel"
         },
         {
             img: "pem3",
             title: "Gérez vos missions",
-            text: "Grâce à notre planning intuitif de gestion<br/> des missions, vérifiez où en sont vos<br/> collaborateurs, quels véhicules sont utilisés<br/> et lesquels sont indisponibles, Modifiez en<br/> temps réel le planning de tournée"
+            text: "Grâce à notre planning intuitif de gestion<br/> des missions, vérifiez où en sont vos<br/> collaborateurs, quels véhicules sont utilisés<br/> et lesquels sont indisponibles, Modifiez en<br/> temps réel le planning de tournée",
+            textMobile: "Grâce à notre planning intuitif de gestion des missions, vérifiez où en sont vos collaborateurs, quels véhicules sont utilisés et lesquels sont indisponibles, Modifiez en temps réel le planning de tournée"
         },
     ],
     title3: "La meilleure façon d’organiser le travail de vos chauffeurs et de vos véhicules",
