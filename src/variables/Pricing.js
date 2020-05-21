@@ -1,7 +1,7 @@
 export const prix = [
     {
         title: "Basique",
-        prix: "10 000",
+        prix: "20 000",
         unit: "FCFA",
         time: "Par véhicule/mois",
         text: "Géolocalisation à petit prix",
@@ -17,7 +17,7 @@ export const prix = [
     },
     {
         title: "Standard",
-        prix: "15 000",
+        prix: "25 000",
         unit: "FCFA",
         time: "Par véhicule/mois",
         text: "La solution <br/> pour les PME",
@@ -27,7 +27,7 @@ export const prix = [
         features: [
             "Dashboard de suivi des coûts",
             "Alertes d’entretien et de maintenance",
-            "Analyse vechicle dowtime",
+            "Analyse d’immobilisation",
             "Gestion des contacts"
         ],
 
@@ -36,7 +36,7 @@ export const prix = [
     },
     {
         title: "Premium",
-        prix: "20 000",
+        prix: "30 000",
         unit: "FCFA",
         time: "Par véhicule/mois",
         text: "Le futur de <br/> la gestion de flotte",
