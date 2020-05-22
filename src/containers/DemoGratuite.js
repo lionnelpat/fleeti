@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Grid, Container, Image, Input, Button, Form, Message, Responsive } from 'semantic-ui-react';
-import img1 from '../img/img1.png'
+import img1 from '../img/dash.png'
 import quote from "../img/quote.png"
 import LogosPartners from '../components/LogosPartners';
 import Axios from 'axios';
