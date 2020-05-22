@@ -7,8 +7,10 @@ import collapse_btn from "../img/collapse_btn.png"
 
 const FirstNav = ({ visible = false, setVisible }) => {
     let countryOptions = [
-        { key: 'sn', value: 'sn', text: 'Sénégal' },
-        { key: 'mr', value: 'mr', text: 'Maurice' },
+        {
+            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{ color: '#757575' }} label="Sénégal" >Sénégal</span>
+        },
+        { key: 'mr', value: 'mr', text: 'Maurice', content: <span style={{ color: '#757575' }} label="Maurice" > Maurice</span> },
     ]
     return (
         <Menu.Menu position="right"  >
