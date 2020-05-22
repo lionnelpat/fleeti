@@ -12,7 +12,7 @@ export const miniCards = [
         text: "Regroupez toutes les données utiles à votre activité en un endroit, prenez des décisions rapidement et réduisez vos coûts.",
         img: "mc1",
         link: "cost-tracking",
-        knowMoreMargin: 28,
+        knowMoreMargin: 25,
         mgleft: 16,
         mgright: 16
     },
