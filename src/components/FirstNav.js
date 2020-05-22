@@ -14,19 +14,19 @@ const FirstNav = ({ visible = false, setVisible }) => {
         dispatch({
             type: "Senegal"
         })
-    }, [])
+    })
 
 
     let countryOptions = [
         {
-            key: 'sn', value: 'sn', text: 'Sénégal', content: <span label="Sénégal" onClick={() => dispatch({
+            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{}} label="Sénégal" onClick={() => dispatch({
                 type: "Senegal"
             })} >Sénégal</span>
         },
         {
             key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => dispatch({
                 type: "Maurice"
-            })} >Maurice</span>
+            })} style={{}} >Maurice</span>
         },
     ]
 

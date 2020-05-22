@@ -9,7 +9,7 @@ function createMarkup(title) {
 
 const Economies = ({ selectedCountry }) => {
     let countryEconomy;
-    if (selectedCountry == 'Senegal') {
+    if (selectedCountry === 'Senegal') {
         countryEconomy = economies.senegal
     } else {
         countryEconomy = economies.maurice
@@ -52,6 +52,7 @@ const Economies = ({ selectedCountry }) => {
                             text1={item.text1}
                             text2={item.text2}
                             color={item.color}
+                            selectedCountry={selectedCountry}
                         />)}
                     </Grid>
                 </Card>

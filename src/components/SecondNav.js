@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, Sidebar, Icon, Segment, Accordion, Dropdown } from 'semantic-ui-react';
 import { items } from '../variables/SecondNav';
 import { Link } from 'react-router-dom'
+import { useDispatch } from "react-redux";
 
 
 const SecondNav = ({ children, visib = false }) => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch({
+            type: "Senegal"
+        })
+    })
+
     let handleClick = (e, titleProps) => {
         console.log(titleProps)
         const { index } = titleProps
@@ -18,9 +27,19 @@ const SecondNav = ({ children, visib = false }) => {
     })
 
     const { activeIndex } = state
+
+
     let countryOptions = [
-        { key: 'sn', value: 'sn', text: 'Sénégal' },
-        { key: 'mr', value: 'mr', text: 'Maurice' },
+        {
+            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{ fontWeight: 'normal' }} label="Sénégal" onClick={() => dispatch({
+                type: "Senegal"
+            })} >Sénégal</span>
+        },
+        {
+            key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => dispatch({
+                type: "Maurice"
+            })} style={{ fontWeight: 'normal' }} >Maurice</span>
+        },
     ]
     return (
         <Sidebar.Pushable as={Segment} style={{ marginTop: -15 }}>

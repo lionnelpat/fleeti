@@ -12,9 +12,9 @@ const Bande1 = () => {
         <BandeLayout
             illustration={<Image src={img1} style={{ width: '94%', float: 'right' }} />}
             image={<Image src={img1} />}
-            mobileTitle={<p style={{ fontSize: 22, fontFamily: 'Muli' }}>Connectez votre flotte</p>}
-            title={<p style={{ fontSize: 33.4, fontWeight: 'bold', fontFamily: 'Muli' }}>Une gestion de flotte <br /> réussie avec fleeti</p>}
-            text={<p style={{ fontSize: 17.22, fontFamily: 'Muli', textAlign: 'center', color: '#757575' }}>La solution complète pour optimiser<br /> la gestion de vos véhicules et piloter<br /> votre entreprise.</p>}
+            mobileTitle={<p style={{ textAlign: "center", marginTop: 20, fontSize: 22.0436, fontWeight: '600', fontFamily: 'Muli', color: "#0BA1C1" }}>Connectez votre flotte</p>}
+            title={<p style={{ fontSize: 33.417, fontWeight: 'bold', fontFamily: 'Muli', color: 'rgba(33, 17, 3, 0.9)', textAlign: 'center' }}>Une gestion de flotte <br /> réussie avec fleeti</p>}
+            text={<p style={{ fontSize: 17.2216, fontFamily: 'Muli', textAlign: 'center', color: '#757575', marginTop: 15 }}>La solution complète pour optimiser<br /> la gestion de vos véhicules et piloter<br /> votre entreprise.</p>}
             minitext={<p style={{ fontSize: 10, color: "#757575", marginTop: 20, textAlign: "center", fontFamily: 'Muli' }}>Essayez fleeti gratuitement pendant 30 jours, aucune <br />carte de crédit n’est requise.</p>}
             showDemoBtn
         >

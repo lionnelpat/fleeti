@@ -7,14 +7,14 @@ const BandeLayout = ({ children, illustration, title, mobileTitle, text, reverse
 
         <>
             <Responsive maxWidth={1024}>
-                <p style={{ textAlign: "center", marginTop: 20, fontSize: 20, color: "#0BA1C1" }}>{mobileTitle}</p>
-                <p style={{ textAlign: "center", marginTop: 20, fontSize: 30, fontWeight: "bold" }}>{title}</p>
+                {mobileTitle}
+                {title}
                 <div style={{ display: "flex", justifyContent: "center" }}>
                     <div style={{ width: "80%" }}>
                         {image}
                     </div>
                 </div>
-                <p style={{ textAlign: "center", marginTop: 20, fontSize: 18 }}>{text}</p>
+                {text}
                 <div style={{ display: "flex", justifyContent: "center" }}>
 
                     {showDemoBtn && <Link to="/demo-gratuite">

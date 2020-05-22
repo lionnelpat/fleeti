@@ -10,12 +10,10 @@ import Meet from '../components/Meet';
 // import Blog from '../components/Blog';
 import { Icon, Responsive } from 'semantic-ui-react';
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 
 const LandingPage = () => {
 
     const selected = useSelector(state => state);
-    const dispatch = useDispatch();
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])

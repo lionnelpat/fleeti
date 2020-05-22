@@ -1,6 +1,3 @@
-
-import React from 'react';
-
 function countryReducer(state = { country: 'Senegal' }, action) {
     switch (action.type) {
         case "Senegal":

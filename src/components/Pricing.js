@@ -7,7 +7,7 @@ import '../index.css'
 const Pricing = ({ selectedCountry }) => {
 
     let countryPricing;
-    if (selectedCountry == 'Senegal') {
+    if (selectedCountry === 'Senegal') {
         countryPricing = prix.senegal
     } else {
         countryPricing = prix.maurice
