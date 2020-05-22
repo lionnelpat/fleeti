@@ -69,8 +69,8 @@ export const prix = {
     maurice: [
         {
             title: "Basique",
-            prix: "10 000",
-            unit: "FCFA",
+            prix: "400",
+            unit: "Rs",
             time: "Par véhicule/mois",
             text: "Géolocalisation à petit prix",
             text2: "Principales fonctionalités :",
@@ -85,8 +85,8 @@ export const prix = {
         },
         {
             title: "Standard",
-            prix: "15 000",
-            unit: "FCFA",
+            prix: "600",
+            unit: "Rs",
             time: "Par véhicule/mois",
             text: "La solution <br/> pour les PME",
             text2: "Toutes les fonctionnalités Basique plus: ",
@@ -104,8 +104,8 @@ export const prix = {
         },
         {
             title: "Premium",
-            prix: "20 000",
-            unit: "FCFA",
+            prix: "800",
+            unit: "Rs",
             time: "Par véhicule/mois",
             text: "Le futur de <br/> la gestion de flotte",
             text2: "Toutes les fonctionnalités Standard  plus : ",

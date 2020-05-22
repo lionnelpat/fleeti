@@ -36,6 +36,7 @@ const Pricing = ({ selectedCountry }) => {
                                 boxWidth={'80%'}
                                 pb={'10%'}
                                 mb={'10%'}
+                                selectedCountry={selectedCountry}
                             />))}
                         </Grid.Row>
                     </div>
@@ -72,6 +73,7 @@ const Pricing = ({ selectedCountry }) => {
                             boxWidth={'110%'}
                             pb={'0%'}
                             mb={'0%'}
+                            selectedCountry={selectedCountry}
                         />))}
                     </Grid>
                 </Card>
