@@ -8,9 +8,9 @@ import collapse_btn from "../img/collapse_btn.png"
 const FirstNav = ({ visible = false, setVisible }) => {
     let countryOptions = [
         {
-            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{ color: '#757575' }} label="Sénégal" >Sénégal</span>
+            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{}} label="Sénégal" >Sénégal</span>
         },
-        { key: 'mr', value: 'mr', text: 'Maurice', content: <span style={{ color: '#757575' }} label="Maurice" > Maurice</span> },
+        { key: 'mr', value: 'mr', text: 'Maurice', content: <span style={{}} label="Maurice" > Maurice</span> },
     ]
     return (
         <Menu.Menu position="right"  >
@@ -34,7 +34,7 @@ const FirstNav = ({ visible = false, setVisible }) => {
                     </Link>
                 </Menu.Item>
                 <Menu.Item>
-                    <Dropdown defaultValue="sn" placeholder='Select choice' simple options={countryOptions} />
+                    <Dropdown style={{ color: '#757575', fontWeight: 'bold' }} defaultValue="sn" placeholder='Select choice' simple options={countryOptions} />
                 </Menu.Item>
 
 
