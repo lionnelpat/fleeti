@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Menu, Dropdown, Button, Responsive, Image } from 'semantic-ui-react';
 import CustomMenuItem from './CustomMenuItem';
 import { items } from '../variables/SecondNav';
 import { Link } from 'react-router-dom';
 import collapse_btn from "../img/collapse_btn.png"
+import { useDispatch } from "react-redux";
 
 const FirstNav = ({ visible = false, setVisible }) => {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch({
+            type: "Senegal"
+        })
+    })
+
+
     let countryOptions = [
-        { key: 'sn', value: 'sn', text: 'Sénégal' },
-        { key: 'mr', value: 'mr', text: 'Maurice' },
+        {
+            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{}} label="Sénégal" onClick={() => dispatch({
+                type: "Senegal"
+            })} >Sénégal</span>
+        },
+        {
+            key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => dispatch({
+                type: "Maurice"
+            })} style={{}} >Maurice</span>
+        },
     ]
+
     return (
-        <Menu.Menu position="right"  >
+        <Menu.Menu position="right" >
             <Responsive maxWidth={1024} style={{ display: "flex", alignItems: "center" }}>
                 <Image src={collapse_btn} style={{ cursor: "pointer" }} onClick={() => setVisible(!visible)} />
             </Responsive>
@@ -25,6 +45,13 @@ const FirstNav = ({ visible = false, setVisible }) => {
                     </Menu.Item>
                 )}
                 <Menu.Item>
+                    <Link to="/partnership">
+                        <p style={{ color: "#757575", fontWeight: "bold" }}>
+                            Devenir partenaire
+                </p>
+                    </Link>
+                </Menu.Item>
+                <Menu.Item>
                     <Link to="/demo-gratuite">
                         <p style={{ color: "#757575", fontWeight: "bold" }}>
                             Nous contacter
@@ -32,7 +59,13 @@ const FirstNav = ({ visible = false, setVisible }) => {
                     </Link>
                 </Menu.Item>
                 <Menu.Item>
-                    <Dropdown defaultValue="sn" placeholder='Select choice' simple options={countryOptions} />
+                    <Dropdown
+                        style={{ color: '#757575', fontWeight: 'bold' }}
+                        defaultValue="sn"
+                        placeholder='Select choice'
+                        simple
+                        options={countryOptions}
+                    />
                 </Menu.Item>
 
 

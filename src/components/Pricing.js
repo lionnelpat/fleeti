@@ -4,18 +4,25 @@ import PricingBox from './PricingBox';
 import { prix } from '../variables/Pricing';
 import '../index.css'
 
-const Pricing = () => {
+const Pricing = ({ selectedCountry }) => {
+
+    let countryPricing;
+    if (selectedCountry === 'Senegal') {
+        countryPricing = prix.senegal
+    } else {
+        countryPricing = prix.maurice
+    }
     return (
         <>
             <Responsive maxWidth={1024.9999} >
                 <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
-                    <div style={{ width: "90%" }}>
+                    <div style={{ width: "100%" }}>
                         <p style={{ fontSize: 22, color: "#0BA1C1", textAlign: "center", marginTop: 100, fontWeight: "600", fontFamily: 'Muli' }}>Nos offres</p>
-                        <p style={{ textAlign: "center", marginTop: 30, marginBottom: 20, color: '#757575', fontSize: 17, fontFamily: 'Muli' }}>Le meilleur investissement pour<br /> votre activité</p>
+                        <p style={{ textAlign: "center", marginTop: 25, marginBottom: 20, color: '#757575', fontSize: 17, fontFamily: 'Muli' }}>Le meilleur investissement pour<br /> votre activité</p>
                     </div>
                     <div>
                         <Grid.Row columns={1}>
-                            {prix.map(((item, i) => <PricingBox
+                            {countryPricing.map(((item, i) => <PricingBox
                                 key={i}
                                 color={item.color}
                                 prix={item.prix}
@@ -26,9 +33,11 @@ const Pricing = () => {
                                 text={item.text}
                                 text2={item.text2}
                                 features={item.features}
-                                boxWidth={'80%'}
+                                cardHeight={560}
+                                boxWidth={300}
                                 pb={'10%'}
                                 mb={'10%'}
+                                selectedCountry={selectedCountry}
                             />))}
                         </Grid.Row>
                     </div>
@@ -51,7 +60,7 @@ const Pricing = () => {
                     <Grid columns={4}>
 
 
-                        {prix.map(((item, i) => <PricingBox
+                        {countryPricing.map(((item, i) => <PricingBox
                             key={i}
                             color={item.color}
                             prix={item.prix}
@@ -65,6 +74,8 @@ const Pricing = () => {
                             boxWidth={'110%'}
                             pb={'0%'}
                             mb={'0%'}
+                            selectedCountry={selectedCountry}
+                            cardHeight={'110%'}
                         />))}
                     </Grid>
                 </Card>

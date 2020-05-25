@@ -59,7 +59,6 @@ const MiniCardGroup = () => {
                                     mt={i > 2 ? 30 : 0}
                                     link={item.link}
                                     height={i === 4 ? 187 : 200}
-                                    mt2={i === 4 ? 43 : undefined}
                                     knowMoreMargin={item.knowMoreMargin}
                                     mgleft={item.mgleft}
                                     mgright={item.mgright}
