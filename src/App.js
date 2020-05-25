@@ -19,6 +19,7 @@ import { Sidebar, Responsive } from 'semantic-ui-react';
 
 function App() {
   const [visible, setVisible] = useState(false)
+
   return (
     <>
       <BrowserRouter>
