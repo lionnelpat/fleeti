@@ -33,7 +33,8 @@ const Pricing = ({ selectedCountry }) => {
                                 text={item.text}
                                 text2={item.text2}
                                 features={item.features}
-                                boxWidth={'80%'}
+                                cardHeight={560}
+                                boxWidth={300}
                                 pb={'10%'}
                                 mb={'10%'}
                                 selectedCountry={selectedCountry}
