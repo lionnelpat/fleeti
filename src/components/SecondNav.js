@@ -23,7 +23,7 @@ const SecondNav = ({ children, visib = false }) => {
         { key: 'mr', value: 'mr', text: 'Maurice' },
     ]
     return (
-        <Sidebar.Pushable as={Segment} style={{ marginTop: -15 }}>
+        <Sidebar.Pushable as={Segment} style={{ marginTop: -15, borderWidth:0}}>
 
             <Sidebar
                 as={Menu}
@@ -39,7 +39,7 @@ const SecondNav = ({ children, visib = false }) => {
                 <Menu.Item as='div'>
 
                     {items.map((item, i) => (
-                        <Accordion fluid styled key={i} style={{ boxShadow: "none" }}>
+                        <Accordion fluid styled key={i} style={{ boxShadow: "none", textAlign: 'left' }}>
                             <Accordion.Title
                                 active={activeIndex === i}
                                 index={i}
@@ -50,7 +50,7 @@ const SecondNav = ({ children, visib = false }) => {
                                 {item.title}
                             </Accordion.Title>
 
-                            <Accordion.Content active={activeIndex === i}>
+                            <Accordion.Content active={activeIndex === i} style={{ paddingLeft: 50 }}>
                                 {item.categories.map((categorie, ind) => (
                                     <p key={ind} style={{ color: "black" }}>
                                         <Link style={{ color: '#000' }} to={"/" + categorie.value} key={i}>
@@ -79,7 +79,7 @@ const SecondNav = ({ children, visib = false }) => {
                     </Link>
                 </p>
                 </Menu.Item>
-                <Menu.Item as="a">
+                <Menu.Item as="p" style={{ textAlign: 'left', paddingLeft: 35 }}>
                     <Dropdown defaultValue="sn" placeholder='Select choice' style={{ color: "black" }} simple options={countryOptions} />
                 </Menu.Item>
             </Sidebar>
