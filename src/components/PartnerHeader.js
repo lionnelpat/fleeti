@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Image, Input, Responsive } from 'semantic-ui-react';
+import { Button, Input, Responsive } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import './PartnerHeader.css'
 

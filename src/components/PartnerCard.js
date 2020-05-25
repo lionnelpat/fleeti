@@ -1,9 +1,8 @@
 import React from 'react';
-import { Grid, Image, Icon, Responsive } from 'semantic-ui-react';
+import { Grid, Image} from 'semantic-ui-react';
 import p1 from "../img/partner1.png"
 import p2 from "../img/partner2.png"
 import p3 from "../img/partner3.png"
-import { Link } from 'react-router-dom';
 import "./MiniCard.css"
 
 function createMarkup(title) {

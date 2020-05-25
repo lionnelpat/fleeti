@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import PartnerHeader from '../components/PartnerHeader';
 import PartnerCardGroup from '../components/PartnerCardGroup'
-import { Icon, Responsive, Button } from 'semantic-ui-react';
+import { Responsive, Button } from 'semantic-ui-react';
 import { partnerships } from "../variables/Partnerships.js"
 import { Link } from 'react-router-dom';
 
