@@ -60,6 +60,7 @@ const FirstNav = ({ visible = false, setVisible }) => {
                 </Menu.Item>
                 <Menu.Item>
                     <Dropdown
+                        style={{ color: '#757575', fontWeight: 'bold' }}
                         defaultValue="sn"
                         placeholder='Select choice'
                         simple
