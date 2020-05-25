@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Image, Input } from 'semantic-ui-react';
-import img1 from '../img/img1.png'
+import img1 from '../img/dash.png'
 import BandeLayout from './BandeLayout';
 import { Link } from 'react-router-dom';
 

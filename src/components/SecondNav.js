@@ -65,8 +65,19 @@ const SecondNav = ({ children, visib = false }) => {
                     ))}
 
                 </Menu.Item>
-                <Menu.Item as="p" style={{ textAlign: 'left', paddingLeft: 35, marginBottom: 0, paddingTop: 0 }}>
-                    <p style={{ color: "black" }}>Nous contacter</p>
+                <Menu.Item as="div">
+                 <p style={{ color: "black" }}>
+                    <Link style={{ color: '#000' }} to={"/partnership"}>
+                        Devenir partenaire
+                    </Link>
+                </p>
+                </Menu.Item>
+                <Menu.Item as="div">
+                 <p style={{ color: "black" }}>
+                    <Link style={{ color: '#000' }} to={"/demo-gratuite"}>
+                        Nous contacter
+                    </Link>
+                </p>
                 </Menu.Item>
                 <Menu.Item as="p" style={{ textAlign: 'left', paddingLeft: 35 }}>
                     <Dropdown defaultValue="sn" placeholder='Select choice' style={{ color: "black" }} simple options={countryOptions} />

@@ -25,6 +25,13 @@ const FirstNav = ({ visible = false, setVisible }) => {
                     </Menu.Item>
                 )}
                 <Menu.Item>
+                    <Link to="/partnership">
+                        <p style={{ color: "#757575", fontWeight: "bold" }}>
+                            Devenir partenaire
+                </p>
+                    </Link>
+                </Menu.Item>
+                <Menu.Item>
                     <Link to="/demo-gratuite">
                         <p style={{ color: "#757575", fontWeight: "bold" }}>
                             Nous contacter
