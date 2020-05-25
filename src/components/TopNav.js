@@ -1,3 +1,4 @@
+ 
 import React, { Component } from 'react';
 import { Segment, Image, Menu } from 'semantic-ui-react';
 import logo from '../img/logo.png'
