@@ -55,7 +55,7 @@ const FirstNav = ({ visible = false, setVisible }) => {
     return (
         <Menu.Menu position="right" >
             <Responsive maxWidth={1024} style={{ display: "flex", alignItems: "center" }}>
-                <Image src={collapse_btn} style={{ cursor: "pointer" }} onClick={() => setVisible(!visible)} />
+                <Image src={collapse_btn} style={{ cursor: "pointer", paddingRight: 10 }} onClick={() => setVisible(!visible)} />
             </Responsive>
             <Responsive minWidth={1024} style={{ display: "flex", width: "100%" }}>
                 {items.map((item, i) =>
