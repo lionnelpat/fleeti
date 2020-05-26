@@ -1,20 +1,42 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, Dropdown, Button, Responsive, Image } from 'semantic-ui-react';
 import CustomMenuItem from './CustomMenuItem';
 import { items } from '../variables/SecondNav';
 import { Link } from 'react-router-dom';
 import collapse_btn from "../img/collapse_btn.png"
 import { useDispatch } from "react-redux";
+import Axios from 'axios'
 
 const FirstNav = ({ visible = false, setVisible }) => {
+    const [countryName, setCountryName] = useState('')
+    const [countryCode, setCountryCode] = useState('')
 
     const dispatch = useDispatch();
 
+    function getGeoInfo() {
+        Axios.get('https://ipapi.co/json/').then((response) => {
+            let data = response.data;
+            setCountryName(data.country_name)
+            setCountryCode(data.country_calling_code)
+        }).catch((error) => {
+            console.log(error);
+        });
+
+        if (countryName === 'Mauritius') {
+            dispatch({
+                type: "Maurice"
+            })
+        } else {
+            dispatch({
+                type: "Senegal"
+            })
+        }
+
+    };
+
     useEffect(() => {
-        /* dispatch({
-            type: "Senegal"
-        }) */
-    })
+        getGeoInfo()
+    }, [countryName, countryCode])
 
 
     let countryOptions = [

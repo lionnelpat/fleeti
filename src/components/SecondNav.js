@@ -3,16 +3,38 @@ import { Menu, Sidebar, Icon, Segment, Accordion, Dropdown } from 'semantic-ui-r
 import { items } from '../variables/SecondNav';
 import { Link } from 'react-router-dom'
 import { useDispatch } from "react-redux";
+import Axios from 'axios'
 
 
 const SecondNav = ({ children, visib = false, setVisible }) => {
+    const [countryName, setCountryName] = useState('')
+    const [countryCode, setCountryCode] = useState('')
+
     const dispatch = useDispatch();
 
+    function getGeoInfo() {
+        Axios.get('https://ipapi.co/json/').then((response) => {
+            let data = response.data;
+            setCountryName(data.country_name)
+            setCountryCode(data.country_calling_code)
+        }).catch((error) => {
+            console.log(error);
+        });
+
+        if (countryName === 'Mauritius') {
+            dispatch({
+                type: "Maurice"
+            })
+        } else {
+            dispatch({
+                type: "Senegal"
+            })
+        }
+    };
+
     useEffect(() => {
-        /* dispatch({
-            type: "Senegal"
-        }) */
-    })
+        getGeoInfo()
+    }, [countryName, countryCode])
 
     let handleClick = (e, titleProps) => {
         console.log(titleProps)
