@@ -37,7 +37,9 @@ export const comparaisonDePrestaires =
             text: "L’outil Fleeti vous permet de suivre l’évolution de vos réparations du dépot de la voiture à sa réception afin d’en optimiser l’usage. Par ailleurs, notre service client est disponible pour répondre à toutes vos interrogations."
         },
 
-    ]
+    ],
+  pageTitle: "La comparaison de prestataires sur Fleeti",
+  pageDescription: "Réalisez vos entretiens et réparations au meilleur prix, avec les meilleurs fournisseurs. Avec Fleeti, vous pourrez comparer directement les prix et la réputation des garages autour de vous."
 
 }
 

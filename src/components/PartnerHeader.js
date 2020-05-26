@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Button, Input, Responsive } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import './PartnerHeader.css'
@@ -23,6 +24,10 @@ const PartnerHeader = () => {
             justifyContent: 'center',
 
         }}>
+            <Helmet>
+              <title>Devenir partenaire sur Fleeti</title>
+              <meta name="description" content="Collaborez avec Fleeti. En rejoignant le réseau de partenaire Fleeti, vous misez sur un produit fiable, innovant et reconnu par de nombreuses entreprises." />
+            </Helmet >
             <div style={{
                 width: '70%', backgroundColor: 'transparent', height: '50%', margin: 'auto',
             }}>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Grid, Container, Image, Input, Button, Form, Message, Responsive } from 'semantic-ui-react';
 import img1 from '../img/dash.png'
 import quote from "../img/quote.png"
@@ -50,6 +51,10 @@ const DemoGratuite = ({ location }) => {
     return (
         <>
             <Responsive maxWidth={1024}>
+              <Helmet>
+                <title>Nous contacter sur Fleeti</title>
+                <meta name="description" content="Notre challenge ? 30 jours pour commencer à vous faire réaliser des économies. Profitez d’un accompagnement sur mesure et découvrez toute la puissance de Fleeti." />
+              </Helmet >
                 <p style={{ textAlign: "center", marginTop: 20, fontSize: 20, color: "#0BA1C1" }}>Démo gratuit</p>
                 <p style={{ textAlign: "center", marginTop: 20, fontSize: 30, fontWeight: "bold" }}>Commencez à faire<br /> des économies</p>
                 <p style={{ fontSize: 17, color: "#757575", marginTop: 10, fontFamily: 'Muli', textAlign: "center" }}>
