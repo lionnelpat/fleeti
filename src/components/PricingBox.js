@@ -7,8 +7,7 @@ function createMarkup(title) {
     return { __html: title };
 }
 
-
-const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, features, boxWidth, pb, mb, selectedCountry }) => {
+const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, features, boxWidth, pb, mb, selectedCountry, cardHeight }) => {
 
     const [border] = useState({
         top: 30,
@@ -34,7 +33,7 @@ const PricingBox = ({ color = "#0BA1C1", title, prix, unit, time, text, text2, f
                     borderTopLeftRadius: 10,
                     borderTopRightRadius: 10,
                     textAlign: "center",
-                    height: "110%",
+                    height: cardHeight,
                     width: boxWidth,
                     paddingBottom: pb,
                     marginBottom: mb

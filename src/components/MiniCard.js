@@ -31,68 +31,71 @@ function createMarkup(title) {
 }
 
 
-const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = "/", mt2, knowMoreMargin, mgleft, mgright, bg, fs, knowMoreSize, pt }) => {
-    return (
+const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = "/", knowMoreMargin, mgleft, mgright, bg, fs, knowMoreSize, pt }) => {
+  return (
 
 
-        <Grid.Column style={{ textAlign: "center", justifyContent: "center", marginTop: mt2 || mt, height: 450, backgroundColor: bg }}>
-            <Grid columns={1}>
-                <Grid.Row style={{ paddingTop: pt }}>
-                    <Grid.Column style={{ display: "flex", justifyContent: "center" }}>
-                        <div style={{ height }}>
-                            <Responsive maxWidth={1024}>
-                                <Image src={img} />
-                            </Responsive>
-                            {img === "mc1" && <Image src={mc1} />}
-                            {img === "mc2" && <Image src={mc2} />}
-                            {img === "mc3" && <Image src={mc3} />}
-                            {img === "mc4" && <Image src={mc4} />}
-                            {img === "mc5" && <Image src={mc5} />}
-                            {img === "mc6" && <Image src={mc6} />}
-                            {img === "ct1" && <Image src={ct1} />}
-                            {img === "ct2" && <Image src={ct2} />}
-                            {img === "ct3" && <Image src={ct3} />}
-                            {img === "geoloc1" && <Image src={geoloc1} />}
-                            {img === "geoloc2" && <Image src={geoloc2} />}
-                            {img === "geoloc3" && <Image src={geoloc3} />}
-                            {img === "fm1" && <Image src={fm1} />}
-                            {img === "fm2" && <Image src={fm2} />}
-                            {img === "fm3" && <Image src={fm3} />}
-                            {img === "cdp1" && <Image src={cdp1} />}
-                            {img === "cdp2" && <Image src={cdp2} />}
-                            {img === "cdp3" && <Image src={cdp3} />}
-                            {img === "a1" && <Image src={a1} />}
-                            {img === "a2" && <Image src={a2} />}
-                            {img === "a3" && <Image src={a3} />}
-                            {img === "pem1" && <Image src={pem1} />}
-                            {img === "pem2" && <Image src={pem2} />}
-                            {img === "pem3" && <Image src={pem3} />}
-                        </div>
+    <Grid.Column style={{ textAlign: "center", marginTop: mt, height: 550, backgroundColor: bg }}>
+      <Grid columns={1} style={{ display: "flex", flexDirection: 'column', justifyContent: "space-between", height: '100%' }}>
+        <Grid.Row style={{ paddingTop: pt }}>
+            <Grid.Column style={{ display: "flex", justifyContent: "center" }}>
+                <div style={{ height }}>
+                    <Responsive maxWidth={1024}>
+                        <Image src={img} />
+                    </Responsive>
+                    {img === "mc1" && <Image src={mc1} />}
+                    {img === "mc2" && <Image src={mc2} />}
+                    {img === "mc3" && <Image src={mc3} />}
+                    {img === "mc4" && <Image src={mc4} />}
+                    {img === "mc5" && <Image src={mc5} />}
+                    {img === "mc6" && <Image src={mc6} />}
+                    {img === "ct1" && <Image src={ct1} />}
+                    {img === "ct2" && <Image src={ct2} />}
+                    {img === "ct3" && <Image src={ct3} />}
+                    {img === "geoloc1" && <Image src={geoloc1} />}
+                    {img === "geoloc2" && <Image src={geoloc2} />}
+                    {img === "geoloc3" && <Image src={geoloc3} />}
+                    {img === "fm1" && <Image src={fm1} />}
+                    {img === "fm2" && <Image src={fm2} />}
+                    {img === "fm3" && <Image src={fm3} />}
+                    {img === "cdp1" && <Image src={cdp1} />}
+                    {img === "cdp2" && <Image src={cdp2} />}
+                    {img === "cdp3" && <Image src={cdp3} />}
+                    {img === "a1" && <Image src={a1} />}
+                    {img === "a2" && <Image src={a2} />}
+                    {img === "a3" && <Image src={a3} />}
+                    {img === "pem1" && <Image src={pem1} />}
+                    {img === "pem2" && <Image src={pem2} />}
+                    {img === "pem3" && <Image src={pem3} />}
+                </div>
 
-                    </Grid.Column>
-                    <Grid.Column style={{ marginTop: 0 }} >
-                        <p style={{ textAlign: "center", color: '#000000', fontWeight: "600", fontSize: 19.8117, fontFamily: 'Muli' }}>{title}</p>
-                    </Grid.Column>
-                </Grid.Row>
+            </Grid.Column>
+            <Grid.Column style={{ marginTop: 0 }} >
+                <p style={{ textAlign: "center", color: '#000000', fontWeight: "600", fontSize: 19.8117, fontFamily: 'Muli' }}>{title}</p>
+            </Grid.Column>
+        </Grid.Row>
 
-                <Grid.Row>
-                    <Grid.Column>
-                        <p style={{ textAlign: "center", color: knowMore ? "#101014" : "white", fontSize: fs, fontFamily: 'Muli', marginLeft: mgleft, marginRight: mgright }} dangerouslySetInnerHTML={createMarkup(text)}></p>
-                    </Grid.Column>
-                </Grid.Row>
-                {knowMore && <Grid.Row>
-                    <Grid.Column  >
-                        <Link to={link} style={{ color: "black" }}>
-                            <p id="mcText2" style={{ textAlign: "center", cursor: "pointer", color: '#666666', fontSize: knowMoreSize, marginTop: knowMoreMargin }} >En savoir plus
+        <Grid.Row>
+            <Grid.Column>
+                <p style={{ textAlign: "center", color: knowMore ? "#101014" : "white", fontSize: fs, fontFamily: 'Muli', marginLeft: mgleft, marginRight: mgright }} dangerouslySetInnerHTML={createMarkup(text)}></p>
+            </Grid.Column>
+        </Grid.Row>
 
-                        <span><Icon name="long arrow alternate right" style={{ marginLeft: 5, color: "#00907E" }} /></span> </p>
-                        </Link>
-                    </Grid.Column>
-                </Grid.Row>}
-            </Grid>
-        </Grid.Column>
 
-    );
+        {knowMore && <Grid.Row>
+            <Grid.Column  >
+                <Link to={link} style={{ color: "black" }}>
+                    <p id="mcText2" style={{ textAlign: "center", cursor: "pointer", color: '#666666', fontSize: knowMoreSize }} >En savoir plus
+
+                <span><Icon name="long arrow alternate right" style={{ marginLeft: 5, color: "#00907E" }} /></span> </p>
+                </Link>
+            </Grid.Column>
+        </Grid.Row>}
+
+      </Grid>
+    </Grid.Column>
+
+  );
 };
 
 export default MiniCard;
