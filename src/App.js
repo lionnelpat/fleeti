@@ -23,7 +23,7 @@ function App() {
     <>
       <BrowserRouter>
         <TopNav visible={visible} setVisible={setVisible} />
-        <SecondNav visib={visible}>
+        <SecondNav visib={visible} setVisible={setVisible}>
           <Sidebar.Pusher>
             <Switch>
               <Route path="/cost-tracking" component={CostTracking} />

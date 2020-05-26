@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from "react-redux";
 
 
-const SecondNav = ({ children, visib = false }) => {
+const SecondNav = ({ children, visib = false, setVisible }) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -31,14 +31,18 @@ const SecondNav = ({ children, visib = false }) => {
 
     let countryOptions = [
         {
-            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{ fontWeight: 'normal' }} label="Sénégal" onClick={() => dispatch({
-                type: "Senegal"
-            })} >Sénégal</span>
+            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{ fontWeight: 'normal' }} label="Sénégal" onClick={() => {
+                dispatch({
+                    type: "Senegal"
+                }); setVisible(false)
+            }} >Sénégal</span>
         },
         {
-            key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => dispatch({
-                type: "Maurice"
-            })} style={{ fontWeight: 'normal' }} >Maurice</span>
+            key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => {
+                dispatch({
+                    type: "Maurice"
+                }); setVisible(false)
+            }} style={{ fontWeight: 'normal' }} >Maurice</span>
         },
     ]
     return (
