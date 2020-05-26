@@ -9,9 +9,9 @@ const SecondNav = ({ children, visib = false }) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch({
+        /* dispatch({
             type: "Senegal"
-        })
+        }) */
     })
 
     let handleClick = (e, titleProps) => {

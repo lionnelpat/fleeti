@@ -11,9 +11,9 @@ const FirstNav = ({ visible = false, setVisible }) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch({
+        /* dispatch({
             type: "Senegal"
-        })
+        }) */
     })
 
 
