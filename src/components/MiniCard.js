@@ -36,7 +36,7 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = 
 
 
         <Grid.Column style={{ textAlign: "center", marginTop: mt, height: cardHeight, backgroundColor: bg }}>
-            <Grid columns={1} style={{ display: "flex", flexDirection: 'column', justifyContent: "space-between", height: '100%' }}>
+            <Grid columns={1}>
                 <Grid.Row style={{ paddingTop: pt }}>
                     <Grid.Column style={{ display: "flex", justifyContent: "center" }}>
                         <div style={{ height }}>
