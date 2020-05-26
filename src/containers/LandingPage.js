@@ -15,6 +15,7 @@ const LandingPage = () => {
 
     const selected = useSelector(state => state);
     useEffect(() => {
+      document.title = "Fleeti - Votre solution de gestion de flotte";
         window.scrollTo(0, 0);
     }, [])
     const arrow = useRef(null)
