@@ -36,6 +36,12 @@ const ComonLayout = ({ minitext, title2Mobile, title1, title2, text, data = [], 
                       <Helmet>
                         <title>{pageTitle ? pageTitle : "Fleeti - Votre solution de gestion de flotte."}</title>
                         <meta name="description" content={pageDescription ? pageDescription : "La solution complète pour optimiser la gestion de vos véhicules et piloter votre entreprise."} />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:title" content={pageTitle ? pageTitle : "Fleeti - Votre solution de gestion de flotte."} />
+                        <meta property="og:description" content={pageDescription ? pageDescription : "La solution complète pour optimiser la gestion de vos véhicules et piloter votre entreprise."} />
+                        <meta property="og:site_name" content={pageTitle ? pageTitle : "Fleeti - Votre solution de gestion de flotte."} />
+                        <meta name="twitter:title" content={pageTitle ? pageTitle : "Fleeti - Votre solution de gestion de flotte."} />
+                        <meta name="twitter:description" content={pageDescription ? pageDescription : "La solution complète pour optimiser la gestion de vos véhicules et piloter votre entreprise."} />
                       </Helmet >
 
                         {img1 === "cost_tracking" && <Image src={cost_tracking} style={styles.imgStyle} />}

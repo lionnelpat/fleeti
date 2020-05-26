@@ -54,6 +54,12 @@ const DemoGratuite = ({ location }) => {
               <Helmet>
                 <title>Nous contacter sur Fleeti</title>
                 <meta name="description" content="Notre challenge ? 30 jours pour commencer à vous faire réaliser des économies. Profitez d’un accompagnement sur mesure et découvrez toute la puissance de Fleeti." />
+                <meta property="og:url" content={window.location.href} />
+                <meta property="og:title" content="Nous contacter sur Fleeti" />
+                <meta property="og:description" content="Notre challenge ? 30 jours pour commencer à vous faire réaliser des économies. Profitez d’un accompagnement sur mesure et découvrez toute la puissance de Fleeti." />
+                <meta property="og:site_name" content="Nous contacter sur Fleeti" />
+                <meta name="twitter:title" content="Nous contacter sur Fleeti" />
+                <meta name="twitter:description" content="Notre challenge ? 30 jours pour commencer à vous faire réaliser des économies. Profitez d’un accompagnement sur mesure et découvrez toute la puissance de Fleeti." />
               </Helmet >
                 <p style={{ textAlign: "center", marginTop: 20, fontSize: 20, color: "#0BA1C1" }}>Démo gratuit</p>
                 <p style={{ textAlign: "center", marginTop: 20, fontSize: 30, fontWeight: "bold" }}>Commencez à faire<br /> des économies</p>
