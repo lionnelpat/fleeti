@@ -182,10 +182,10 @@ const DemoGratuite = ({ location }) => {
                     </Grid>
                     <div style={{ width: "50%", display: "flex", position: "relative", marginTop: 60, marginLeft: 'auto', marginRight: 'auto' }} >
                         <Image src={quote} style={{ position: "absolute", top: -35, left: -70 }} />
-                        <p id="grText2">
+                        <div id="grText2">
                             “Fleeti nous a ouvert les yeux sur les dépenses liées à notre parc de véhicules. Nous sous-estimions largement les frais engagés et les économies à réaliser.”
                     <p style={{ textAlign: "center", fontWeight: "bold", color: "#0BA1C1", margin: 60 }}>J.Balsemin, Adneom</p>
-                        </p>
+                        </div>
                     </div>
                     <div style={{ marginTop: 50 }} />
                 </Container>
