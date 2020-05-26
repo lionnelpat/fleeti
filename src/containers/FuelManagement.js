@@ -21,6 +21,8 @@ const FuelManagement = () => {
                 temoignage="“Les dépenses en carburant représentent 40% du coût total de détention d’un véhicule professionel”"
                 speaker="Deloitte “Fleet Management in Europe”, 2017"
                 mr={60}
+                pageTitle={fuelManagement.pageTitle}
+                pageDescription={fuelManagement.pageDescription}
             />
         </>
     );
