@@ -6,14 +6,13 @@ import LogosPartners from '../components/LogosPartners';
 import Axios from 'axios';
 
 const DemoGratuite = ({ location }) => {
+    const api_url = process.env.REACT_APP_API_URL;
     const [state, setState] = useState({
         working_email: "",
         lastname: "",
         firstname: "",
         phone_number: "",
         company_name: "",
-        comments: "",
-        working_address: "",
         success: "",
         loading: false
 
@@ -33,14 +32,12 @@ const DemoGratuite = ({ location }) => {
     let handleSubmit = (e) => {
         e.preventDefault()
         setState({ loading: true })
-        Axios.post("https://kulucar-api-test.cleverapps.io/api/v1/demo/create", {
+        Axios.post(api_url, {
             firstname: state.firstname,
             lastname: state.lastname,
             working_email: state.working_email,
             phone_number: state.phone_number,
-            company_name: state.company_name,
-            working_address: state.working_address,
-            comments: state.comments
+            company_name: state.company_name
 
         })
             .then(result => {
@@ -89,7 +86,7 @@ const DemoGratuite = ({ location }) => {
                                         <Input value={state.company_name} size="large" fluid placeholder='Société' onChange={({ target }) => setState({ company_name: target.value })} required style={styles.inputMobile} />
                                     </Grid.Column>
                                     <Grid.Column style={styles.inputStyleMobile}>
-                                        <Input value={state.email} pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onChange={({ target }) => setState({ email: target.value })} type="email" size="large" fluid placeholder='Adresse Email' required />
+                                        <Input value={state.working_email} pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onChange={({ target }) => setState({ email: target.value })} type="email" size="large" fluid placeholder='Adresse Email' required />
                                     </Grid.Column>
                                     <Grid.Column style={styles.inputStyleMobile}>
                                         <Input value={state.phone_number} size="large" fluid placeholder='Téléphone' pattern={"^[0-9]*$"} type="tel" onChange={({ target }) => setState({ numTel: target.value })} required />
@@ -100,12 +97,7 @@ const DemoGratuite = ({ location }) => {
                                     <Grid.Column style={styles.inputStyleMobile}>
                                         <Input value={state.lastname} size="large" onChange={({ target }) => setState({ lastname: target.value })} fluid placeholder='Nom' required />
                                     </Grid.Column>
-                                    <Grid.Column style={styles.inputStyleMobile}>
-                                        <Input value={state.working_address} size="large" onChange={({ target }) => setState({ working_address: target.value })} fluid placeholder='Adresse' required />
-                                    </Grid.Column>
-                                    <Grid.Column style={styles.inputStyleMobile}>
-                                        <textarea value={state.comments} size="large" onChange={({ target }) => setState({ comments: target.value })} fluid placeholder='Message' required style={{ minHeight: 100 }} rows="3" />
-                                    </Grid.Column>
+
                                     <Grid.Column style={styles.inputStyleMobile}>
                                         <Button loading={state.loading} style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} size="big" type="submit">Envoyer</Button>
                                     </Grid.Column>
@@ -162,7 +154,7 @@ const DemoGratuite = ({ location }) => {
                                                     <Input value={state.company_name} size="large" fluid placeholder='Société' onChange={({ target }) => setState({ company_name: target.value })} required style={styles.inputMobile} />
                                                 </Grid.Column>
                                                 <Grid.Column style={styles.inputStyleMobile}>
-                                                    <Input value={state.email} pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onChange={({ target }) => setState({ email: target.value })} type="email" size="large" fluid placeholder='Adresse Email' required />
+                                                    <Input value={state.working_email} pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onChange={({ target }) => setState({ working_email: target.value })} type="email" size="large" fluid placeholder='Adresse Email' required />
                                                 </Grid.Column>
                                                 <Grid.Column style={styles.inputStyleMobile}>
                                                     <Input value={state.phone_number} size="large" fluid placeholder='Téléphone' pattern={"^[0-9]*$"} type="tel" onChange={({ target }) => setState({ numTel: target.value })} required />
@@ -173,12 +165,7 @@ const DemoGratuite = ({ location }) => {
                                                 <Grid.Column style={styles.inputStyleMobile}>
                                                     <Input value={state.lastname} size="large" onChange={({ target }) => setState({ lastname: target.value })} fluid placeholder='Nom' required />
                                                 </Grid.Column>
-                                                <Grid.Column style={styles.inputStyleMobile}>
-                                                    <Input value={state.working_address} size="large" onChange={({ target }) => setState({ working_address: target.value })} fluid placeholder='Adresse' required />
-                                                </Grid.Column>
-                                                <Grid.Column style={styles.inputStyleMobile}>
-                                                    <textarea value={state.comments} size="large" onChange={({ target }) => setState({ comments: target.value })} fluid placeholder='Message' required style={{ minHeight: 100 }} rows="3" />
-                                                </Grid.Column>
+
                                                 <Grid.Column style={styles.inputStyleMobile}>
                                                     <Button loading={state.loading} style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} size="big" type="submit">Envoyer</Button>
                                                 </Grid.Column>
