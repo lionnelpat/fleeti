@@ -31,13 +31,13 @@ const ComonLayout = ({ minitext, title2Mobile, title1, title2, text, data = [], 
         <>
             <BandeLayout4
                 illustration={
-                    <div style={{ textAlign: "center" }}>
-                        {img1 === "cost_tracking" && <Image src={cost_tracking} style={styles.imgStyle} />}
-                        {img1 === "geolocalisation" && <Image src={geolocalisation} style={styles.imgStyle} />}
-                        {img1 === "fuel_management" && <Image src={fuel_management} style={styles.imgStyle} />}
+                    <div style={{ textAlign: "center", display: 'flex', justifyContent: 'center' }}>
+                        {img1 === "cost_tracking" && <Image src={cost_tracking} />}
+                        {img1 === "geolocalisation" && <Image src={geolocalisation} />}
+                        {img1 === "fuel_management" && <Image src={fuel_management} />}
                         {img1 === "planning_et_missions" && <Image src={planning_et_missions} style={styles.imgStyle} />}
                         {img1 === "alertes" && <Image src={alertes} style={styles.imgStyle} />}
-                        {img1 === "comparaisonDePrestaires" && <Image src={comparaisonDePrestaires} style={styles.imgStyle} />}
+                        {img1 === "comparaisonDePrestaires" && <Image src={comparaisonDePrestaires} />}
                     </div>
                 }
 
@@ -190,6 +190,6 @@ const ComonLayout = ({ minitext, title2Mobile, title1, title2, text, data = [], 
 export default ComonLayout;
 
 const styles = {
-    imgStyle: { width: '90%', float: 'right', paddingTop: 25 },
+    imgStyle: { width: '60%', /*float: 'right', paddingTop: 25 */ },
     bandeLayoutImgStyle: { height: 500 }
 }
