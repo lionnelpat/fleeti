@@ -21,6 +21,8 @@ const Alertes = () => {
                 temoignage="“Chaque jour d’immobilisation d’un véhicule représente une perte de productivtié comprise entre 450€ et 650€”"
                 speaker="Étude Décisiv"
                 mr={90}
+                pageTitle={alertes.pageTitle}
+                pageDescription={alertes.pageDescription}
             />
         </>
     )

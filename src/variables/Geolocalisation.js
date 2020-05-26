@@ -37,7 +37,9 @@ export const geolocalisation =
             text: "La géolocalisation des véhicules permet de faire remonter des données en temps réel au responsable de parc. Ces informations lui permettent de prendre des décisions plus éclairées et de renforcer sa réactivité dans des situations d’urgence."
         },
 
-    ]
+    ],
+    pageTitle: "La géolocalisation sur Fleeti",
+    pageDescription: "Localisez vos véhicules en un clin d’oeil et vérifiez l’état de vos livraisons. Intégrez votre fournisseur de géolocalisation à Fleeti ou utilisez notre solution intégrée pour localiser vos véhicules en toute simplicité"
 
 }
 

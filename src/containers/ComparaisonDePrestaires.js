@@ -20,6 +20,8 @@ const ComparaisonDePrestaires = () => {
                 img2={comparaisonDePrestaires.img2}
                 temoignage="“’La part des entreprises européennes qui géolocalisaent leur flotte a augmenté de 20% entre 2010 et 2019”"
                 speaker="Arval Fleet Observatory 2019"
+                pageTitle={comparaisonDePrestaires.pageTitle}
+                pageDescription={comparaisonDePrestaires.pageDescription}
             />
         </>
     );

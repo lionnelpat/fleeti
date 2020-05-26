@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Grid, Container, Image, Input, Button, Form, Message, Responsive } from 'semantic-ui-react';
 import img1 from '../img/dash.png'
 import quote from "../img/quote.png"
@@ -50,6 +51,16 @@ const DemoGratuite = ({ location }) => {
     return (
         <>
             <Responsive maxWidth={1024}>
+              <Helmet>
+                <title>Nous contacter sur Fleeti</title>
+                <meta name="description" content="Notre challenge ? 30 jours pour commencer à vous faire réaliser des économies. Profitez d’un accompagnement sur mesure et découvrez toute la puissance de Fleeti." />
+                <meta property="og:url" content={window.location.href} />
+                <meta property="og:title" content="Nous contacter sur Fleeti" />
+                <meta property="og:description" content="Notre challenge ? 30 jours pour commencer à vous faire réaliser des économies. Profitez d’un accompagnement sur mesure et découvrez toute la puissance de Fleeti." />
+                <meta property="og:site_name" content="Nous contacter sur Fleeti" />
+                <meta name="twitter:title" content="Nous contacter sur Fleeti" />
+                <meta name="twitter:description" content="Notre challenge ? 30 jours pour commencer à vous faire réaliser des économies. Profitez d’un accompagnement sur mesure et découvrez toute la puissance de Fleeti." />
+              </Helmet >
                 <p style={{ textAlign: "center", marginTop: 20, fontSize: 20, color: "#0BA1C1" }}>Démo gratuit</p>
                 <p style={{ textAlign: "center", marginTop: 20, fontSize: 30, fontWeight: "bold" }}>Commencez à faire<br /> des économies</p>
                 <p style={{ fontSize: 17, color: "#757575", marginTop: 10, fontFamily: 'Muli', textAlign: "center" }}>
@@ -171,10 +182,10 @@ const DemoGratuite = ({ location }) => {
                     </Grid>
                     <div style={{ width: "50%", display: "flex", position: "relative", marginTop: 60, marginLeft: 'auto', marginRight: 'auto' }} >
                         <Image src={quote} style={{ position: "absolute", top: -35, left: -70 }} />
-                        <p id="grText2">
+                        <div id="grText2">
                             “Fleeti nous a ouvert les yeux sur les dépenses liées à notre parc de véhicules. Nous sous-estimions largement les frais engagés et les économies à réaliser.”
                     <p style={{ textAlign: "center", fontWeight: "bold", color: "#0BA1C1", margin: 60 }}>J.Balsemin, Adneom</p>
-                        </p>
+                        </div>
                     </div>
                     <div style={{ marginTop: 50 }} />
                 </Container>

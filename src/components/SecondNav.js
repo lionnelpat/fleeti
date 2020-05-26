@@ -124,7 +124,7 @@ const SecondNav = ({ children, visib = false, setVisible }) => {
                     </Link>
                     </p>
                 </Menu.Item>
-                <Menu.Item as="p" style={{ textAlign: 'left', paddingLeft: 35 }}>
+                <Menu.Item as="div" style={{ textAlign: 'left', paddingLeft: 35 }}>
                     <Dropdown defaultValue="sn" placeholder='Select choice' style={{ color: "black" }} simple options={countryOptions} />
                 </Menu.Item>
             </Sidebar>

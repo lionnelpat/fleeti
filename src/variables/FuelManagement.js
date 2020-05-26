@@ -37,7 +37,9 @@ export const fuelManagement =
             text: "Les coûts de carburant sont trops importants pour se contenter d’analyse de consommation moyenne. Nos outils vous permettent de prendre des décisions éclairées grâce à une analyse précise des données récoltées. L’impact est immédiat sur vos coûts opérationnels. "
         },
 
-    ]
+    ],
+    pageTitle: "Le suivi de carburant sur Fleeti",
+    pageDescription: "Suivez l’évolution de vos consommations carburant et réduisez vos dépenses. Avoir un outil précis d’analyse et de contrôle des consommations carburant est l’un des meilleurs moyens de réduire les coûts opérationnels."
 
 }
 
