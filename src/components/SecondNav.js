@@ -3,16 +3,38 @@ import { Menu, Sidebar, Icon, Segment, Accordion, Dropdown } from 'semantic-ui-r
 import { items } from '../variables/SecondNav';
 import { Link } from 'react-router-dom'
 import { useDispatch } from "react-redux";
+import Axios from 'axios'
 
 
-const SecondNav = ({ children, visib = false }) => {
+const SecondNav = ({ children, visib = false, setVisible }) => {
+    const [countryName, setCountryName] = useState('')
+    const [countryCode, setCountryCode] = useState('')
+
     const dispatch = useDispatch();
 
+    function getGeoInfo() {
+        Axios.get('https://ipapi.co/json/').then((response) => {
+            let data = response.data;
+            setCountryName(data.country_name)
+            setCountryCode(data.country_calling_code)
+        }).catch((error) => {
+            console.log(error);
+        });
+
+        if (countryName === 'Mauritius') {
+            dispatch({
+                type: "Maurice"
+            })
+        } else {
+            dispatch({
+                type: "Senegal"
+            })
+        }
+    };
+
     useEffect(() => {
-        dispatch({
-            type: "Senegal"
-        })
-    })
+        getGeoInfo()
+    }, [countryName, countryCode])
 
     let handleClick = (e, titleProps) => {
         console.log(titleProps)
@@ -31,18 +53,22 @@ const SecondNav = ({ children, visib = false }) => {
 
     let countryOptions = [
         {
-            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{ fontWeight: 'normal' }} label="Sénégal" onClick={() => dispatch({
-                type: "Senegal"
-            })} >Sénégal</span>
+            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{ fontWeight: 'normal' }} label="Sénégal" onClick={() => {
+                dispatch({
+                    type: "Senegal"
+                }); setVisible(false)
+            }} >Sénégal</span>
         },
         {
-            key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => dispatch({
-                type: "Maurice"
-            })} style={{ fontWeight: 'normal' }} >Maurice</span>
+            key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => {
+                dispatch({
+                    type: "Maurice"
+                }); setVisible(false)
+            }} style={{ fontWeight: 'normal' }} >Maurice</span>
         },
     ]
     return (
-        <Sidebar.Pushable as={Segment} style={{ marginTop: -15, borderWidth:0}}>
+        <Sidebar.Pushable as={Segment} style={{ marginTop: -15, borderWidth: 0 }}>
 
             <Sidebar
                 as={Menu}
@@ -71,7 +97,7 @@ const SecondNav = ({ children, visib = false }) => {
 
                             <Accordion.Content active={activeIndex === i} style={{ paddingLeft: 50 }}>
                                 {item.categories.map((categorie, ind) => (
-                                    <p key={ind} style={{ color: "black" }}>
+                                    <p key={ind} style={{ color: "black" }} onClick={() => setVisible(false)}>
                                         <Link style={{ color: '#000' }} to={"/" + categorie.value} key={i}>
                                             {categorie.text}
                                         </Link>
@@ -85,18 +111,18 @@ const SecondNav = ({ children, visib = false }) => {
 
                 </Menu.Item>
                 <Menu.Item as="div">
-                 <p style={{ color: "black" }}>
-                    <Link style={{ color: '#000' }} to={"/partnership"}>
-                        Devenir partenaire
+                    <p style={{ color: "black" }} onClick={() => setVisible(false)}>
+                        <Link style={{ color: '#000', marginLeft: -170 }} to={"/partnership"}>
+                            Devenir partenaire
                     </Link>
-                </p>
+                    </p>
                 </Menu.Item>
                 <Menu.Item as="div">
-                 <p style={{ color: "black" }}>
-                    <Link style={{ color: '#000' }} to={"/demo-gratuite"}>
-                        Nous contacter
+                    <p style={{ color: "black", marginLeft: -190 }} onClick={() => setVisible(false)}>
+                        <Link style={{ color: '#000' }} to={"/demo-gratuite"}>
+                            Nous contacter
                     </Link>
-                </p>
+                    </p>
                 </Menu.Item>
                 <Menu.Item as="p" style={{ textAlign: 'left', paddingLeft: 35 }}>
                     <Dropdown defaultValue="sn" placeholder='Select choice' style={{ color: "black" }} simple options={countryOptions} />
