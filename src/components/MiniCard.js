@@ -70,19 +70,19 @@ const MiniCard = ({ title, text, img, mt, knowMore = true, height = 200, link = 
                         </div>
 
                     </Grid.Column>
-                    <Grid.Column style={{ marginTop: 0 }} >
+                    <div style={{ marginTop: 0, width: '100%' }} >
                         <p style={{ textAlign: "center", color: '#000000', fontWeight: "600", fontSize: 19.8117, fontFamily: 'Muli' }}>{title}</p>
-                    </Grid.Column>
-                    <Grid.Column style={{ marginTop: 20, marginBottom: 20 }}>
+                    </div>
+                    <div style={{ marginTop: 20, height: 150, width: '100%' }}>
                         <p style={{ textAlign: "center", color: knowMore ? "#101014" : "white", fontSize: fs, fontFamily: 'Muli', marginLeft: mgleft, marginRight: mgright }} dangerouslySetInnerHTML={createMarkup(text)}></p>
-                    </Grid.Column>
-                    {knowMore && <Grid.Column style={{ marginTop: knowMoreMargin }}>
+                    </div>
+                    {knowMore && <div style={{ width: '100%' }}>
                         <Link to={link} style={{ color: "black" }}>
                             <p id="mcText2" style={{ textAlign: "center", cursor: "pointer", color: '#666666', fontSize: knowMoreSize }} >En savoir plus
 
                 <span><Icon name="long arrow alternate right" style={{ marginLeft: 5, color: "#00907E" }} /></span> </p>
                         </Link>
-                    </Grid.Column>}
+                    </div>}
                 </Grid.Row>
 
 
