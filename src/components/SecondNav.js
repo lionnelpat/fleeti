@@ -46,7 +46,7 @@ const SecondNav = ({ children, visib = false, setVisible }) => {
         },
     ]
     return (
-        <Sidebar.Pushable as={Segment} style={{ marginTop: -15, borderWidth:0}}>
+        <Sidebar.Pushable as={Segment} style={{ marginTop: -15, borderWidth: 0 }}>
 
             <Sidebar
                 as={Menu}
@@ -75,7 +75,7 @@ const SecondNav = ({ children, visib = false, setVisible }) => {
 
                             <Accordion.Content active={activeIndex === i} style={{ paddingLeft: 50 }}>
                                 {item.categories.map((categorie, ind) => (
-                                    <p key={ind} style={{ color: "black" }}>
+                                    <p key={ind} style={{ color: "black" }} onClick={() => setVisible(false)}>
                                         <Link style={{ color: '#000' }} to={"/" + categorie.value} key={i}>
                                             {categorie.text}
                                         </Link>
@@ -89,18 +89,18 @@ const SecondNav = ({ children, visib = false, setVisible }) => {
 
                 </Menu.Item>
                 <Menu.Item as="div">
-                 <p style={{ color: "black" }}>
-                    <Link style={{ color: '#000' }} to={"/partnership"}>
-                        Devenir partenaire
+                    <p style={{ color: "black" }} onClick={() => setVisible(false)}>
+                        <Link style={{ color: '#000', marginLeft: -170 }} to={"/partnership"}>
+                            Devenir partenaire
                     </Link>
-                </p>
+                    </p>
                 </Menu.Item>
                 <Menu.Item as="div">
-                 <p style={{ color: "black" }}>
-                    <Link style={{ color: '#000' }} to={"/demo-gratuite"}>
-                        Nous contacter
+                    <p style={{ color: "black", marginLeft: -190 }} onClick={() => setVisible(false)}>
+                        <Link style={{ color: '#000' }} to={"/demo-gratuite"}>
+                            Nous contacter
                     </Link>
-                </p>
+                    </p>
                 </Menu.Item>
                 <Menu.Item as="p" style={{ textAlign: 'left', paddingLeft: 35 }}>
                     <Dropdown defaultValue="sn" placeholder='Select choice' style={{ color: "black" }} simple options={countryOptions} />
