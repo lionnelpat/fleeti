@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import "semantic-ui-css/semantic.min.css"
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import countryReducer from "./reducers/CountryReducer";
+
+const country = createStore(countryReducer);
+const rootElement = document.getElementById("root");
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={country}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  rootElement
 );
 
 // If you want your app to work offline and load faster, you can change

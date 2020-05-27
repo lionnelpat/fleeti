@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Muli';
+  src: local('Muli'), url(./fonts/muli.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(./fonts/roboto.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: local('RobotoBold'), url(./fonts/roboto-bold.ttf) format('ttf');
+}
+
+.item{
+color:'red'
+}

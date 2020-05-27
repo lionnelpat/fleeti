@@ -1,25 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import LandingPage from './containers/LandingPage';
+import CostTracking from './containers/CostTracking';
+import TopNav from './components/TopNav';
+import Geolocalisation from './containers/Geolocalisation';
+import FuelManagement from './containers/FuelManagement';
+import { BrowserRouter, Switch, Route } from "react-router-dom"
+import Alertes from './containers/Alertes';
+import ComparaisonDePrestaires from './containers/ComparaisonDePrestaires';
+import Footer from './components/Footer';
+import Try from './components/Try';
+import DemoGratuite from './containers/DemoGratuite';
+import PlanningEtMissions from './containers/PlanningEtMissions';
+import Partnership from './containers/Partnership';
+import SecondNav from './components/SecondNav';
+import { Sidebar, Responsive } from 'semantic-ui-react';
+import { useSelector } from "react-redux";
+
 
 function App() {
+  const [visible, setVisible] = useState(false)
+  const selected = useSelector(state => state);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <TopNav visible={visible} setVisible={setVisible} selectedCountryCode={selected.code} />
+        <SecondNav visib={visible} setVisible={setVisible} countryInitials={selected.code}>
+          <Sidebar.Pusher>
+            <Switch>
+              <Route path="/cost-tracking" component={CostTracking} />
+              <Route path="/geolocalisation" component={Geolocalisation} />
+              <Route path="/fuel-management" component={FuelManagement} />
+              <Route path="/alertes" component={Alertes} />
+              <Route path="/comparaison-de-prestaires" component={ComparaisonDePrestaires} />
+              <Route path="/demo-gratuite" component={DemoGratuite} />
+              <Route path="/planning-et-missions" component={PlanningEtMissions} />
+              <Route exact path="/partnership" component={Partnership} />
+              <Route exact path="/" component={LandingPage} />
+            </Switch>
+            <Responsive minWidth={1024}>
+              <Try />
+            </Responsive>
+            <Footer />
+          </Sidebar.Pusher>
+        </SecondNav>
+      </BrowserRouter>
+
+    </>
   );
 }
 
