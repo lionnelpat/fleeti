@@ -37,7 +37,9 @@ export const alertes =
             text: "Les alertes vous permettent de planifier le renouvellement de vos contrats d’assaurance, vos contrôles techniques, renouvellement de permis de conduire et toute autre obligation réglementaire"
         },
 
-    ]
+    ],
+  pageTitle: "Les alertes sur Fleeti",
+  pageDescription: "Suivez en temps réel l’état de votre flotte, personnalisez les alertes d’entretien et de renouvellement de contrat, prenez rapidement les bonnes décisions en cas d’urgence."
 
 }
 

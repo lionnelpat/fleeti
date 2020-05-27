@@ -22,6 +22,8 @@ const Geolocalisation = () => {
                 temoignage="“La part des entreprises européennes qui géolocalisaent leur flotte a augmenté de 20% entre 2010 et 2019”"
                 speaker="Arval Fleet Observatory 2019"
                 mr={75}
+                pageTitle={geolocalisation.pageTitle}
+                pageDescription={geolocalisation.pageDescription}
             />
         </>
     );
