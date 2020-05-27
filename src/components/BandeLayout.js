@@ -10,7 +10,7 @@ const BandeLayout = ({ children, illustration, title, mobileTitle, text, reverse
                 {mobileTitle}
                 {title}
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                    <div style={{ width: "80%", display: 'flex', justifyContent: 'center' }}>
+                    <div style={{ width: "70%", justifyContent: 'center' }}>
                         {image}
                     </div>
                 </div>
