@@ -32,7 +32,7 @@ const ComonLayout = ({ minitext, title2Mobile, title1, title2, text, data = [], 
         <>
             <BandeLayout4
                 illustration={
-                    <div style={{ textAlign: "center" }}>
+                    <div style={{ textAlign: "center", display: 'flex', justifyContent: 'center' }}>
                       <Helmet>
                         <title>{pageTitle ? pageTitle : "Fleeti - Votre solution de gestion de flotte."}</title>
                         <meta name="description" content={pageDescription ? pageDescription : "La solution complète pour optimiser la gestion de vos véhicules et piloter votre entreprise."} />
@@ -202,6 +202,6 @@ const ComonLayout = ({ minitext, title2Mobile, title1, title2, text, data = [], 
 export default ComonLayout;
 
 const styles = {
-    imgStyle: { width: '90%', float: 'right', paddingTop: 25 },
+    imgStyle: { width: '80%', /*float: 'right', paddingTop: 25 */ },
     bandeLayoutImgStyle: { height: 500 }
 }

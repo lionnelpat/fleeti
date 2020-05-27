@@ -8,22 +8,19 @@ import Axios from 'axios';
 
 const DemoGratuite = ({ location }) => {
     const api_url = process.env.REACT_APP_API_URL;
-    const [state, setState] = useState({
-        working_email: "",
-        lastname: "",
-        firstname: "",
-        phone_number: "",
-        company_name: "",
-        success: "",
-        loading: false
-
-    })
+    const [working_email, setWorking_email] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [firstname, setFirstname] = useState('')
+    const [phone_number, setPhone_number] = useState('')
+    const [company_name, setCompany_name] = useState('')
+    const [success, setSuccess] = useState('')
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         window.scrollTo(0, 0);
         try {
             const { working_email } = location.state
-            setState({ working_email })
+            setWorking_email(working_email)
 
         } catch (error) { }
 
@@ -31,24 +28,25 @@ const DemoGratuite = ({ location }) => {
         [location])
 
     let handleSubmit = (e) => {
+        console.log('firstname : ' + firstname + ' lastname : ' + lastname + ' email : ' + working_email + ' telephone : ' + phone_number + ' company : ' + company_name)
         e.preventDefault()
-        setState({ loading: true })
+        setLoading(true)
         Axios.post(api_url, {
-            firstname: state.firstname,
-            lastname: state.lastname,
-            working_email: state.working_email,
-            phone_number: state.phone_number,
-            company_name: state.company_name
+            firstname: firstname,
+            lastname: lastname,
+            working_email: working_email,
+            phone_number: phone_number,
+            company_name: company_name
 
         })
             .then(result => {
-                setState({ loading: false, success: true })
-                //console.log(result)
-
+                setLoading(false)
+                setSuccess(true)
             })
             .catch(err => {
-                setState({ loading: false, success: false })
-                //console.log(err)
+
+                setLoading(false)
+                setSuccess(false)
             })
     }
     return (
@@ -80,13 +78,13 @@ const DemoGratuite = ({ location }) => {
                             <Form style={{ width: "100%" }} onSubmit={handleSubmit}>
                                 <Grid.Row columns={1} centered style={{ margin: 20 }}>
                                     <Grid.Column>
-                                        {state.success === true && <Message positive>
+                                        {success === true && <Message positive>
                                             <Message.Header>Envoi réussi</Message.Header>
                                             <p>
                                                 Vos informatins ont bien été envoyées à l'equipe fleeti.
                                                 </p>
                                         </Message>}
-                                        {state.success === false && <Message negative>
+                                        {success === false && <Message negative>
                                             <Message.Header>Echec d'envoi</Message.Header>
                                             <p>
                                                 Merci de verifier votre connexion internet et de réessayer.
@@ -94,23 +92,23 @@ const DemoGratuite = ({ location }) => {
                                         </Message>}
                                     </Grid.Column>
                                     <Grid.Column style={styles.inputStyleMobile}>
-                                        <Input value={state.company_name} size="large" fluid placeholder='Société' onChange={({ target }) => setState({ company_name: target.value })} required style={styles.inputMobile} />
+                                        <Input value={company_name} size="large" fluid placeholder='Société' onChange={({ target }) => setCompany_name(target.value)} required style={styles.inputMobile} />
                                     </Grid.Column>
                                     <Grid.Column style={styles.inputStyleMobile}>
-                                        <Input value={state.working_email} pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onChange={({ target }) => setState({ email: target.value })} type="email" size="large" fluid placeholder='Adresse Email' required />
+                                        <Input value={working_email} pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onChange={({ target }) => setWorking_email(target.value)} type="email" size="large" fluid placeholder='Adresse Email' required />
                                     </Grid.Column>
                                     <Grid.Column style={styles.inputStyleMobile}>
-                                        <Input value={state.phone_number} size="large" fluid placeholder='Téléphone' pattern={"^[0-9]*$"} type="tel" onChange={({ target }) => setState({ numTel: target.value })} required />
+                                        <Input value={phone_number} size="large" fluid placeholder='Téléphone' pattern={"^[0-9]*$"} type="tel" onChange={({ target }) => setPhone_number(target.value)} required />
                                     </Grid.Column>
                                     <Grid.Column style={styles.inputStyleMobile}>
-                                        <Input value={state.firstname} size="large" onChange={({ target }) => setState({ firstname: target.value })} fluid placeholder='Prénom' required />
+                                        <Input value={firstname} size="large" onChange={({ target }) => setFirstname(target.value)} fluid placeholder='Prénom' required />
                                     </Grid.Column>
                                     <Grid.Column style={styles.inputStyleMobile}>
-                                        <Input value={state.lastname} size="large" onChange={({ target }) => setState({ lastname: target.value })} fluid placeholder='Nom' required />
+                                        <Input value={lastname} size="large" onChange={({ target }) => setLastname(target.value)} fluid placeholder='Nom' required />
                                     </Grid.Column>
 
                                     <Grid.Column style={styles.inputStyleMobile}>
-                                        <Button loading={state.loading} style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} size="big" type="submit">Envoyer</Button>
+                                        <Button loading={loading} style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} size="big" type="submit">Envoyer</Button>
                                     </Grid.Column>
                                 </Grid.Row>
                             </Form>
@@ -134,7 +132,6 @@ const DemoGratuite = ({ location }) => {
             <Responsive minWidth={1024}>
                 <Container style={{ padding: 50 }}>
                     <Grid>
-
                         <Grid.Row columns={2} centered>
                             <Grid.Column>
                                 <h1 style={{ fontSize: 48, color: "#0BA1C1", fontFamily: 'Muli' }}>Commencez votre essai gratuit </h1>
@@ -148,13 +145,13 @@ const DemoGratuite = ({ location }) => {
                                         <Form style={{ width: "100%" }} onSubmit={handleSubmit}>
                                             <Grid.Row columns={1} centered>
                                                 <Grid.Column>
-                                                    {state.success === true && <Message positive>
+                                                    {success === true && <Message positive>
                                                         <Message.Header>Envoi réussi</Message.Header>
                                                         <p>
                                                             Vos informatins ont bien été envoyées à l'equipe fleeti.
                                                 </p>
                                                     </Message>}
-                                                    {state.success === false && <Message negative>
+                                                    {success === false && <Message negative>
                                                         <Message.Header>Echec d'envoi</Message.Header>
                                                         <p>
                                                             Merci de verifier votre connexion internet et de réessayer.
@@ -162,23 +159,23 @@ const DemoGratuite = ({ location }) => {
                                                     </Message>}
                                                 </Grid.Column>
                                                 <Grid.Column style={styles.inputStyleMobile}>
-                                                    <Input value={state.company_name} size="large" fluid placeholder='Société' onChange={({ target }) => setState({ company_name: target.value })} required style={styles.inputMobile} />
+                                                    <Input value={company_name} size="large" fluid placeholder='Société' onChange={({ target }) => setCompany_name(target.value)} required style={styles.inputMobile} />
                                                 </Grid.Column>
                                                 <Grid.Column style={styles.inputStyleMobile}>
-                                                    <Input value={state.working_email} pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onChange={({ target }) => setState({ working_email: target.value })} type="email" size="large" fluid placeholder='Adresse Email' required />
+                                                    <Input value={working_email} pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onChange={({ target }) => setWorking_email(target.value)} type="email" size="large" fluid placeholder='Adresse Email' required />
                                                 </Grid.Column>
                                                 <Grid.Column style={styles.inputStyleMobile}>
-                                                    <Input value={state.phone_number} size="large" fluid placeholder='Téléphone' pattern={"^[0-9]*$"} type="tel" onChange={({ target }) => setState({ numTel: target.value })} required />
+                                                    <Input value={phone_number} size="large" fluid placeholder='Téléphone' pattern={"^[0-9]*$"} type="tel" onChange={({ target }) => setPhone_number(target.value)} required />
                                                 </Grid.Column>
                                                 <Grid.Column style={styles.inputStyleMobile}>
-                                                    <Input value={state.firstname} size="large" onChange={({ target }) => setState({ firstname: target.value })} fluid placeholder='Prénom' required />
+                                                    <Input value={firstname} size="large" onChange={({ target }) => setFirstname(target.value)} fluid placeholder='Prénom' required />
                                                 </Grid.Column>
                                                 <Grid.Column style={styles.inputStyleMobile}>
-                                                    <Input value={state.lastname} size="large" onChange={({ target }) => setState({ lastname: target.value })} fluid placeholder='Nom' required />
+                                                    <Input value={lastname} size="large" onChange={({ target }) => setLastname(target.value)} fluid placeholder='Nom' required />
                                                 </Grid.Column>
 
                                                 <Grid.Column style={styles.inputStyleMobile}>
-                                                    <Button loading={state.loading} style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} size="big" type="submit">Envoyer</Button>
+                                                    <Button loading={loading} style={{ backgroundColor: "#0BA1C1", color: "white", fontWeight: "bold" }} size="big" type="submit">Envoyer</Button>
                                                 </Grid.Column>
                                             </Grid.Row>
                                         </Form>

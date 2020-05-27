@@ -13,7 +13,7 @@ const BandeLayout3 = ({ children, illustration, title, mobileTitle, text, revers
             <Responsive maxWidth={1024}>
                 <p style={{ textAlign: "center", marginTop: 20, fontSize: 22, fontWeight: '600', color: "#0BA1C1", fontFamily: 'Muli' }}>{mobileTitle}</p>
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                    <div style={{ width: "80%", display: 'flex', justifyContent: 'center' }}>
+                    <div style={{ width: "80%", justifyContent: 'center' }}>
                         {image}
                     </div>
                 </div>

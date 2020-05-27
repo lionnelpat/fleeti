@@ -6,11 +6,23 @@ import { useDispatch } from "react-redux";
 import Axios from 'axios'
 
 
-const SecondNav = ({ children, visib = false, setVisible }) => {
+const SecondNav = ({ children, visib = false, setVisible, countryInitials }) => {
     const [countryName, setCountryName] = useState('')
-    const [countryCode, setCountryCode] = useState('')
+    const [setCountryCode] = useState('')
 
     const dispatch = useDispatch();
+
+    function selectSenegal() {
+        dispatch({
+            type: "Senegal"
+        })
+    }
+
+    function selectMaurice() {
+        dispatch({
+            type: "Maurice"
+        })
+    }
 
     function getGeoInfo() {
         Axios.get('https://ipapi.co/json/').then((response) => {
@@ -21,20 +33,21 @@ const SecondNav = ({ children, visib = false, setVisible }) => {
             console.log(error);
         });
 
+
         if (countryName === 'Mauritius') {
-            dispatch({
-                type: "Maurice"
-            })
+            selectMaurice()
+            //selectSenegal()
         } else {
-            dispatch({
-                type: "Senegal"
-            })
+            selectSenegal()
+            //selectMaurice()
         }
+
+
     };
 
     useEffect(() => {
         getGeoInfo()
-    }, [countryName, countryCode])
+    }, [])
 
     let handleClick = (e, titleProps) => {
         console.log(titleProps)
@@ -54,16 +67,14 @@ const SecondNav = ({ children, visib = false, setVisible }) => {
     let countryOptions = [
         {
             key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{ fontWeight: 'normal' }} label="Sénégal" onClick={() => {
-                dispatch({
-                    type: "Senegal"
-                }); setVisible(false)
+                selectSenegal();
+                setVisible(false)
             }} >Sénégal</span>
         },
         {
             key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => {
-                dispatch({
-                    type: "Maurice"
-                }); setVisible(false)
+                selectMaurice();
+                setVisible(false)
             }} style={{ fontWeight: 'normal' }} >Maurice</span>
         },
     ]
@@ -91,8 +102,8 @@ const SecondNav = ({ children, visib = false, setVisible }) => {
                                 onClick={handleClick}
                                 style={{ color: "black", fontWeight: "normal" }}
                             >
-                                <Icon name='dropdown' />
                                 {item.title}
+                                <Icon name='dropdown' />
                             </Accordion.Title>
 
                             <Accordion.Content active={activeIndex === i} style={{ paddingLeft: 50 }}>
@@ -124,8 +135,14 @@ const SecondNav = ({ children, visib = false, setVisible }) => {
                     </Link>
                     </p>
                 </Menu.Item>
-                <Menu.Item as="div" style={{ textAlign: 'left', paddingLeft: 35 }}>
-                    <Dropdown defaultValue="sn" placeholder='Select choice' style={{ color: "black" }} simple options={countryOptions} />
+                <Menu.Item as="p" style={{ textAlign: 'left', paddingLeft: 35 }}>
+                    {typeof countryInitials !== 'undefined' ? <Dropdown
+                        style={{ color: "black" }}
+                        defaultValue={countryInitials}
+                        placeholder='Select choice'
+                        simple
+                        options={countryOptions}
+                    /> : null}
                 </Menu.Item>
             </Sidebar>
 

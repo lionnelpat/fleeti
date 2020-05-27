@@ -1,12 +1,14 @@
-function countryReducer(state = { country: 'Senegal' }, action) {
+function countryReducer(state = { country: '', code: 'sn' }, action) {
     switch (action.type) {
         case "Senegal":
             return {
-                country: "Senegal"
+                country: "Senegal",
+                code: 'sn'
             };
         case "Maurice":
             return {
-                country: "Maurice"
+                country: "Maurice",
+                code: 'mr'
             };
         default:
             return "";

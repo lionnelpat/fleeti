@@ -18,7 +18,7 @@ export const miniCards = [
     },
     {
         title: "Alertes",
-        text: "Anticipez les actions à mener sur chacun de vos véhicules (assurance, entretien, contrôle technique...) <br/> et réduisez vos temps d’immobilisation.",
+        text: "Anticipez les actions à mener sur chacun de vos véhicules (assurance, entretien, contrôle technique...) et réduisez vos temps d’immobilisation.",
         img: "mc2",
         link: "alertes",
         knowMoreMargin: 25,
@@ -27,7 +27,7 @@ export const miniCards = [
     },
     {
         title: "Géolocalisation",
-        text: "Suivez vos véhicules en temps <br/> réel sur une carte intéractive,<br/> consultez les tournées de vos<br/> équipes et protégez vos <br/> véhicules contre le vol.",
+        text: "Suivez vos véhicules en temps réel sur une carte intéractive, consultez les tournées de vos équipes et protégez vos véhicules contre le vol.",
         img: "mc3",
         link: "geolocalisation",
         knowMoreMargin: 0,
@@ -54,7 +54,7 @@ export const miniCards = [
     },
     {
         title: "Comparaison de prestataires",
-        text: "Rejoignez la grande flotte Fleeti et<br/>  bénéficiez de tarifs négociés pour  l’entretien de votre parc, automatisez la relation avec vos fournisseurs <br/> et gérez vos stocks.",
+        text: "Rejoignez la grande flotte Fleeti et  bénéficiez de tarifs négociés pour  l’entretien de votre parc, automatisez la relation avec vos fournisseurs et gérez vos stocks.",
         img: "mc6",
         link: "comparaison-de-prestaires",
         knowMoreMargin: 0,
