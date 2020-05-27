@@ -7,10 +7,9 @@ import collapse_btn from "../img/collapse_btn.png"
 import { useDispatch } from "react-redux";
 import Axios from 'axios'
 
-const FirstNav = ({ visible = false, setVisible }) => {
+const FirstNav = ({ visible = false, setVisible, countryInitials }) => {
     const [countryName, setCountryName] = useState('')
     const [countryCode, setCountryCode] = useState('')
-    const [defaultCountry, setDefaultCountry] = useState('')
 
     const dispatch = useDispatch();
 
@@ -18,14 +17,12 @@ const FirstNav = ({ visible = false, setVisible }) => {
         dispatch({
             type: "Senegal"
         })
-        setDefaultCountry('sn')
     }
 
     function selectMaurice() {
         dispatch({
             type: "Maurice"
         })
-        setDefaultCountry('mr')
     }
 
     function getGeoInfo() {
@@ -45,7 +42,7 @@ const FirstNav = ({ visible = false, setVisible }) => {
             selectSenegal()
             //selectMaurice()
         }
-        //console.log(defaultCountry)
+
 
     };
 
@@ -55,25 +52,14 @@ const FirstNav = ({ visible = false, setVisible }) => {
 
 
     let countryOptions = [
-        [
-            {
-                key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{}} label="Sénégal" onClick={() => selectSenegal()} >Sénégal</span>
-            },
-            {
-                key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => selectMaurice()} style={{}} >Maurice</span>
-            },
-        ],
-        [
-            {
-                key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => selectMaurice()} style={{}} >Maurice</span>
-            },
-            {
-                key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{}} label="Sénégal" onClick={() => selectSenegal()} >Sénégal</span>
-            }
-        ]
-    ]
 
-    //console.log(defaultCountry)
+        {
+            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{}} label="Sénégal" onClick={() => selectSenegal()} >Sénégal</span>
+        },
+        {
+            key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => selectMaurice()} style={{}} >Maurice</span>
+        },
+    ]
 
     return (
         <Menu.Menu position="right" >
@@ -100,25 +86,17 @@ const FirstNav = ({ visible = false, setVisible }) => {
                     <Link to="/demo-gratuite">
                         <p style={{ color: "#757575", fontWeight: "bold" }}>
                             Nous contacter
-                </p>
+                        </p>
                     </Link>
                 </Menu.Item>
                 <Menu.Item>
-                    {
-                        defaultCountry === 'mr' ? <Dropdown
-                            style={{ color: '#757575', fontWeight: 'bold' }}
-                            defaultValue={'mr'}
-                            placeholder='Select choice'
-                            simple
-                            options={countryOptions[1]}
-                        /> : <Dropdown
-                                style={{ color: '#757575', fontWeight: 'bold' }}
-                                defaultValue={'sn'}
-                                placeholder='Select choice'
-                                simple
-                                options={countryOptions[0]}
-                            />
-                    }
+                    {typeof countryInitials !== 'undefined' ? <Dropdown
+                        style={{ color: '#757575', fontWeight: 'bold' }}
+                        defaultValue={countryInitials}
+                        placeholder='Select choice'
+                        simple
+                        options={countryOptions}
+                    /> : null}
 
                 </Menu.Item>
 
