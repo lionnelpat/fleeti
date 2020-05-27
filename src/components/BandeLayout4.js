@@ -29,9 +29,9 @@ const BandeLayout4 = ({ children, illustration, title, mobileTitle, title2Mobile
 
             </Responsive>
             <Responsive minWidth={1024}>
-                <Card style={{ width: "90%", paddingLeft: 60, paddingRight: 60, paddingTop: 40, boxShadow: "none" }} centered>
+                <Card style={{ width: "90%", paddingLeft: 60, paddingTop: 40, boxShadow: "none" }} centered>
                     <Grid >
-                        <Grid.Row style={{ paddingLeft: 50, paddingRight: 50 }}>
+                        <Grid.Row style={{ paddingLeft: 50 }}>
                             <Grid.Column width={9}>
 
                                 <Card.Content>

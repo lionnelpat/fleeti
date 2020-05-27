@@ -15,12 +15,14 @@ const PlanningEtMissions = () => {
                 title3Mobile={planningEtMissions.title3Mobile}
                 text="Organisez facilement le planning de vos équipes selon la disponbilité de vos chauffeurs et de vos véhicules / équipements"
                 title1="Missions et planning"
-                title2="Plannifiez le travail de vos équipes "
+                title2="Planifiez le travail de vos équipes "
                 img1="planning_et_missions"
                 img2={planningEtMissions.img2}
                 temoignage="“’Avoir la possibilité d’établir nos planning via Fleeti, de communiquer en temps réel avec nos chauffeurs et de suivre leur progression a complètement changé notre organisation et la façon dont nous établissons nos tournées de livraison”"
                 speaker="Pol Vuillier, France Sapion Bio "
                 mr={90}
+                pageTitle={planningEtMissions.pageTitle}
+                pageDescription={planningEtMissions.pageDescription}
             />
         </>
     );

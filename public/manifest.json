@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Fleeti",
+  "name": "Fleeti, solution de gestion de flotte",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,12 +10,17 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "50x52"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "50x52"
+    },
+    {
+      "src": "cover.jpg",
+      "type": "image/jpg",
+      "sizes": "1200x630"
     }
   ],
   "start_url": ".",

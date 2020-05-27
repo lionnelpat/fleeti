@@ -37,7 +37,9 @@ export const costTracking =
             text: "Centralisez l’ensemble de vos coûts (main-d’oeuvre, maintenance, dépréciation..etc) à partir de vos outils existants pour identifier rapidement les points sur lesquels vous pouvez vous améliorer."
         },
 
-    ]
+    ],
+    pageTitle: "Suivi de coûts sur Fleeti",
+    pageDescription: "Obtenez une vision en temps réel du coût de détention de votre flotte, estimez quels sont les  véhicules les plus rentables, soyez alertés des anomalies dans l’évolution de ces coûts"
 
 }
 

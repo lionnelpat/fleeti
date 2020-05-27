@@ -36,7 +36,9 @@ export const planningEtMissions =
             text: "Centralisez l’ensemble de vos documents (bons de livraison, réception...) sur notre application mobile dédiée à vos chauffeurs. "
         },
 
-    ]
+    ],
+    pageTitle: "Les missions et planning sur Fleeti",
+    pageDescription: "Planifiez le travail de vos équipes. Organisez facilement le planning de vos équipes selon la disponbilité de vos chauffeurs et de vos véhicules / équipements."
 
 }
 
