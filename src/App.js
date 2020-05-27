@@ -15,16 +15,18 @@ import PlanningEtMissions from './containers/PlanningEtMissions';
 import Partnership from './containers/Partnership';
 import SecondNav from './components/SecondNav';
 import { Sidebar, Responsive } from 'semantic-ui-react';
+import { useSelector } from "react-redux";
 
 
 function App() {
   const [visible, setVisible] = useState(false)
+  const selected = useSelector(state => state);
 
   return (
     <>
       <BrowserRouter>
-        <TopNav visible={visible} setVisible={setVisible} />
-        <SecondNav visib={visible} setVisible={setVisible}>
+        <TopNav visible={visible} setVisible={setVisible} selectedCountryCode={selected.code} />
+        <SecondNav visib={visible} setVisible={setVisible} countryInitials={selected.code}>
           <Sidebar.Pusher>
             <Switch>
               <Route path="/cost-tracking" component={CostTracking} />

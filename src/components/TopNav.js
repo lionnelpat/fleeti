@@ -8,7 +8,8 @@ import { withRouter } from "react-router-dom"
 class TopNav extends Component {
     state = { activeItem: 'home' }
     render() {
-        let { history, setVisible, visible } = this.props
+        let { history, setVisible, visible, selectedCountryCode } = this.props
+        //console.log(selectedCountryCode)
 
         return (
             <>
@@ -18,7 +19,7 @@ class TopNav extends Component {
                             <Menu.Menu onClick={() => { history.push('/'); setVisible(false) }} style={{ cursor: "pointer" }}>
                                 <Image src={logo} size='small' style={{ marginLeft: 20 }} />
                             </Menu.Menu>
-                            <FirstNav setVisible={setVisible} visible={visible} />
+                            <FirstNav setVisible={setVisible} visible={visible} countryInitials={selectedCountryCode} />
                         </Menu>
                     </Segment>
                 </Responsive>
@@ -28,7 +29,7 @@ class TopNav extends Component {
                             <Menu.Menu onClick={() => history.push('/')} style={{ cursor: "pointer" }}>
                                 <Image src={logo} size='small' style={{ marginLeft: 20 }} />
                             </Menu.Menu>
-                            <FirstNav setVisible={setVisible} visible={visible} />
+                            <FirstNav setVisible={setVisible} visible={visible} countryInitials={selectedCountryCode} />
                         </Menu>
                     </Segment>
                 </Responsive>
