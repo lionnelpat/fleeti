@@ -6,7 +6,7 @@ export const items = [
             { key: 'a', value: 'alertes', text: 'Alertes' },
             { key: 'g', value: 'geolocalisation', text: 'Géolocalisation' },
             { key: 'fm', value: 'fuel-management', text: 'Gestion du carburant' },
-            { key: 'pm', value: 'planning-et-missions', text: 'Planning et missions' },
+            { key: 'pm', value: 'planning-et-missions', text: 'Missions et planning' },
             { key: 'cp', value: 'comparaison-de-prestaires', text: 'Comparaison de prestataires' }
         ]
     },

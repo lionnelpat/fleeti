@@ -32,7 +32,7 @@ const ComonLayout = ({ minitext, title2Mobile, title1, title2, text, data = [], 
         <>
             <BandeLayout4
                 illustration={
-                    <div style={{ textAlign: "center" }}>
+                    <div style={{ textAlign: "center", display: 'flex', justifyContent: 'center' }}>
                       <Helmet>
                         <title>{pageTitle ? pageTitle : "Fleeti - Votre solution de gestion de flotte."}</title>
                         <meta name="description" content={pageDescription ? pageDescription : "La solution complète pour optimiser la gestion de vos véhicules et piloter votre entreprise."} />
@@ -44,12 +44,12 @@ const ComonLayout = ({ minitext, title2Mobile, title1, title2, text, data = [], 
                         <meta name="twitter:description" content={pageDescription ? pageDescription : "La solution complète pour optimiser la gestion de vos véhicules et piloter votre entreprise."} />
                       </Helmet >
 
-                        {img1 === "cost_tracking" && <Image src={cost_tracking} style={styles.imgStyle} />}
-                        {img1 === "geolocalisation" && <Image src={geolocalisation} style={styles.imgStyle} />}
-                        {img1 === "fuel_management" && <Image src={fuel_management} style={styles.imgStyle} />}
-                        {img1 === "planning_et_missions" && <Image src={planning_et_missions} style={styles.imgStyle} />}
-                        {img1 === "alertes" && <Image src={alertes} style={styles.imgStyle} />}
-                        {img1 === "comparaisonDePrestaires" && <Image src={comparaisonDePrestaires} style={styles.imgStyle} />}
+                        {img1 === "cost_tracking" && <Image src={cost_tracking} />}
+                        {img1 === "geolocalisation" && <Image src={geolocalisation} />}
+                        {img1 === "fuel_management" && <Image src={fuel_management} />}
+                        {img1 === "planning_et_missions" && <Image src={planning_et_missions} />}
+                        {img1 === "alertes" && <Image src={alertes} />}
+                        {img1 === "comparaisonDePrestaires" && <Image src={comparaisonDePrestaires} />}
                     </div>
                 }
 
@@ -201,7 +201,7 @@ const ComonLayout = ({ minitext, title2Mobile, title1, title2, text, data = [], 
 
 export default ComonLayout;
 
-const styles = {
-    imgStyle: { width: '90%', float: 'right', paddingTop: 25 },
-    bandeLayoutImgStyle: { height: 500 }
-}
+// const styles = {
+//     imgStyle: { width: '60%', /*float: 'right', paddingTop: 25 */ },
+//     bandeLayoutImgStyle: { height: 500 }
+// }
