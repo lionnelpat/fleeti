@@ -18,11 +18,13 @@ const MiniCardGroup = () => {
                             title={item.title}
                             text={item.text}
                             img={item.img}
-                            mt={i > 2 ? 100 : 0}
+                            mt={i > 2 ? 50 : 0}
                             link={item.link}
                             bg={i % 2 ? "white" : "#F5F5F5"}
                             fs={16.5098}
                             knowMoreSize={14.8588}
+                            cardHeight={450}
+                            imgMt={20}
                         />)}
                     </Grid.Row>
                     <Grid.Row columns={1} centered>
@@ -48,27 +50,26 @@ const MiniCardGroup = () => {
                                 <span style={{ fontSize: 22, color: "#757575", fontWeight: 'normal', fontFamily: 'Roboto' }}>Un outil complet de pilotage de votre activité.</span>
                             </div>
                         </div>
-                        <Grid columns={3} >
-                            <Grid.Row>
+                        <div class="ui stackable three column grid">
 
-                                {miniCards.map((item, i) => <MiniCard
-                                    key={i}
-                                    title={item.title}
-                                    text={item.text}
-                                    img={item.img}
-                                    mt={i > 2 ? 30 : 0}
-                                    link={item.link}
-                                    height={i === 4 ? 187 : 200}
-                                    knowMoreMargin={item.knowMoreMargin}
-                                    mgleft={item.mgleft}
-                                    mgright={item.mgright}
-                                    fs={18}
-                                    knowMoreSize={18}
-                                    pt={40}
-                                />)}
-                            </Grid.Row>
-
-                        </Grid>
+                            {miniCards.map((item, i) => <div class="column"> <MiniCard
+                                key={i}
+                                title={item.title}
+                                text={item.text}
+                                img={item.img}
+                                mt={i == 4 ? 13 : 0}
+                                link={item.link}
+                                height={i === 4 ? 187 : 200}
+                                knowMoreMargin={item.knowMoreMargin}
+                                mgleft={item.mgleft}
+                                mgright={item.mgright}
+                                fs={18}
+                                knowMoreSize={18}
+                                pt={40}
+                                cardHeight={550}
+                                imgMt={0}
+                            /></div>)}
+                        </div>
                     </Card>
                 </div>
 
