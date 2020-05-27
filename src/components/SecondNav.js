@@ -33,8 +33,8 @@ const SecondNav = ({ children, visib = false, setVisible }) => {
     };
 
     useEffect(() => {
-        getGeoInfo()
-    }, [countryName, countryCode])
+        //getGeoInfo()
+    }, [])
 
     let handleClick = (e, titleProps) => {
         console.log(titleProps)

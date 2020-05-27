@@ -1,4 +1,4 @@
-function countryReducer(state = { country: 'Senegal' }, action) {
+function countryReducer(state = { country: '' }, action) {
     switch (action.type) {
         case "Senegal":
             return {

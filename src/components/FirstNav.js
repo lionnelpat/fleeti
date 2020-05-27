@@ -10,8 +10,23 @@ import Axios from 'axios'
 const FirstNav = ({ visible = false, setVisible }) => {
     const [countryName, setCountryName] = useState('')
     const [countryCode, setCountryCode] = useState('')
+    const [defaultCountry, setDefaultCountry] = useState('')
 
     const dispatch = useDispatch();
+
+    function selectSenegal() {
+        dispatch({
+            type: "Senegal"
+        })
+        setDefaultCountry('sn')
+    }
+
+    function selectMaurice() {
+        dispatch({
+            type: "Maurice"
+        })
+        setDefaultCountry('mr')
+    }
 
     function getGeoInfo() {
         Axios.get('https://ipapi.co/json/').then((response) => {
@@ -22,35 +37,43 @@ const FirstNav = ({ visible = false, setVisible }) => {
             console.log(error);
         });
 
+
         if (countryName === 'Mauritius') {
-            dispatch({
-                type: "Maurice"
-            })
+            selectMaurice()
+            //selectSenegal()
         } else {
-            dispatch({
-                type: "Senegal"
-            })
+            selectSenegal()
+            //selectMaurice()
         }
+        //console.log(defaultCountry)
 
     };
 
     useEffect(() => {
         getGeoInfo()
-    }, [countryName, countryCode])
+    }, [])
 
 
     let countryOptions = [
-        {
-            key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{}} label="Sénégal" onClick={() => dispatch({
-                type: "Senegal"
-            })} >Sénégal</span>
-        },
-        {
-            key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => dispatch({
-                type: "Maurice"
-            })} style={{}} >Maurice</span>
-        },
+        [
+            {
+                key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{}} label="Sénégal" onClick={() => selectSenegal()} >Sénégal</span>
+            },
+            {
+                key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => selectMaurice()} style={{}} >Maurice</span>
+            },
+        ],
+        [
+            {
+                key: 'mr', value: 'mr', text: 'Maurice', content: <span label="Sénégal" onClick={() => selectMaurice()} style={{}} >Maurice</span>
+            },
+            {
+                key: 'sn', value: 'sn', text: 'Sénégal', content: <span style={{}} label="Sénégal" onClick={() => selectSenegal()} >Sénégal</span>
+            }
+        ]
     ]
+
+    //console.log(defaultCountry)
 
     return (
         <Menu.Menu position="right" >
@@ -81,14 +104,24 @@ const FirstNav = ({ visible = false, setVisible }) => {
                     </Link>
                 </Menu.Item>
                 <Menu.Item>
-                    <Dropdown
-                        style={{ color: '#757575', fontWeight: 'bold' }}
-                        defaultValue="sn"
-                        placeholder='Select choice'
-                        simple
-                        options={countryOptions}
-                    />
+                    {
+                        defaultCountry === 'mr' ? <Dropdown
+                            style={{ color: '#757575', fontWeight: 'bold' }}
+                            defaultValue={'mr'}
+                            placeholder='Select choice'
+                            simple
+                            options={countryOptions[1]}
+                        /> : <Dropdown
+                                style={{ color: '#757575', fontWeight: 'bold' }}
+                                defaultValue={'sn'}
+                                placeholder='Select choice'
+                                simple
+                                options={countryOptions[0]}
+                            />
+                    }
+
                 </Menu.Item>
+
 
 
                 <Menu.Item>
