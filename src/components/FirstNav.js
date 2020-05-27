@@ -9,7 +9,7 @@ import Axios from 'axios'
 
 const FirstNav = ({ visible = false, setVisible, countryInitials }) => {
     const [countryName, setCountryName] = useState('')
-    const [countryCode, setCountryCode] = useState('')
+    const [setCountryCode] = useState('')
 
     const dispatch = useDispatch();
 
