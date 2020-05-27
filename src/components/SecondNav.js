@@ -91,8 +91,8 @@ const SecondNav = ({ children, visib = false, setVisible }) => {
                                 onClick={handleClick}
                                 style={{ color: "black", fontWeight: "normal" }}
                             >
-                                <Icon name='dropdown' />
                                 {item.title}
+                                <Icon name='dropdown' />
                             </Accordion.Title>
 
                             <Accordion.Content active={activeIndex === i} style={{ paddingLeft: 50 }}>
