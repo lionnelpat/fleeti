@@ -1,0 +1,11 @@
+[context.demo]
+  [context.demo.environment]
+    REACT_APP_STAGE = "demo"
+    REACT_APP_API_URL = ""https://fleeti-demo.cleverapps.io"
+    REACT_APP_ESPACE_CLIENT = "https://fleeti-demo.cleverapps.io/"
+
+[context.production]
+  [context.production.environment]
+    REACT_APP_STAGE = "production"
+    REACT_APP_API_URL = ""https://web.fleeti.co"
+    REACT_APP_ESPACE_CLIENT = ""https://api.fleeti.co" 
